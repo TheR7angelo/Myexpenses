@@ -4,11 +4,10 @@
              xmlns:local="clr-namespace:Myexpenses"
              x:Class="Myexpenses.MainPage">
 
-    <StackLayout>
+    <StackLayout Orientation="Vertical">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button Text="Camera" Clicked="Button_OnClicked"/>
+        <Label x:Name="LabelLocation"/>
     </StackLayout>
 
 </ContentPage>
