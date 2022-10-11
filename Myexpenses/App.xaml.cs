@@ -4,7 +4,7 @@ using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
-namespace Myexpenses
+namespace MyExpenses
 {
     public partial class App : Application
     {

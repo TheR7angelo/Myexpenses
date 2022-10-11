@@ -1,8 +1,7 @@
 ﻿using System;
-using Myexpenses.Utils;
-using Xamarin.Essentials;
+using MyExpenses.Utils;
 
-namespace Myexpenses
+namespace MyExpenses
 {
     public partial class MainPage
     {

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 
-namespace Myexpenses.Utils
+namespace MyExpenses.Utils
 {
     public class Permission
     {

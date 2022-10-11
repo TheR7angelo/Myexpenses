@@ -4,7 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Plugin.Permissions;
 
-namespace Myexpenses.Droid
+namespace MyExpenses.Droid
 {
     [Activity(Label = "Myexpenses", Theme = "@style/MainTheme", MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
