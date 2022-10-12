@@ -8,6 +8,8 @@ namespace MyExpenses.Utils
     {
         public static bool Camera() => Ask<Permissions.Camera>().Result;
         public static bool Location() => Ask<Permissions.LocationWhenInUse>().Result;
+        public static bool StorageWrite() => Ask<Permissions.StorageWrite>().Result;
+        public static bool StorageRead() => Ask<Permissions.StorageRead>().Result;
 
         private static async Task<bool> Ask<TPermission>() where TPermission : Permissions.BasePermission, new()
         {

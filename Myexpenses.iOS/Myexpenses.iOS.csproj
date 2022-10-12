@@ -91,6 +91,7 @@
         <Compile Include="AppDelegate.cs" />
         <None Include="Entitlements.plist" />
         <None Include="Info.plist" />
+        <Compile Include="PlatformDetails.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
@@ -106,6 +107,7 @@
         <Reference Include="Xamarin.iOS" />
     </ItemGroup>
     <ItemGroup>
+        <PackageReference Include="PCLStorage" Version="1.0.2" />
         <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
         <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     </ItemGroup>

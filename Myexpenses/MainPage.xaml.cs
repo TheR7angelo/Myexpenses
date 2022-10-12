@@ -1,61 +1,48 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using MyExpenses.Utils;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace MyExpenses
 {
-    public partial class MainPage
+    public partial class MainPage : ContentPage
     {
+        private static string _root;
+        public string ApplicationPath { get; } = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
         public MainPage()
         {
+            _root = DependencyService.Get<IInterface>().GetPlatformRoot();
             InitializeComponent();
         }
 
-        private void Button_OnClicked(object sender, EventArgs e)
+        private async void Button_OnClicked(object sender, EventArgs e)
         {
-            LabelLocation.Text = Permission.Camera() ? "gagner" : "perdu";
-            var takePhotoAsync = TakePhotoAsync();
-            LabelLocation.Text = takePhotoAsync.ToString();
+            await TakePhotoAsync();
         }
 
         private async Task TakePhotoAsync()
         {
-            try
-            {
-                var photo = await MediaPicker.CapturePhotoAsync();
-                await LoadPhotoAsync(photo);
-                //Console.WriteLine($"CapturePhotoAsync COMPLETED: {PhotoPath}");
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Feature is not supported on the device
-            }
-            catch (PermissionException pEx)
-            {
-                // Permissions not granted
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
-            }
+            var photo = await MediaPicker.CapturePhotoAsync();
+            var path = await LoadPhotoAsync(photo);
+            Console.WriteLine($"CapturePhotoAsync COMPLETED: {path}");
+            LabelLocation.Text = path;
         }
 
-        private async Task LoadPhotoAsync(FileResult photo)
+        private static async Task<string> LoadPhotoAsync(FileResult photo)
         {
-            // canceled
-            if (photo == null)
-            {
-                return;
-            }
 
-            // save the file into local storage
-            var newFile = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
-            using (var stream = await photo.OpenReadAsync())
-            using (var newStream = File.OpenWrite(newFile))
-                await stream.CopyToAsync(newStream);
+            if (photo is null) return string.Empty;
+
+            
+            
+            var newFile = Path.Combine(_root, $"hey20{Path.GetExtension(photo.FileName)}");
+            var stream = await photo.OpenReadAsync();
+            var newStream = File.OpenWrite(newFile);
+
+            await stream.CopyToAsync(newStream);
+            return newFile;
         }
-
     }
 }

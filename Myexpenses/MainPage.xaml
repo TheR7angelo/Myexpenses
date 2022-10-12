@@ -8,6 +8,7 @@
         <!-- Place new controls here -->
         <Button Text="Camera" Clicked="Button_OnClicked"/>
         <Label x:Name="LabelLocation"/>
+        <Image x:Name="Image"/>
     </StackLayout>
 
 </ContentPage>
