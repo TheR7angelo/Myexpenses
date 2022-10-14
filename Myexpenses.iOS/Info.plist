@@ -21,17 +21,17 @@
         <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
     <key>MinimumOSVersion</key>
-    <string>15.0</string>
+    <string>8.0</string>
     <key>CFBundleDisplayName</key>
-    <string>Myexpenses</string>
+    <string>MyExpenses</string>
     <key>CFBundleIdentifier</key>
-    <string>com.companyname.Myexpenses</string>
+    <string>com.companyname.MyExpenses</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
     <key>CFBundleName</key>
-    <string>Myexpenses</string>
+    <string>MyExpenses</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>

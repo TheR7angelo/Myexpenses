@@ -1,5 +1,8 @@
-﻿using System;
-using MyExpenses.Models;
+﻿using MyExpenses.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace MyExpenses.ViewModels

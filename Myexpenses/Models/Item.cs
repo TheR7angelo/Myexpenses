@@ -1,4 +1,6 @@
-﻿namespace MyExpenses.Models
+﻿using System;
+
+namespace MyExpenses.Models
 {
     public class Item
     {

@@ -1,4 +1,5 @@
 ﻿using MyExpenses.ViewModels;
+using System.ComponentModel;
 using Xamarin.Forms;
 
 namespace MyExpenses.Views

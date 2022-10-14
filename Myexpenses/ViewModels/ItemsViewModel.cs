@@ -1,9 +1,9 @@
-﻿using System;
+﻿using MyExpenses.Models;
+using MyExpenses.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using MyExpenses.Models;
-using MyExpenses.Views;
 using Xamarin.Forms;
 
 namespace MyExpenses.ViewModels
