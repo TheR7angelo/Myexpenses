@@ -1,4 +1,5 @@
-﻿using MyExpenses.ViewModels;
+﻿using System;
+using MyExpenses.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,6 +12,11 @@ namespace MyExpenses.Views
         {
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
+        }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            //pass
         }
     }
 }
