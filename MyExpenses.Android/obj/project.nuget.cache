@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DT9YJ676N4BIxlL9zZyGFlrl7X3jmJnL4Bs5WTt6aTVsYJVyc1he57PAb/O/m/14smk2/FgA/wLb5E1+Ok2r2w==",
+  "dgSpecHash": "GbI3w9ebxdMgaVK68UOBS4Fn6JmxCQFqa6WHQI/AB6a2OIuTBbs3Jw4IOPFgoj4jFP6i3htPmd6nZD9RNNYO+w==",
   "success": true,
-  "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
+  "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rapha\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

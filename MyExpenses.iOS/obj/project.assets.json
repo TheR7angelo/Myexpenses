@@ -988,11 +988,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "projectUniqueName": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
       "projectName": "MyExpenses.iOS",
-      "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
       "packagesPath": "C:\\Users\\Rapha\\.nuget\\packages\\",
-      "outputPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.iOS\\obj\\",
+      "outputPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1013,8 +1013,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses\\MyExpenses.csproj": {
-              "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses\\MyExpenses.csproj"
+            "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj": {
+              "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj"
             }
           }
         }

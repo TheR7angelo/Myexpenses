@@ -3178,11 +3178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
+      "projectUniqueName": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
       "projectName": "MyExpenses.Android",
-      "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
+      "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
       "packagesPath": "C:\\Users\\Rapha\\.nuget\\packages\\",
-      "outputPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.Android\\obj\\",
+      "outputPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3203,8 +3203,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses\\MyExpenses.csproj": {
-              "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses\\MyExpenses.csproj"
+            "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj": {
+              "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj"
             }
           }
         }

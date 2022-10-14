@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+HiNZq9lQg/5MyDuJKsEurzxVjcxdwhDBlfBiwMexvIr3EMvtrm5Fbprk+KD5KvVKUTjgRKaYi+rKdPysa6RsA==",
+  "dgSpecHash": "mucfnELPKJKbMuqvC+54ur8lszxSzQ9KLWD3zzRfCG+bJnSu2x8utJ9OEUqWn4S3adSfefQkmWMM+xxTuI5YVQ==",
   "success": true,
-  "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses\\MyExpenses.csproj",
+  "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rapha\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
