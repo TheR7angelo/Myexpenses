@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "uOlHFhVwpxj3Jb4a1sf4T8cV9EAsLdzdvzX2pt2TL4YGpQnQRgjkQ7yKUpYVEQauSsmNyUL5+VV3oJfvZKzG5g==",
+  "success": true,
+  "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Poubelle\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rapha\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
