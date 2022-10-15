@@ -23,7 +23,7 @@
                 <Editor Grid.Row="0" Grid.Column="1" x:Name="EditorNameAccount" MaxLength="20" HorizontalOptions="Center" TextChanged="EditorNameAccount_OnTextChanged"/>
                 
                 <Label Grid.Row="1" Grid.Column="0" Text="Mot de passe ?"/>
-                <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="False" CheckedChanged="CheckBoxPassword_OnCheckedChanged"/>
+                <CheckBox Grid.Row="1" Grid.Column="1" x:Name="CheckBoxPassword" IsChecked="False" CheckedChanged="CheckBoxPassword_OnCheckedChanged"/>
                 
                 <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="StackLayoutPassword" Orientation="Vertical" IsVisible="False">
                     <Grid>

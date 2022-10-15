@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,9 +29,26 @@ public partial class AddAccount
         }
     }
 
-    private void Button_OnClicked(object sender, EventArgs e)
+    private async void Button_OnClicked(object sender, EventArgs e)
     {
-        throw new NotImplementedException();
+        var password = string.Empty;
+        
+        if (CheckBoxPassword.IsChecked)
+        {
+            if (!EntryPassword.Text.Equals(EntryPasswordConfirm.Text))
+            {
+                await DisplayAlert("Alert", "Les mot de passe ne correspondent pas", "OK");
+                return;
+            }
+            password = EntryPassword.Text;
+        }
+        await CreateDb(EditorNameAccount.Text, password);
+        await DisplayAlert("Alert", "Compte ajouté", "OK");
+    }
+
+    private static async Task CreateDb(string name, string password)
+    {
+        // pass
     }
 
     private void CheckBoxPassword_OnCheckedChanged(object sender, CheckedChangedEventArgs e) => StackLayoutPassword.IsVisible = ((CheckBox)sender).IsChecked;
