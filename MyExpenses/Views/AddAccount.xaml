@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyExpenses.Views.AddAccount"
+             Title="AddAccount"
+             BackgroundColor="Beige">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Nom :"/>
+                <Editor x:Name="EditorNameAccount" MaxLength="20" AutoSize="TextChanges" HorizontalOptions="Center" TextChanged="EditorNameAccount_OnTextChanged"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Mot de passe ?"/>
+                <CheckBox IsChecked="False" CheckedChanged="CheckBoxPassword_OnCheckedChanged"/>
+            </StackLayout>
+            <StackLayout x:Name="StackLayoutPassword" Orientation="Vertical" IsVisible="False">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Mot de passe :"/>
+                    <Entry x:Name="EntryPassword" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Mot de passe :"/>
+                    <Entry x:Name="EntryPasswordConfirm" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="Confirmer" Margin="15" Clicked="Button_OnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

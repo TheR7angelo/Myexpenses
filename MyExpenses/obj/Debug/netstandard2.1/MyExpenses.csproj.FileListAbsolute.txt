@@ -26,3 +26,4 @@ E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\My
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Utils\Style\Widget\Label.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Utils\Style\Widget\Layout.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Utils\Style\Widget\TabBar.xaml.g.cs
+E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\AddAccount.xaml.g.cs

@@ -2,6 +2,8 @@
     
     <Style TargetType="Label" x:Key="BaseLabel">
         <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
     </Style>
     
     <!-- Initial -->
