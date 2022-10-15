@@ -29,9 +29,9 @@ public partial class AddAccount
     private void EditorNameAccount_OnTextChanged(object sender, TextChangedEventArgs e)
     {
         var editor = sender as Editor;
-        foreach (var c in new List<string>{"\\", "/", ":", "*", "?", "\"", "<", ">", "|"}.Where(c => editor.Text.Contains(c)))
+        foreach (var c in new List<string>{"\\", "/", ":", "*", "?", "\"", "<", ">", "|"}.Where(c => editor!.Text.Contains(c)))
         {
-            editor.Text = editor.Text.Replace(c, "");
+            editor!.Text = editor.Text.Replace(c, "");
         }
     }
 }

@@ -16,14 +16,21 @@
                 <CheckBox IsChecked="False" CheckedChanged="CheckBoxPassword_OnCheckedChanged"/>
             </StackLayout>
             <StackLayout x:Name="StackLayoutPassword" Orientation="Vertical" IsVisible="False">
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Mot de passe :"/>
-                    <Entry x:Name="EntryPassword" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Cinfirmer le mot de passe :"/>
-                    <Entry x:Name="EntryPasswordConfirm" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
-                </StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" Text="Mot de passe :"/>
+                    <Entry Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start" x:Name="EntryPassword" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
+                    
+                    <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start" Text="Cinfirmer le mot de passe :"/>
+                    <Entry Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" x:Name="EntryPasswordConfirm" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
+                </Grid>
             </StackLayout>
             <Button Text="Confirmer" Margin="15" Clicked="Button_OnClicked"/>
         </StackLayout>
