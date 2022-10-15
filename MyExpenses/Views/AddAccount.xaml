@@ -6,32 +6,45 @@
              Title="AddAccount"
              BackgroundColor="Beige">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Nom :"/>
-                <Editor x:Name="EditorNameAccount" MaxLength="20" AutoSize="TextChanges" HorizontalOptions="Center" TextChanged="EditorNameAccount_OnTextChanged"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Mot de passe ?"/>
-                <CheckBox IsChecked="False" CheckedChanged="CheckBoxPassword_OnCheckedChanged"/>
-            </StackLayout>
-            <StackLayout x:Name="StackLayoutPassword" Orientation="Vertical" IsVisible="False">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" Text="Mot de passe :"/>
-                    <Entry Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start" x:Name="EntryPassword" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
-                    
-                    <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start" Text="Cinfirmer le mot de passe :"/>
-                    <Entry Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" x:Name="EntryPasswordConfirm" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
-                </Grid>
-            </StackLayout>
+        <!-- todo truc bizzard  -->
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Row="0" Grid.Column="0" Text="Nom :"/>
+                <Editor Grid.Row="0" Grid.Column="1" x:Name="EditorNameAccount" MaxLength="20" HorizontalOptions="Center" TextChanged="EditorNameAccount_OnTextChanged"/>
+                
+                <Label Grid.Row="1" Grid.Column="0" Text="Mot de passe ?"/>
+                <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="False" CheckedChanged="CheckBoxPassword_OnCheckedChanged"/>
+                
+                <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" x:Name="StackLayoutPassword" Orientation="Vertical" IsVisible="False">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" Text="Mot de passe :"/>
+                        <Entry Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Start" x:Name="EntryPassword" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
+            
+                        <Label Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Start" Text="Confirmer le mot de passe :"/>
+                        <Entry Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Start" x:Name="EntryPasswordConfirm" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
+                    </Grid>
+                </StackLayout>
+                
+            </Grid>
+            
             <Button Text="Confirmer" Margin="15" Clicked="Button_OnClicked"/>
         </StackLayout>
     </ContentPage.Content>

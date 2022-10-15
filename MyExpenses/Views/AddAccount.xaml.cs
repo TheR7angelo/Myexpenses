@@ -12,10 +12,19 @@ public partial class AddAccount
     public AddAccount()
     {
         InitializeComponent();
+
+        const int minWidth = 200;
+        const int maxLenght = 20;
+        
+        foreach (var editor in new List<Editor> { EditorNameAccount })
+        {
+            editor.WidthRequest = minWidth;
+        }
+        
         foreach (var entry in new List<Entry>{ EntryPassword, EntryPasswordConfirm })
         {
-            entry.WidthRequest = 200;
-            entry.MaxLength = 20;
+            entry.WidthRequest = minWidth;
+            entry.MaxLength = maxLenght;
         }
     }
 
