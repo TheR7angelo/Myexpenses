@@ -21,7 +21,7 @@
                     <Entry x:Name="EntryPassword" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Mot de passe :"/>
+                    <Label Text="Cinfirmer le mot de passe :"/>
                     <Entry x:Name="EntryPasswordConfirm" HorizontalOptions="Start" ClearButtonVisibility="WhileEditing" IsPassword="True"/>
                 </StackLayout>
             </StackLayout>
