@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Style TargetType="Label" x:Key="BaseLabel">
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
+    
+    <!-- Initial -->
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource BaseLabel}"/>
+    
+</ResourceDictionary>

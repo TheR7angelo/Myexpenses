@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "mucfnELPKJKbMuqvC+54ur8lszxSzQ9KLWD3zzRfCG+bJnSu2x8utJ9OEUqWn4S3adSfefQkmWMM+xxTuI5YVQ==",
+  "dgSpecHash": "lvikdoRC5Nk1gJ6ON6/eG/U1v95ZJqHiHEQ57X0AVHzgZKRH3NKcDCdUNR7ftCjtGCDOoR59U4Lp4UpDGbyvTQ==",
   "success": true,
   "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Rapha\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Rapha\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
