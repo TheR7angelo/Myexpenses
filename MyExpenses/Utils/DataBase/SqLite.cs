@@ -1,4 +1,5 @@
 ﻿#nullable enable
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using SQLite;
@@ -18,15 +19,17 @@ public static partial class SqLite
         _connection = new SQLiteAsyncConnection(dbPath, false);
         _connection.ExecuteAsync("PRAGMA foreignkeys = ON");
 
-        _connection.CreateTablesAsync<Lieu, TypeRecurence, TypePayement, TypeCategorie, Ticket>().Wait();
-        _connection.CreateTableAsync<Credit>().Wait();
+        foreach (var cmd in new List<string>
+                     { Lieu, TypeRecurence, TypePayement, TypeCategorie, Ticket, TypeCompte, Credit, Compte, Historique })
+        {
+           Execute(cmd);
+        }
+
         return Task.CompletedTask;
     }
 
-    public static Task<int> InsertLieu(Lieu lieu) => _connection!.InsertAsync(lieu);
 
-
-    // private static void Execute(string cmd) => new SQLiteCommand(cmd, _connection).ExecuteNonQuery();
+    private static void Execute(string cmd) => _connection!.ExecuteAsync(cmd).Wait();
     // private static SQLiteDataReader ExecuteReader(string cmd) => new SQLiteCommand(cmd, _connection).ExecuteReader();
 
 }
