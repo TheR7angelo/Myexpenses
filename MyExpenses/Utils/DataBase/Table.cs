@@ -1,14 +1,10 @@
-﻿using System;
-using SQLite;
-using SQLiteNetExtensions.Attributes;
-
-namespace MyExpenses.Utils.Database;
+﻿namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
     #region TableBase
 
-    private const string Lieu = @"
+    private const string TLieu = @"
     create table t_lieu
     (
         id         INTEGER NOT NULL
@@ -24,7 +20,7 @@ public static partial class SqLite
         longitude  INTEGER
     );";
 
-    private const string TypeRecurence = @"
+    private const string TTypeRecurence = @"
     create table t_type_recurence
     (
         id  INTEGER NOT NULL
@@ -32,7 +28,7 @@ public static partial class SqLite
         nom TEXT
     );";
 
-    private const string TypePayement = @"
+    private const string TTypePayement = @"
     create table t_type_payement
     (
         id  INTEGER NOT NULL
@@ -40,7 +36,7 @@ public static partial class SqLite
         nom TEXT
     );";
 
-    private const string TypeCategorie = @"
+    private const string TTypeCategorie = @"
     create table t_type_categorie
     (
         id  INTEGER NOT NULL
@@ -48,7 +44,7 @@ public static partial class SqLite
         nom TEXT
     );";
 
-    private const string Ticket = @"
+    private const string TTicket = @"
     create table t_ticket
     (
         id   INTEGER NOT NULL
@@ -56,7 +52,7 @@ public static partial class SqLite
         path TEXT
     );";
 
-    private const string TypeCompte = @"
+    private const string TTypeCompte = @"
     create table t_type_compte
     (
         id  INTEGER
@@ -68,7 +64,7 @@ public static partial class SqLite
 
     #endregion
 
-    private const string Compte = @"
+    private const string TCompte = @"
     create table t_compte
     (
         id             integer
@@ -81,7 +77,7 @@ public static partial class SqLite
     );
     ";
     
-    private const string Credit = @"
+    private const string TCredit = @"
     create table t_credit
     (
         id                integer
@@ -102,7 +98,7 @@ public static partial class SqLite
     );
     ";
 
-    private const string Historique = @"
+    private const string THistorique = @"
     create table t_historique
     (
         id               integer
@@ -112,7 +108,7 @@ public static partial class SqLite
             constraint t_historique_t_compte_id_fk
                 references t_compte (id),
         ordre            text,
-        type_categorie   integer
+        type_categorie_fk   integer
             constraint t_historique_t_type_categorie_id_fk
                 references t_type_categorie (id),
         type_payement_fk integer
