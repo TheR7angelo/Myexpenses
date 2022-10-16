@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using MyExpenses.Utils.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -42,14 +44,11 @@ public partial class AddAccount
             }
             password = EntryPassword.Text;
         }
-        await CreateDb(EditorNameAccount.Text, password);
-        await DisplayAlert("Alert", "Compte ajouté", "OK");
-    }
+        // await CreateDb(EditorNameAccount.Text, password);
 
-    private static async Task CreateDb(string name, string password)
-    {
-        //todo finir
-        // pass
+        await SqLite.Initialized(EditorNameAccount.Text, password);
+
+        await DisplayAlert("Alert", "Compte ajouté", "OK");
     }
 
     private void CheckBoxPassword_OnCheckedChanged(object sender, CheckedChangedEventArgs e) => StackLayoutPassword.IsVisible = ((CheckBox)sender).IsChecked;
