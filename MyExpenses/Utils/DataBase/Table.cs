@@ -15,9 +15,9 @@ public static partial class SqLite
         postal     TEXT,
         ville      TEXT,
         pays       TEXT,
-        date_ajout TEXT,
-        latitude   INTEGER,
-        longitude  INTEGER
+        date_ajout TEXT default CURRENT_DATE,
+        latitude   REAL,
+        longitude  REAL
     );";
 
     private const string TTypeRecurence = @"
