@@ -2,43 +2,92 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:MyExpenses.Views"
+       x:Name="ShellTest"
        Title="MyExpenses"
        x:Class="MyExpenses.AppShell">
 
-    <!-- 
-        When the Flyout is visible this defines the content to display in the flyout.
-        FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
-        https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
-    -->
-    <FlyoutItem Title="About" Icon="icon_about.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-    </FlyoutItem>
     
-    <FlyoutItem Title="Crée un compte" Icon="icon_about.png">
-        <ShellContent Route="AddAccount" ContentTemplate="{DataTemplate local:AddAccount}">
-            
-        </ShellContent>
-    </FlyoutItem>
+    <!-- <FlyoutItem Title="sideNav" Shell.TabBarIsVisible="True" FlyoutDisplayOptions="AsMultipleItems"> -->
+    <!--     <ShellContent Title="Home" IsTabStop="True"/> -->
+    <!-- </FlyoutItem> -->
     
-    <!-- <FlyoutItem Title="Browse" Icon="icon_feed.png"> -->
-    <!--     <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" /> -->
+    <!-- <Shell.FlyoutContentTemplate> -->
+    <!--     <DataTemplate> -->
+    <!--         <StackLayout> -->
+    <!--             <ListView x:Name="MenuItemsListView" -->
+    <!--                       SeparatorVisibility="None" -->
+    <!--                       HasUnevenRows="true" -->
+    <!--                       ItemsSource="{Binding FlyoutItems}"> -->
+    <!--                 <ListView.Header> -->
+    <!--                     <Grid BackgroundColor="#8f0000"> -->
+    <!--                         <Grid.ColumnDefinitions> -->
+    <!--                             <ColumnDefinition Width="10"/> -->
+    <!--                             <ColumnDefinition Width="*"/> -->
+    <!--                             <ColumnDefinition Width="10"/> -->
+    <!--                         </Grid.ColumnDefinitions> -->
+    <!--                         <Grid.RowDefinitions> -->
+    <!--                             <RowDefinition Height="30"/> -->
+    <!--                             <RowDefinition Height="80"/> -->
+    <!--                             <RowDefinition Height="Auto"/> -->
+    <!--                             <RowDefinition Height="10"/> -->
+    <!--                         </Grid.RowDefinitions> -->
+    <!--                         <Label Grid.Row="2" Grid.Column="1" -->
+    <!--                                TextColor="#d7d9b4" -->
+    <!--                                Text="{Binding Title}" -->
+    <!--                                FontSize="24"/> -->
+    <!--                     </Grid> -->
+    <!--                 </ListView.Header> -->
+    <!-- -->
+    <!--                 <ListView.ItemTemplate> -->
+    <!--                     <DataTemplate> -->
+    <!--                         <ViewCell> -->
+    <!--                             <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand"> -->
+    <!--                                 ~1~ <Label VerticalOptions="FillAndExpand" @1@ -->
+    <!--                                 ~1~        VerticalTextAlignment="Center" @1@ -->
+    <!--                                 ~1~        Text="{Binding MenuTitle}" @1@ -->
+    <!--                                 ~1~        TextColor="Black" @1@ -->
+    <!--                                 ~1~        FontSize="20"/> @1@ -->
+    <!--                             </StackLayout> -->
+    <!--                         </ViewCell> -->
+    <!--                     </DataTemplate> -->
+    <!--                 </ListView.ItemTemplate> -->
+    <!--             </ListView> -->
+    <!--         </StackLayout> -->
+    <!--     </DataTemplate> -->
+    <!-- </Shell.FlyoutContentTemplate> -->
+    
+    <!--  -->
+    <!--     When the Flyout is visible this defines the content to display in the flyout. -->
+    <!--     FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element     -->
+    <!--     https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms -->
+    <!-- -->
+    <!-- <FlyoutItem Title="About" Icon="icon_about.png"> -->
+    <!--     <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" /> -->
     <!-- </FlyoutItem> -->
-    <!-- <FlyoutItem Title="Capture" Icon="icon_feed.png"> -->
-    <!--     <ShellContent Route="Capture" ContentTemplate="{DataTemplate local:Capture}" /> -->
+    <!-- -->
+    <!-- <FlyoutItem Title="Crée un compte" Icon="icon_about.png"> -->
+    <!--     <ShellContent Route="AddAccount" ContentTemplate="{DataTemplate local:AddAccount}"/> -->
     <!-- </FlyoutItem> -->
-
-    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <!-- <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked"/> -->
-
-    <!--
-        TabBar lets you define content that won't show up in a flyout menu. When this content is active
-        the flyout menu won't be available. This is useful for creating areas of the application where 
-        you don't want users to be able to navigate away from. If you would like to navigate to this 
-        content you can do so by calling 
-        await Shell.Current.GoToAsync("//LoginPage");
-    -->
-    <TabBar>
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
-    </TabBar>
-
+    <!-- -->
+    <!-- ~1~ <FlyoutItem Title="Browse" Icon="icon_feed.png"> @1@ -->
+    <!-- ~1~     <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" /> @1@ -->
+    <!-- ~1~ </FlyoutItem> @1@ -->
+    <!-- ~1~ <FlyoutItem Title="Capture" Icon="icon_feed.png"> @1@ -->
+    <!-- ~1~     <ShellContent Route="Capture" ContentTemplate="{DataTemplate local:Capture}" /> @1@ -->
+    <!-- ~1~ </FlyoutItem> @1@ -->
+    <!-- -->
+    <!-- ~1~ When the Flyout is visible this will be a menu item you can tie a click behavior to  @1@ -->
+    <!-- ~1~ <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked"/> @1@ -->
+    <!-- -->
+    <!-- -->
+    <!--     TabBar lets you define content that won't show up in a flyout menu. When this content is active -->
+    <!--     the flyout menu won't be available. This is useful for creating areas of the application where  -->
+    <!--     you don't want users to be able to navigate away from. If you would like to navigate to this  -->
+    <!--     content you can do so by calling  -->
+    <!--     await Shell.Current.GoToAsync("//LoginPage"); -->
+    <!-- -->
+    <!-- <TabBar> -->
+    <!--     <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" /> -->
+    <!-- </TabBar> -->
+    
 </Shell>

@@ -33,7 +33,7 @@ public static partial class SqLite
 
             #region View
 
-            foreach (var cmd in new List<string> { VHistorique })
+            foreach (var cmd in new List<string> { VHistorique, VToto, VTotoCategorie })
             {
                 Execute(cmd);
             }
@@ -45,7 +45,6 @@ public static partial class SqLite
 
         _connection = new SQLiteAsyncConnection(dbPath, false);
         _connection.ExecuteAsync("PRAGMA foreignkeys = ON").Wait();
-
         return Task.CompletedTask;
     }
 

@@ -27,5 +27,20 @@ public static partial class SqLite
                        on th.ticket_fk = tt.id
              LEFT JOIN t_credit t
                        on tl.id = t.lieu_fk;
-";
+    ";
+
+
+    private const string VToto = @"
+    CREATE VIEW v_total as
+    SELECT h.compte, round(sum(h.montant), 2) as restant
+    FROM v_historique h
+    GROUP BY h.compte;
+    ";
+
+    private const string VTotoCategorie = @"
+    CREATE VIEW v_total_by_categorie as
+    Select h.compte, h.categorie, round(sum(h.montant), 2) as montant
+    FROM v_historique h
+    GROUP BY h.compte, h.categorie;
+    ";
 }

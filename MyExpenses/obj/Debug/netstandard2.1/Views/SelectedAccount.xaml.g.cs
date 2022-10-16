@@ -8,21 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("MyExpenses.AppShell.xaml", "AppShell.xaml", typeof(global::MyExpenses.AppShell))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("MyExpenses.Views.SelectedAccount.xaml", "Views/SelectedAccount.xaml", typeof(global::MyExpenses.Views.SelectedAccount))]
 
-namespace MyExpenses {
+namespace MyExpenses.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("AppShell.xaml")]
-    public partial class AppShell : global::Xamarin.Forms.Shell {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\SelectedAccount.xaml")]
+    public partial class SelectedAccount : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Shell ShellTest;
+        private global::Xamarin.Forms.FlexLayout FlexLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AppShell));
-            ShellTest = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Shell>(this, "ShellTest");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SelectedAccount));
+            FlexLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.FlexLayout>(this, "FlexLayout");
         }
     }
 }

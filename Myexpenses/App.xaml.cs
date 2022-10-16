@@ -1,19 +1,12 @@
-﻿using MyExpenses.Services;
-using MyExpenses.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-namespace MyExpenses
+﻿namespace MyExpenses
 {
-    public partial class App : Application
+    public partial class App
     {
 
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
+            
             MainPage = new AppShell();
         }
 

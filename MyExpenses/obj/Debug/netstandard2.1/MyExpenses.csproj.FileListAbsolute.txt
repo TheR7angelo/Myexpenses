@@ -7,10 +7,6 @@ E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\My
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\AppShell.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\AboutPage.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\Capture.xaml.g.cs
-E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\ItemDetailPage.xaml.g.cs
-E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\ItemsPage.xaml.g.cs
-E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\LoginPage.xaml.g.cs
-E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\NewItemPage.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\MyExpenses.AssemblyInfoInputs.cache
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\MyExpenses.AssemblyInfo.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\MyExpenses.csproj.CoreCompileInputs.cache
@@ -27,3 +23,5 @@ E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\My
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Utils\Style\Widget\Layout.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Utils\Style\Widget\TabBar.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\AddAccount.xaml.g.cs
+E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\Home.xaml.g.cs
+E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\SelectedAccount.xaml.g.cs
