@@ -14,16 +14,37 @@ public static partial class SqLite
     {
         var dbPath = Path.Combine(Root, "dbFiles", $"{name}.sqlite");
 
-        if (!File.Exists(dbPath)) Directory.CreateDirectory(Path.GetDirectoryName(dbPath)!);
+        if (!File.Exists(dbPath))
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(dbPath)!);
+            _connection = new SQLiteAsyncConnection(dbPath, false);
+            _connection.ExecuteAsync("PRAGMA foreignkeys = ON");
+            
+            #region Tables
+
+            foreach (var cmd in new List<string>
+                         { TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
+            {
+                Execute(cmd);
+            }
+
+            #endregion
+
+
+            #region View
+
+            foreach (var cmd in new List<string> { VHistorique })
+            {
+                Execute(cmd);
+            }
+
+            #endregion
+            
+            return Task.CompletedTask;
+        }
 
         _connection = new SQLiteAsyncConnection(dbPath, false);
-        _connection.ExecuteAsync("PRAGMA foreignkeys = ON");
-
-        foreach (var cmd in new List<string>
-                     { Lieu, TypeRecurence, TypePayement, TypeCategorie, Ticket, TypeCompte, Credit, Compte, Historique })
-        {
-           Execute(cmd);
-        }
+        _connection.ExecuteAsync("PRAGMA foreignkeys = ON").Wait();
 
         return Task.CompletedTask;
     }
