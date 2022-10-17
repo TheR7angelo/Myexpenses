@@ -33,6 +33,7 @@ public partial class ActiveAccount
             var btn = new Button
             {
                 Text = account.Nom,
+                ClassId = account.Nom,
                 Style = FindByName("WalletButton") as Style,
                 Margin = new Thickness(7),
                 BackgroundColor = account.Color is not null ? Color.FromHex(account.Color) : Color.Bisque
