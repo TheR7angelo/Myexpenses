@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
+using Microcharts;
+using MyExpenses.Utils.Database;
+using SkiaSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,12 +12,30 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class SelectedAccount
 {
-    private static readonly string _db = Home._db;
+    private static readonly string Db = Home._db;
     public SelectedAccount()
     {
         InitializeComponent();
         
-        var listeDb = Directory.GetFiles(_db, "*.sqlite").Select(Path.GetFileNameWithoutExtension).ToList();
+        var entrie = new[]
+        {
+            new ChartEntry(212)
+            {
+                Label = "test",
+                ValueLabel = "212",
+                Color = SKColors.SkyBlue
+            },
+            new ChartEntry(213)
+            {
+                Label = "test2",
+                ValueLabel = "213",
+                Color = SKColors.Bisque
+            },
+        };
+        ChartView.Chart = new PieChart{Entries = entrie ,LabelTextSize = 30};
+
+        
+        var listeDb = Directory.GetFiles(Db, "*.sqlite").Select(Path.GetFileNameWithoutExtension).ToList();
 
         const int size = 75;
         foreach (var btn in listeDb.Select(db => new Button{ Text = db, ClassId = db, }))
@@ -24,13 +43,14 @@ public partial class SelectedAccount
             btn.HeightRequest = size;
             btn.WidthRequest = size;
             btn.Margin = new Thickness(10);
-            btn.Clicked += BtnOnClicked;
+            btn.Clicked += Btn_OnClicked;
             FlexLayout.Children.Add(btn);
         }
     }
 
-    private void BtnOnClicked(object sender, EventArgs e)
+    private static void Btn_OnClicked(object sender, EventArgs e)
     {
-        throw new NotImplementedException();
+        // todo password ?
+        SqLite.Initialized(((Button)sender).ClassId, "");
     }
 }
