@@ -1873,11 +1873,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
       "projectName": "MyExpenses.iOS",
-      "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
       "packagesPath": "C:\\Users\\ZP6177\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses.iOS\\obj\\",
+      "outputPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1899,8 +1899,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses\\MyExpenses.csproj": {
-              "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses\\MyExpenses.csproj"
+            "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj": {
+              "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj"
             }
           }
         }

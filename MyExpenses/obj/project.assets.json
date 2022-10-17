@@ -3532,11 +3532,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses\\MyExpenses.csproj",
+      "projectUniqueName": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj",
       "projectName": "MyExpenses",
-      "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses\\MyExpenses.csproj",
+      "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj",
       "packagesPath": "C:\\Users\\ZP6177\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses\\obj\\",
+      "outputPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

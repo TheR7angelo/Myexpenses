@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cUKO1+ig4XnaQ/+xG1xQZldjODWbf+jheQkeXPayCdXiioYgnP/cwdn1IbIrJKbo9QOLJs0k4Kyzkm2C0BggYg==",
+  "dgSpecHash": "tvWyoeloURXfPJX00EmqaiPaASh+9HWVlXYT9/KYYGQW2iRotC8WeG8FU2hU4d0Q9hBzYAAPkowK++wYOVk43A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+  "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZP6177\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",

@@ -1,7 +1,4 @@
 ﻿using MyExpenses.Views;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace MyExpenses
@@ -14,11 +11,6 @@ namespace MyExpenses
             InitializeComponent();
 
             ShellTest.Items.Add(new ShellSection{Title = "home", Items = { new ShellContent{Content = new Home()} }});
-        }
-
-        private async void OnMenuItemClicked(object sender, EventArgs e)
-        {
-            await Current.GoToAsync("//LoginPage");
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ru7y0+UVRZS5d6c85KCHr1tONqQufKMJM4PTpfCmjF7UoQv3AShO5ysWWZfN2llR5h3wU4GoGpF6FvgMDqu33w==",
+  "dgSpecHash": "GzKDwcgWqzdhgvBZdzpAtw1c6mJnmwIoZavMIY5CZbn6ZO77DgH029dOSLYS/KzwBh9qyYKaO4L4IUCHK8O/nw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\poubelle\\t\\MyExpenses\\MyExpenses.csproj",
+  "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZP6177\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
