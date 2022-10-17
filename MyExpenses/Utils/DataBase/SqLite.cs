@@ -1,4 +1,5 @@
 ﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -10,42 +11,49 @@ public static partial class SqLite
 {
     private static SQLiteAsyncConnection? _connection;
     
-    public static Task Initialized(string name, string password)
+    public static Task<bool> Initialized(string name, string password)
     {
         var dbPath = Path.Combine(Root, "dbFiles", $"{name}.sqlite");
 
-        if (!File.Exists(dbPath))
+        try
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(dbPath)!);
+            if (!File.Exists(dbPath))
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(dbPath)!);
+                _connection = new SQLiteAsyncConnection(dbPath, false);
+                _connection.ExecuteAsync("PRAGMA foreignkeys = ON");
+            
+                #region Tables
+
+                foreach (var cmd in new List<string>
+                             { TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
+                {
+                    Execute(cmd);
+                }
+
+                #endregion
+
+
+                #region View
+
+                foreach (var cmd in new List<string> { VHistorique, VToto, VTotoCategorie })
+                {
+                    Execute(cmd);
+                }
+
+                #endregion
+            
+                return Task.FromResult(true);
+            }
+
             _connection = new SQLiteAsyncConnection(dbPath, false);
-            _connection.ExecuteAsync("PRAGMA foreignkeys = ON");
-            
-            #region Tables
-
-            foreach (var cmd in new List<string>
-                         { TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
-            {
-                Execute(cmd);
-            }
-
-            #endregion
-
-
-            #region View
-
-            foreach (var cmd in new List<string> { VHistorique, VToto, VTotoCategorie })
-            {
-                Execute(cmd);
-            }
-
-            #endregion
-            
-            return Task.CompletedTask;
+            _connection.ExecuteAsync("PRAGMA foreignkeys = ON").Wait();
+            return Task.FromResult(true);
         }
-
-        _connection = new SQLiteAsyncConnection(dbPath, false);
-        _connection.ExecuteAsync("PRAGMA foreignkeys = ON").Wait();
-        return Task.CompletedTask;
+        catch (Exception)
+        {
+            return Task.FromResult(false);
+        }
     }
 
 

@@ -44,11 +44,11 @@ public partial class AddAccount
             }
             password = EntryPassword.Text;
         }
-        // await CreateDb(EditorNameAccount.Text, password);
 
-        await SqLite.Initialized(EditorNameAccount.Text, password);
+        var create = await SqLite.Initialized(EditorNameAccount.Text, password);
+        var msg = create ? "Compte ajouté" : "une erreur est surevenue";
 
-        await DisplayAlert("Alert", "Compte ajouté", "OK");
+        await DisplayAlert("Alert", msg, "OK");
     }
 
     private void CheckBoxPassword_OnCheckedChanged(object sender, CheckedChangedEventArgs e) => StackLayoutPassword.IsVisible = ((CheckBox)sender).IsChecked;
