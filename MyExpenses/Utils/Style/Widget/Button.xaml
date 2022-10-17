@@ -21,6 +21,15 @@
         </Setter>
     </Style>
     
+    <Style TargetType="{x:Type Button}" x:Key="WalletButton">
+        <Setter Property="HeightRequest" Value="75"/>
+        <Setter Property="WidthRequest" Value="125"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="BorderColor" Value="Black"/>
+        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="CornerRadius" Value="3"/>
+    </Style>
+    
     <!-- Initial -->
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButton}"/>
     

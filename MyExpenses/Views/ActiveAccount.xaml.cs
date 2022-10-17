@@ -30,18 +30,14 @@ public partial class ActiveAccount
         var lst = SqLite.GetAllAccount();
         foreach (var account in lst)
         {
-            var btn = new Button();
-            btn.Text = account.Nom;
-            btn.HeightRequest = 75;
-            btn.WidthRequest = 125;
-            btn.FontSize = 12;
-            btn.Margin = new Thickness(7);
-            btn.BorderColor = Color.Black;
-            btn.BorderWidth = 1;
-            btn.CornerRadius = 3;
+            var btn = new Button
+            {
+                Text = account.Nom,
+                Style = FindByName("WalletButton") as Style,
+                Margin = new Thickness(7),
+                BackgroundColor = account.Color is not null ? Color.FromHex(account.Color) : Color.Bisque
+            };
 
-            btn.BackgroundColor = account.Color is not null ? Color.FromHex(account.Color) : Color.Bisque;
-            
             FlexLayout.Children.Add(btn);
         }
 
