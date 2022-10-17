@@ -16,6 +16,8 @@ public partial class SelectedAccount
     public SelectedAccount()
     {
         InitializeComponent();
+
+        
         
         // todo a finir
         var entrie = new[]
@@ -33,9 +35,14 @@ public partial class SelectedAccount
                 Color = SKColors.Bisque
             },
         };
+        
         ChartView.Chart = new PieChart{Entries = entrie ,LabelTextSize = 30};
 
-        
+        CreateButton();
+    }
+
+    private void CreateButton()
+    {
         var listeDb = Directory.GetFiles(Db, "*.sqlite").Select(Path.GetFileNameWithoutExtension).ToList();
 
         const int size = 75;
@@ -46,12 +53,16 @@ public partial class SelectedAccount
             btn.Margin = new Thickness(10);
             btn.Clicked += Btn_OnClicked;
             FlexLayout.Children.Add(btn);
+            
         }
     }
 
-    private static void Btn_OnClicked(object sender, EventArgs e)
+    private void Btn_OnClicked(object sender, EventArgs e)
     {
         // todo password ?
-        SqLite.Initialized(((Button)sender).ClassId, "");
+        var account = ((Button)sender).ClassId;
+        SqLite.Initialized(account, "");
+
+        Navigation.PushAsync(new ActiveAccount(account));
     }
 }

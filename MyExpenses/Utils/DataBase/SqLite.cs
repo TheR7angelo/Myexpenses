@@ -18,6 +18,8 @@ public static partial class SqLite
     {
         var dbPath = Path.Combine(Db, $"{name}.sqlite");
 
+        _connection?.CloseAsync().Wait();
+
         try
         {
             if (!File.Exists(dbPath))
@@ -47,9 +49,9 @@ public static partial class SqLite
             
                 return Task.FromResult(true);
             }
-
             _connection = new SQLiteAsyncConnection(dbPath, false);
             _connection.ExecuteAsync("PRAGMA foreignkeys = ON").Wait();
+
             return Task.FromResult(true);
         }
         catch (Exception)
@@ -60,6 +62,6 @@ public static partial class SqLite
 
 
     private static void Execute(string cmd) => _connection!.ExecuteAsync(cmd).Wait();
-    // private static SQLiteDataReader ExecuteReader(string cmd) => new SQLiteCommand(cmd, _connection).ExecuteReader();
+    //private static SQlite ExecuteReader(string cmd) => new SQLiteCommand(cmd, _connection).ExecuteReader();
 
 }

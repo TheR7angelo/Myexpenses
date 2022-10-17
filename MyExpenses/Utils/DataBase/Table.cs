@@ -1,4 +1,6 @@
-﻿namespace MyExpenses.Utils.Database;
+﻿using SQLite;
+
+namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
@@ -73,7 +75,9 @@ public static partial class SqLite
         nom            text,
         type_compte_fk integer
             constraint t_compte_t_type_compte_id_fk
-                references t_type_compte (id)
+                references t_type_compte (id),
+        color          text,
+        image          text
     );
     ";
     
@@ -125,6 +129,20 @@ public static partial class SqLite
         credit_fk        integer
             constraint t_historique_t_credit_id_fk
                 references t_credit (id)
-    );
-    ";
+    );";
+    
+    
+    public class TCompteClass
+    {
+        [Column("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Nom { get; set; }
+        [Column("type_compte_fk")]
+        public int TypeCompteFk { get; set; }
+        [Column("color")]
+        public string Color { get; set; }
+        [Column("image")]
+        public string Image { get; set; }
+    }
 }

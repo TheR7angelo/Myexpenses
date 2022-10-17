@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyExpenses.Views.ActiveAccount">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="PORTEFEUILLE" FontAttributes="Bold" HorizontalOptions="Start"/>
+                <Label Grid.Column="2" x:Name="LabelNumberWallet" Text="0" HorizontalOptions="End"/>
+            </Grid>
+            <FlexLayout x:Name="FlexLayout" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
