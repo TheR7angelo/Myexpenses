@@ -12,7 +12,7 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class SelectedAccount
 {
-    private static readonly string Db = Home._db;
+    private static readonly string Db = Home.Db;
     public SelectedAccount()
     {
         InitializeComponent();

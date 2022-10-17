@@ -10,13 +10,13 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
-    private static readonly string _db = Home._db;
+    private static readonly string Db = Home.Db;
 
     private static SQLiteAsyncConnection? _connection;
 
     public static Task<bool> Initialized(string name, string password)
     {
-        var dbPath = Path.Combine(_db, $"{name}.sqlite");
+        var dbPath = Path.Combine(Db, $"{name}.sqlite");
 
         try
         {

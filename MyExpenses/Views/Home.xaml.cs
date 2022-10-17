@@ -8,12 +8,13 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class Home
 {
-    public static string _root;
-    public static string _db;
+    public static string Root;
+    public static string Db;
     public Home()
     {
-        _root = DependencyService.Get<IInterface>().GetPlatformRoot();
-        _db = Path.Combine(_root, "dbFiles");
+        Root = DependencyService.Get<IInterface>().GetPlatformRoot();
+        Db = Path.Combine(Root, "dbFiles");
+
         InitializeComponent();
     }
 
