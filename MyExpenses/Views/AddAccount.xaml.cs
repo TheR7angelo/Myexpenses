@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using MyExpenses.Utils.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
