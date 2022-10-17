@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 using Xamarin.Forms;
@@ -10,12 +11,14 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class SelectedAccount
 {
+    private static readonly string _db = Home._db;
     public SelectedAccount()
     {
         InitializeComponent();
-        const int size = 75;
         
-        var listeDb = new List<string> { "yolo", "salut", "test", "123", "456", "789" };
+        var listeDb = Directory.GetFiles(_db, "*.sqlite").Select(Path.GetFileNameWithoutExtension).ToList();
+
+        const int size = 75;
         foreach (var btn in listeDb.Select(db => new Button{ Text = db, ClassId = db, }))
         {
             btn.HeightRequest = size;

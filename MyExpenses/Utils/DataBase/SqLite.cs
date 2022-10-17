@@ -3,17 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using MyExpenses.Views;
 using SQLite;
 
 namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
+    private static readonly string _db = Home._db;
+
     private static SQLiteAsyncConnection? _connection;
-    
+
     public static Task<bool> Initialized(string name, string password)
     {
-        var dbPath = Path.Combine(Root, "dbFiles", $"{name}.sqlite");
+        var dbPath = Path.Combine(_db, $"{name}.sqlite");
 
         try
         {
@@ -25,8 +28,7 @@ public static partial class SqLite
             
                 #region Tables
 
-                foreach (var cmd in new List<string>
-                             { TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
+                foreach (var cmd in new List<string> { TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
                 {
                     Execute(cmd);
                 }
