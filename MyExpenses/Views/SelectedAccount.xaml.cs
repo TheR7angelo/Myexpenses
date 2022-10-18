@@ -17,27 +17,6 @@ public partial class SelectedAccount
     {
         InitializeComponent();
 
-        
-        
-        // todo a finir
-        var entrie = new[]
-        {
-            new ChartEntry(212)
-            {
-                Label = "test",
-                ValueLabel = "212",
-                Color = SKColors.SkyBlue
-            },
-            new ChartEntry(213)
-            {
-                Label = "test2",
-                ValueLabel = "213",
-                Color = SKColors.Bisque
-            },
-        };
-        
-        ChartView.Chart = new PieChart{Entries = entrie ,LabelTextSize = 30};
-
         CreateButton();
     }
 
@@ -53,7 +32,6 @@ public partial class SelectedAccount
             btn.Margin = new Thickness(10);
             btn.Clicked += Btn_OnClicked;
             FlexLayout.Children.Add(btn);
-            
         }
     }
 

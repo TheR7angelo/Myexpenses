@@ -146,7 +146,7 @@ public static partial class SqLite
         [Column("id")]
         public int Id { get; set; }
         [Column("nom")]
-        public string Nom { get; set; }
+        public string Name { get; set; }
         [Column("type_compte_fk")]
         public int TypeCompteFk { get; set; }
         [Column("color")]
