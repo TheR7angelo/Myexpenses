@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Microcharts;
 using MyExpenses.Utils.Database;
@@ -41,11 +41,17 @@ public partial class ActiveAccount
         foreach (var account in lstAccount)
         {
             // Fonctionne mais faut atttribuée la couleur du compte au schema
-            var value = lstVTotalByAccountClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
+            var value = new SqLite.VTotalByAccountClass();
+            if (!lstVTotalByAccountClass.Count.Equals(0))
+            {
+                value = lstVTotalByAccountClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
+            }
+
             entries.Add(new ChartEntry(value.Remaining)
             {
-                // Label = account.Name,
-                Color = SKColors.Chocolate
+                ValueLabel = value.Remaining.ToString(CultureInfo.InvariantCulture),
+                ValueLabelColor = SKColor.Parse(account.Color),
+                Color = SKColor.Parse(account.Color)
             });
             
             ListViewAccount.Children.Add(LegendLabel(account));
@@ -63,8 +69,7 @@ public partial class ActiveAccount
                 BorderColor = Color.Black,
                 BorderWidth = 2,
                 CornerRadius = 10,
-                // BackgroundColor = account.Color is not null ? Color.FromHex(account.Color) : Color.Bisque
-                BackgroundColor = Color.Chocolate
+                BackgroundColor = Color.FromHex(account.Color)
             };
             FlexLayout.Children.Add(btn);
         }
@@ -82,7 +87,7 @@ public partial class ActiveAccount
             VerticalOptions = LayoutOptions.Start,
             Children =
             {
-                new Rectangle{WidthRequest = 17, HeightRequest = 17, Background = new SolidColorBrush(Color.Chocolate)},
+                new Rectangle{WidthRequest = 17, HeightRequest = 17, Background = new SolidColorBrush(Color.FromHex(account.Color))},
                 new Label{Text = account.Name, TextColor = Color.Black}
             }
         };

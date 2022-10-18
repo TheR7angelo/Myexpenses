@@ -150,7 +150,7 @@ public static partial class SqLite
         [Column("type_compte_fk")]
         public int TypeCompteFk { get; set; }
         [Column("color")]
-        public int Color { get; set; }
+        public string Color { get; set; }
         [Column("image")]
         public int Image { get; set; }
     }

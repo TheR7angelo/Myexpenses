@@ -50,7 +50,7 @@ public static partial class SqLite
                 // todo à tester
                 FillColors();
             
-                return Task.FromResult(true);
+                return Task.FromResult(false);
             }
             _connection = new SQLiteAsyncConnection(dbPath, false);
             _connection.ExecuteAsync("PRAGMA foreignkeys = ON").Wait();
