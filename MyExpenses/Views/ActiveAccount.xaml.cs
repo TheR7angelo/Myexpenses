@@ -36,7 +36,8 @@ public partial class ActiveAccount
                 ClassId = account.Nom,
                 Style = FindByName("WalletButton") as Style,
                 Margin = new Thickness(7),
-                BackgroundColor = account.Color is not null ? Color.FromHex(account.Color) : Color.Bisque
+                // BackgroundColor = account.Color is not null ? Color.FromHex(account.Color) : Color.Bisque
+                BackgroundColor = Color.Chocolate
             };
 
             FlexLayout.Children.Add(btn);
