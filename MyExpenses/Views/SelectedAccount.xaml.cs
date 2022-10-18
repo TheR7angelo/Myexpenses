@@ -1,9 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Microcharts;
 using MyExpenses.Utils.Database;
-using SkiaSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

@@ -26,7 +26,7 @@
         <Setter Property="WidthRequest" Value="125"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="BorderColor" Value="Black"/>
-        <Setter Property="BorderWidth" Value="1"/>
+        <Setter Property="BorderWidth" Value="5"/>
         <Setter Property="CornerRadius" Value="3"/>
     </Style>
     

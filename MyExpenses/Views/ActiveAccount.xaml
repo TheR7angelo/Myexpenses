@@ -7,16 +7,38 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Column="0" Text="PORTEFEUILLE" FontAttributes="Bold" HorizontalOptions="Start"/>
-                <Label Grid.Column="2" x:Name="LabelNumberWallet" Text="0" HorizontalOptions="End"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                
+                <Grid Grid.Row="0" BackgroundColor="Aqua">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="PORTEFEUILLE" FontAttributes="Bold" HorizontalOptions="Start"/>
+                    <Label Grid.Column="2" x:Name="LabelNumberWallet" Text="0" HorizontalOptions="End"/>
+                </Grid>
+                
+                <!-- <Line Grid.Row="1" BackgroundColor="Gray"/> -->
+                
+                <FlexLayout Grid.Row="2" BackgroundColor="Aqua" x:Name="FlexLayout" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+                
+                <Grid Grid.Row="4" BackgroundColor="Aqua">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <microcharts:ChartView Grid.Column="0" x:Name="ChartView" HeightRequest="10"/>
+                    <StackLayout x:Name="ListViewAccount" Grid.Column="1" Orientation="Vertical"/>
+                </Grid>
             </Grid>
-            <FlexLayout x:Name="FlexLayout" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
-            <microcharts:ChartView x:Name="ChartView" HeightRequest="300"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
