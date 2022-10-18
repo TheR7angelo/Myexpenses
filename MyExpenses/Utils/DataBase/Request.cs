@@ -4,9 +4,9 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
-    public static List<TCompteClass> GetAllAccount()
-    {
-        const string cmd = "SELECT * FROM t_compte";
-        return _connection!.QueryAsync<TCompteClass>(cmd).Result;
-    }
+    public static List<TAccountClass> GetAllAccount() => _connection!.QueryAsync<TAccountClass>("SELECT * FROM t_compte").Result;
+
+    public static List<VTotalByAccountClass> GetVTotalByAccountClass() => _connection!
+        .QueryAsync<VTotalByAccountClass>(
+            "SELECT h.compte, round(sum(h.montant), 2) as restant  FROM v_historique h GROUP BY h.compte;").Result;
 }

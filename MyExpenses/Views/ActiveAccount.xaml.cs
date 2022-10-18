@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microcharts;
 using MyExpenses.Utils.Database;
 using SkiaSharp;
@@ -30,16 +31,18 @@ public partial class ActiveAccount
 
     public void DisplayWallet()
     {
-        var entries = new List<ChartEntry>();
-        var rand = new Random();
-        
-        
         FlexLayout.Children.Clear();
-        var lst = SqLite.GetAllAccount();
-        foreach (var account in lst)
+        
+        var entries = new List<ChartEntry>();
+        
+        var lstAccount = SqLite.GetAllAccount();
+        var lstVTotalByAccountClass = SqLite.GetVTotalByAccountClass();
+        
+        foreach (var account in lstAccount)
         {
             // Fonctionne mais faut atttribuée la couleur du compte au schema
-            entries.Add(new ChartEntry(rand.Next(10, 255))
+            var value = lstVTotalByAccountClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
+            entries.Add(new ChartEntry(value.Remaining)
             {
                 // Label = account.Name,
                 Color = SKColors.Chocolate
@@ -66,11 +69,11 @@ public partial class ActiveAccount
             FlexLayout.Children.Add(btn);
         }
 
-        LabelNumberWallet.Text = lst.Count.ToString();
+        LabelNumberWallet.Text = lstAccount.Count.ToString();
         ChartView.Chart = new PieChart{Entries = entries ,LabelTextSize = 30};
     }
     
-    private static StackLayout LegendLabel(SqLite.TCompteClass account)
+    private static StackLayout LegendLabel(SqLite.TAccountClass account)
     {
         return new StackLayout
         {

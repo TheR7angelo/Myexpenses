@@ -44,10 +44,12 @@ public partial class AddAccount
         }
 
         var create = await SqLite.Initialized(EditorNameAccount.Text, password);
-        var msg = create ? "Compte ajouté" : "une erreur est surevenue";
+        var msg = create ? "une erreur est surevenue" : "Compte ajouté";
 
         await DisplayAlert("Alert", msg, "OK");
-        await Navigation.PushAsync(new ActiveAccount(EditorNameAccount.Text));
+        
+        if (!create)
+            await Navigation.PushAsync(new ActiveAccount(EditorNameAccount.Text));
     }
 
     private void CheckBoxPassword_OnCheckedChanged(object sender, CheckedChangedEventArgs e) => StackLayoutPassword.IsVisible = ((CheckBox)sender).IsChecked;

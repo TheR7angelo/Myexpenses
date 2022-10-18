@@ -12,10 +12,23 @@ public static partial class SqLite
         foreach (var propInfo  in propInfos)
         {
             var color = Color.FromName(propInfo.Name);
-            var hex = $"#{color.A:X}{color.R:X}{color.G:X}{color.B:X}".ToUpper();
+            var a = color.A.ParseToHex();
+            var r = color.R.ParseToHex();
+            var g = color.G.ParseToHex();
+            var b = color.B.ParseToHex();
+            
+            var hex = $"#{a}{r}{g}{b}".ToUpper();
 
-            var insert = new TColorsClass() { Nom = propInfo.Name, Value = hex };
-            _connection!.InsertAsync(insert);
+            var insert = new TColorsClass { Nom = propInfo.Name, Value = hex };
+            _connection!.InsertAsync(insert).Wait();
         }
     }
+
+    private static string ParseToHex(this byte value)
+    {
+        var hex = value.ToString("X");
+        if (hex.Length.Equals(1)) hex = $"0{hex}";
+
+        return hex;
+    } 
 }

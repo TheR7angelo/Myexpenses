@@ -55,11 +55,12 @@ public static partial class SqLite
             _connection = new SQLiteAsyncConnection(dbPath, false);
             _connection.ExecuteAsync("PRAGMA foreignkeys = ON").Wait();
 
-            return Task.FromResult(true);
-        }
-        catch (Exception)
-        {
             return Task.FromResult(false);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return Task.FromResult(true);
         }
     }
 

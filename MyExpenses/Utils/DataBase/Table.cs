@@ -140,8 +140,8 @@ public static partial class SqLite
                 references t_credit (id)
     );";
     
-    
-    public class TCompteClass
+    [Table("t_compte")]
+    public class TAccountClass
     {
         [Column("id")]
         public int Id { get; set; }
@@ -155,13 +155,23 @@ public static partial class SqLite
         public int Image { get; set; }
     }
 
+    [Table("t_colors")]
     public class TColorsClass
     {
-        [AutoIncrement ,Column("id")]
+        [PrimaryKey, AutoIncrement ,Column("id")]
         public int Id { get; set; }
         [Column("nom")]
         public string Nom { get; set; }
         [Column("value")]
         public string Value { get; set; }
+    }
+
+    [Table("v_total_by_categorie")]
+    public class VTotalByAccountClass
+    {
+        [Column("compte")]
+        public string Name { get; set; }
+        [Column("restant")]
+        public float Remaining { get; set; }
     }
 }
