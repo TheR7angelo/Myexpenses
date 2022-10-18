@@ -46,8 +46,7 @@ public static partial class SqLite
                 }
 
                 #endregion
-
-                // todo à tester
+                
                 FillColors();
             
                 return Task.FromResult(false);
