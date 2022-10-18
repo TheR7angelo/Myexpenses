@@ -6,6 +6,15 @@ public static partial class SqLite
 {
     #region TableBase
 
+    private const string TColors = @"
+    create table t_colors
+    (
+        id         INTEGER NOT NULL
+            PRIMARY KEY AUTOINCREMENT,
+        nom        TEXT,
+        value      TEXT
+    );";
+    
     private const string TLieu = @"
     create table t_lieu
     (
@@ -144,5 +153,15 @@ public static partial class SqLite
         public int Color { get; set; }
         [Column("image")]
         public int Image { get; set; }
+    }
+
+    public class TColorsClass
+    {
+        [AutoIncrement ,Column("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Nom { get; set; }
+        [Column("value")]
+        public string Value { get; set; }
     }
 }

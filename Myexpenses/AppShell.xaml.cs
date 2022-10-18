@@ -1,4 +1,5 @@
-﻿using MyExpenses.Views;
+﻿using MyExpenses.test;
+using MyExpenses.Views;
 using Xamarin.Forms;
 
 namespace MyExpenses

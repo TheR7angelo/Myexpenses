@@ -80,3 +80,4 @@ C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\M
 C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\obj\Debug\netstandard2.1\MyExpenses.pdb
 C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\obj\Debug\netstandard2.1\ref\MyExpenses.dll
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\ActiveAccount.xaml.g.cs
+C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\obj\Debug\netstandard2.1\Views\ActiveAccount.xaml.g.cs
