@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="test" uuid="d0960a46-c7fd-416a-97a7-6ee1da8c01d0">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>b88fce1d-d7ae-4048-9e62-b00780e6ede7</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\test\test.sqlite</jdbc-url>
@@ -10,6 +10,18 @@
       <libraries>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.38.0/sqlite-jdbc-3.38.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="test [2]" uuid="08934627-5326-4419-8598-d21c012f961d">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test.sqlite</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
         </library>
       </libraries>
     </data-source>
