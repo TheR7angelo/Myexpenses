@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Logiciels/Adobe/Creative Cloud Files/Programmation/C#/Personnel/MyExpenses/MyExpenses.Android/obj/Debug/120/lp/96/jl/res/layout/mtrl_alert_select_dialog_singlechoice.xml" value="0.18177083333333333" />
+      </map>
+    </option>
+  </component>
   <component name="com.jetbrains.rider.android.RiderAndroidMiscFileCreationComponent">
     <option name="ENSURE_MISC_FILE_EXISTS" value="true" />
   </component>

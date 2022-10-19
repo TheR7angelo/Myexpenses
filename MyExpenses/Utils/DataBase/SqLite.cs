@@ -19,7 +19,7 @@ public static partial class SqLite
         var dbPath = Path.Combine(Db, $"{name}.sqlite");
 
         _connection?.CloseAsync().Wait();
-
+        //todo add button create wallet and made the style of all button
         try
         {
             if (!File.Exists(dbPath))
