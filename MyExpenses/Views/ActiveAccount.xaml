@@ -6,7 +6,6 @@
              x:Class="MyExpenses.Views.ActiveAccount">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Button Style="{StaticResource WalletButton}"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
