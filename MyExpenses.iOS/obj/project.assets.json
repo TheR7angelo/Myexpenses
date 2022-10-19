@@ -36,14 +36,10 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "SkiaSharp/2.88.3": {
@@ -52,14 +48,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -98,14 +90,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -116,14 +104,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -132,14 +116,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -149,14 +129,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -166,14 +142,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -218,14 +190,10 @@
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -235,14 +203,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -257,14 +221,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -287,45 +247,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2196": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -436,6 +376,40 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.ComboBox/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.iOS.MaterialComponents": "92.0.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        }
+      },
+      "Xamarin.iOS.MaterialComponents/92.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        }
+      },
       "MyExpenses/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -446,6 +420,7 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -491,14 +466,10 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "SkiaSharp/2.88.3": {
@@ -507,14 +478,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -535,14 +502,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -553,14 +516,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -569,14 +528,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -586,14 +541,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -603,14 +554,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -655,14 +602,10 @@
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -672,14 +615,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -694,14 +633,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -724,45 +659,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2196": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -873,6 +788,40 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.ComboBox/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.iOS.MaterialComponents": "92.0.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        }
+      },
+      "Xamarin.iOS.MaterialComponents/92.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        }
+      },
       "MyExpenses/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -883,6 +832,7 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -928,14 +878,10 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "SkiaSharp/2.88.3": {
@@ -944,14 +890,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -972,14 +914,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -990,14 +928,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -1006,14 +940,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -1023,14 +953,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -1040,14 +966,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -1092,14 +1014,10 @@
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -1109,14 +1027,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -1131,14 +1045,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -1161,45 +1071,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2196": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -1310,6 +1200,40 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.ComboBox/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.iOS.MaterialComponents": "92.0.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        }
+      },
+      "Xamarin.iOS.MaterialComponents/92.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        }
+      },
       "MyExpenses/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -1320,6 +1244,7 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1365,14 +1290,10 @@
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "SkiaSharp/2.88.3": {
@@ -1381,14 +1302,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -1409,14 +1326,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -1427,14 +1340,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -1443,14 +1352,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -1460,14 +1365,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -1477,14 +1378,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -1529,14 +1426,10 @@
       "System.Buffers/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -1546,14 +1439,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "compile": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -1568,14 +1457,10 @@
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -1598,45 +1483,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2196": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -1747,6 +1612,40 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.ComboBox/1.0.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
+        }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.iOS.MaterialComponents": "92.0.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
+        }
+      },
+      "Xamarin.iOS.MaterialComponents/92.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS/MaterialComponents.dll": {}
+        }
+      },
       "MyExpenses/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -1757,6 +1656,7 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -2569,6 +2469,53 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "Xamarin.Forms.ComboBox/1.0.0.3": {
+      "sha512": "jMbUH1YSXK+0YpWWuwUnAncCTmCKPEFVJEdAxJ/DUzn8U09AKfYHUGdX+a7xB4BIuSweFa+mUDLVjNZ1gSmhUg==",
+      "type": "package",
+      "path": "xamarin.forms.combobox/1.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll",
+        "xamarin.forms.combobox.1.0.0.3.nupkg.sha512",
+        "xamarin.forms.combobox.nuspec"
+      ]
+    },
+    "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+      "sha512": "ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
+      "type": "package",
+      "path": "xamarin.forms.visual.material/5.0.0.2012",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "build/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
+        "buildTransitive/MonoAndroid10/Xamarin.Forms.Visual.Material.targets",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Material.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Material.pdb",
+        "lib/MonoAndroid10/_._",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Material.pdb",
+        "lib/netstandard1.0/_._",
+        "lib/tizen40/Xamarin.Forms.Material.dll",
+        "lib/tizen40/Xamarin.Forms.Material.pdb",
+        "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
+        "xamarin.forms.visual.material.nuspec"
+      ]
+    },
+    "Xamarin.iOS.MaterialComponents/92.0.0": {
+      "sha512": "I0mVxJBHsaR2NtFbZmafSLmIB4FUOSfSOf1SW3i2UA0TyoWr+F0AdrLtPRQtXq97LUg0fEnWhaq+4suVxbDbFw==",
+      "type": "package",
+      "path": "xamarin.ios.materialcomponents/92.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS/MaterialComponents.dll",
+        "xamarin.ios.materialcomponents.92.0.0.nupkg.sha512",
+        "xamarin.ios.materialcomponents.nuspec"
+      ]
+    },
     "MyExpenses/1.0.0": {
       "type": "project",
       "path": "../MyExpenses/MyExpenses.csproj",
@@ -2581,28 +2528,29 @@
       "MyExpenses >= 1.0.0",
       "SkiaSharp.Views.Forms >= 2.88.3",
       "Xamarin.Essentials >= 1.7.0",
-      "Xamarin.Forms >= 5.0.0.2196"
+      "Xamarin.Forms >= 5.0.0.2196",
+      "Xamarin.Forms.ComboBox >= 1.0.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ZP6177\\.nuget\\packages\\": {},
+    "C:\\Users\\Rapha\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "projectUniqueName": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
       "projectName": "MyExpenses.iOS",
-      "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
-      "packagesPath": "C:\\Users\\ZP6177\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\obj\\",
+      "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "packagesPath": "C:\\Users\\Rapha\\.nuget\\packages\\",
+      "outputPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ZP6177\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2611,14 +2559,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "\\\\bordeaux04\\NuGet\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj": {
-              "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj"
+            "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj": {
+              "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj"
             }
           }
         }
@@ -2642,6 +2589,10 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[5.0.0.2196, )"
+          },
+          "Xamarin.Forms.ComboBox": {
+            "target": "Package",
+            "version": "[1.0.0.3, )"
           }
         }
       }

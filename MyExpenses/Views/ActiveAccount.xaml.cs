@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using System.Linq;
 using Microcharts;
 using MyExpenses.Utils.Database;
 using SkiaSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Rectangle = Xamarin.Forms.Shapes.Rectangle;
 
 namespace MyExpenses.Views;
 
@@ -22,8 +20,8 @@ public partial class ActiveAccount
         
         //todo à refaire car pas beau
         _styleWallet.Setters.Add(new Setter{Property = View.MarginProperty, Value = 7});
-        _styleWallet.Setters.Add(new Setter{Property = HeightRequestProperty, Value = 75});
-        _styleWallet.Setters.Add(new Setter{Property = WidthRequestProperty, Value = 150});
+        _styleWallet.Setters.Add(new Setter{Property = HeightRequestProperty, Value = 50});
+        _styleWallet.Setters.Add(new Setter{Property = WidthRequestProperty, Value = 100});
         _styleWallet.Setters.Add(new Setter{Property = View.HorizontalOptionsProperty, Value = LayoutOptions.Center});
         _styleWallet.Setters.Add(new Setter{Property = View.VerticalOptionsProperty, Value = LayoutOptions.Start});
         _styleWallet.Setters.Add(new Setter{Property = Button.BorderColorProperty, Value = Color.Black});
@@ -53,13 +51,16 @@ public partial class ActiveAccount
         var btn = new Button
         {
             Text = "+",
-            FontSize = 40,
+            FontSize = 25,
             FontAttributes = FontAttributes.Bold,
             ClassId = "+",
             Style = _styleWallet,
         };
+        btn.Clicked += BtnOnClicked;
         FlexLayout.Children.Add(btn);
     }
+
+    private void BtnOnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddWallet());
 
     private void MakeWallets()
     {
@@ -83,22 +84,12 @@ public partial class ActiveAccount
                 Color = SKColor.Parse(account.Color)
             });
 
-            ListViewAccount.Children.Add(LegendLabel(account));
-
             var btn = new Button
             {
                 Text = account.Name,
                 ClassId = account.Name,
-                // Style = FindByName("WalletButton") as Style,
+                FontSize = 10,
                 Style = _styleWallet,
-                // Margin = new Thickness(7),
-                // HeightRequest = 75,
-                // WidthRequest = 150,
-                // HorizontalOptions = LayoutOptions.Center,
-                // VerticalOptions = LayoutOptions.Start,
-                // BorderColor = Color.Black,
-                // BorderWidth = 2,
-                // CornerRadius = 10,
                 BackgroundColor = Color.FromHex(account.Color)
             };
             FlexLayout.Children.Add(btn);
@@ -106,20 +97,5 @@ public partial class ActiveAccount
 
         LabelNumberWallet.Text = lstAccount.Count.ToString();
         ChartView.Chart = new PieChart { Entries = entries, LabelTextSize = 30 };
-    }
-
-    private static StackLayout LegendLabel(SqLite.TAccountClass account)
-    {
-        return new StackLayout
-        {
-            Orientation = StackOrientation.Horizontal,
-            HorizontalOptions = LayoutOptions.Start,
-            VerticalOptions = LayoutOptions.Start,
-            Children =
-            {
-                new Rectangle{WidthRequest = 17, HeightRequest = 17, Background = new SolidColorBrush(Color.FromHex(account.Color))},
-                new Label{Text = account.Name, TextColor = Color.Black}
-            }
-        };
     }
 }

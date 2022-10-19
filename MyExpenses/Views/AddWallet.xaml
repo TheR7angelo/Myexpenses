@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:comboBox="clr-namespace:Xamarin.Forms.ComboBox;assembly=Xamarin.Forms.ComboBox"
+             Title="AddWallet"
+             x:Class="MyExpenses.Views.AddWallet">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="1" Margin="10, 0, 10, 0" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Start">
+                <Label Text="Nom" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Editor x:Name="EditorName" Placeholder="Nom du portefeuille"/>
+                <Label Text="Type" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+                <comboBox:ComboBox x:Name="ComboBoxType" Placeholder="Type de portefeuille"/>
+                <Label Text="Solde de départ" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Entry x:Name="EntryStartSolde" Placeholder="Nom du portefeuille" Keyboard="Numeric"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Couleur" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Icône" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <comboBox:ComboBox  Grid.Row="1" Grid.Column="0" x:Name="ComboBoxColor"/>
+                </Grid>
+            </StackLayout>
+            <Button Grid.Row="3" Text="Valider" HorizontalOptions="Center" VerticalOptions="Start" Clicked="Button_OnClicked"/>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

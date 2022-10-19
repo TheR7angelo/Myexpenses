@@ -15,6 +15,7 @@
           "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "sqlite-net-pcl": "1.8.116"
         },
         "runtime": {
@@ -635,6 +636,23 @@
             "fileVersion": "5.0.0.786"
           }
         }
+      },
+      "Xamarin.Forms.ComboBox/1.0.0.3": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {
+            "assemblyVersion": "1.0.0.3",
+            "fileVersion": "1.0.0.3"
+          }
+        }
+      },
+      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2196"
+        }
       }
     }
   },
@@ -1028,6 +1046,20 @@
       "sha512": "sha512-zSXDiZukojtEBmZKUUG1yYBwlB9tI8JLPkc6n+Sm1PAX01QyzErWE9AaFJgP7usyoGHn92l4HnQF7A+/MPI6VA==",
       "path": "xamarin.forms/5.0.0.2196",
       "hashPath": "xamarin.forms.5.0.0.2196.nupkg.sha512"
+    },
+    "Xamarin.Forms.ComboBox/1.0.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jMbUH1YSXK+0YpWWuwUnAncCTmCKPEFVJEdAxJ/DUzn8U09AKfYHUGdX+a7xB4BIuSweFa+mUDLVjNZ1gSmhUg==",
+      "path": "xamarin.forms.combobox/1.0.0.3",
+      "hashPath": "xamarin.forms.combobox.1.0.0.3.nupkg.sha512"
+    },
+    "Xamarin.Forms.Visual.Material/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
+      "path": "xamarin.forms.visual.material/5.0.0.2012",
+      "hashPath": "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
     }
   }
 }

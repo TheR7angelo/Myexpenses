@@ -29,14 +29,7 @@
                 
                 <FlexLayout Grid.Row="2" BackgroundColor="Aqua" x:Name="FlexLayout" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
                 
-                <Grid Grid.Row="4" BackgroundColor="Aqua">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <microcharts:ChartView Grid.Column="0" x:Name="ChartView" HeightRequest="10"/>
-                    <StackLayout x:Name="ListViewAccount" Grid.Column="1" Orientation="Vertical"/>
-                </Grid>
+                <microcharts:ChartView Grid.Row="4" x:Name="ChartView" HeightRequest="25"/>
             </Grid>
 
         </StackLayout>

@@ -19,7 +19,6 @@ public static partial class SqLite
         var dbPath = Path.Combine(Db, $"{name}.sqlite");
 
         _connection?.CloseAsync().Wait();
-        //todo add button create wallet and made the style of all button
         try
         {
             if (!File.Exists(dbPath))
@@ -65,6 +64,5 @@ public static partial class SqLite
 
 
     private static void Execute(string cmd) => _connection!.ExecuteAsync(cmd).Wait();
-    //private static SQlite ExecuteReader(string cmd) => new SQLiteCommand(cmd, _connection).ExecuteReader();
 
 }
