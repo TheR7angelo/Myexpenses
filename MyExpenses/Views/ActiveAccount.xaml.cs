@@ -20,27 +20,48 @@ public partial class ActiveAccount
 
         DisplayWallet();
         
-
-        // foreach (var te in new List<string>{"hey", "hey","hey","hey","hey","hey","hey","hey","hey","hey","hey","hey","hey"})
-        // {
-        //     var btn = new Button() { Text = te, HeightRequest = 75, WidthRequest = 75, Margin = new Thickness(10) };
-        //     FlexLayout.Children.Add(btn);
-        // }
         FlexLayout.ForceLayout();
     }
 
-    public void DisplayWallet()
+    private void DisplayWallet()
     {
         FlexLayout.Children.Clear();
-        
+
+        MakeWallets();
+        AddNewWallet();
+    }
+
+    private void AddNewWallet()
+    {
+        var btn = new Button
+        {
+            Text = "+",
+            FontSize = 40,
+            FontAttributes = FontAttributes.Bold,
+            ClassId = "+",
+            // Style = FindByName("WalletButton") as Style,
+            Margin = new Thickness(7),
+            HeightRequest = 75,
+            WidthRequest = 150,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Start,
+            BorderColor = Color.Black,
+            BorderWidth = 2,
+            CornerRadius = 10,
+            BackgroundColor = Color.LightGray
+        };
+        FlexLayout.Children.Add(btn);
+    }
+
+    private void MakeWallets()
+    {
         var entries = new List<ChartEntry>();
-        
+
         var lstAccount = SqLite.GetAllAccount();
         var lstVTotalByAccountClass = SqLite.GetVTotalByAccountClass();
-        
+
         foreach (var account in lstAccount)
         {
-            // Fonctionne mais faut atttribuée la couleur du compte au schema
             var value = new SqLite.VTotalByAccountClass();
             if (!lstVTotalByAccountClass.Count.Equals(0))
             {
@@ -53,9 +74,9 @@ public partial class ActiveAccount
                 ValueLabelColor = SKColor.Parse(account.Color),
                 Color = SKColor.Parse(account.Color)
             });
-            
+
             ListViewAccount.Children.Add(LegendLabel(account));
-            
+
             var btn = new Button
             {
                 Text = account.Name,
@@ -75,9 +96,9 @@ public partial class ActiveAccount
         }
 
         LabelNumberWallet.Text = lstAccount.Count.ToString();
-        ChartView.Chart = new PieChart{Entries = entries ,LabelTextSize = 30};
+        ChartView.Chart = new PieChart { Entries = entries, LabelTextSize = 30 };
     }
-    
+
     private static StackLayout LegendLabel(SqLite.TAccountClass account)
     {
         return new StackLayout
