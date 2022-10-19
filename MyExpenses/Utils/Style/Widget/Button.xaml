@@ -22,12 +22,15 @@
     </Style>
     
     <Style TargetType="{x:Type Button}" x:Key="WalletButton">
+        <Setter Property="Margin" Value="7"/>
         <Setter Property="HeightRequest" Value="75"/>
-        <Setter Property="WidthRequest" Value="125"/>
-        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Start"/>
         <Setter Property="BorderColor" Value="Black"/>
-        <Setter Property="BorderWidth" Value="5"/>
-        <Setter Property="CornerRadius" Value="3"/>
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="BackgroundColor" Value="LightGray"/>
     </Style>
     
     <!-- Initial -->

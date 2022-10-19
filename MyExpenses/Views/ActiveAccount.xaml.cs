@@ -27,6 +27,9 @@ public partial class ActiveAccount
     {
         FlexLayout.Children.Clear();
 
+        // todo find style WalletButton
+        var style = Application.Current.Resources.Values;
+        
         MakeWallets();
         AddNewWallet();
     }
@@ -39,16 +42,16 @@ public partial class ActiveAccount
             FontSize = 40,
             FontAttributes = FontAttributes.Bold,
             ClassId = "+",
-            // Style = FindByName("WalletButton") as Style,
-            Margin = new Thickness(7),
-            HeightRequest = 75,
-            WidthRequest = 150,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Start,
-            BorderColor = Color.Black,
-            BorderWidth = 2,
-            CornerRadius = 10,
-            BackgroundColor = Color.LightGray
+            //Style = style,
+            // Margin = new Thickness(7),
+            // HeightRequest = 75,
+            // WidthRequest = 150,
+            // HorizontalOptions = LayoutOptions.Center,
+            // VerticalOptions = LayoutOptions.Start,
+            // BorderColor = Color.Black,
+            // BorderWidth = 2,
+            // CornerRadius = 10,
+            // BackgroundColor = Color.LightGray
         };
         FlexLayout.Children.Add(btn);
     }
