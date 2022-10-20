@@ -165,7 +165,7 @@ public static partial class SqLite
         public int Image { get; set; }
     }
     
-    public class VAccountClass
+    public class VWalletClass
     {
         [Column("id")]
         public int Id { get; set; }
@@ -191,7 +191,7 @@ public static partial class SqLite
     }
 
     [Table("v_total_by_categorie")]
-    public class VTotalByAccountClass
+    public class VTotalByWaletClass
     {
         [Column("compte")]
         public string Name { get; set; }
