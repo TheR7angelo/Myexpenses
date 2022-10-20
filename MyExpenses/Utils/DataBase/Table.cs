@@ -74,6 +74,7 @@ public static partial class SqLite
         nom TEXT
     );
     ";
+    
 
     #endregion
 
