@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using MyExpenses.Utils.Database;
 using Xamarin.Forms;
@@ -9,10 +11,13 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddWallet
 {
+    private readonly ObservableCollection<string> _data = new ();
+    private List<SqLite.TWalletType> _walletTypes = new();
+
     public AddWallet()
     {
         InitializeComponent();
-
+        FillWalletType(); 
         FillComboColor();
         //todo finir les inputs et récupérer les données
     }
@@ -20,21 +25,68 @@ public partial class AddWallet
     private void FillComboColor()
     {
         var colors = SqLite.GetAllColor();
-        ComboBoxColor.ItemsSource = colors.OrderBy(s => s.Nom).Select(color => color.Nom).ToList();
-        
-        // todo à finir marche po cette merde
+        PickerColor.ItemsSource = colors.OrderBy(s => s.Nom).Select(color => color.Nom).ToList();
     }
+
+    private async void FillWalletType() //List of Countries  
+    {  
+        try
+        {
+            _walletTypes = SqLite.GetAllWalletType();
+            foreach (var typeWallets in _walletTypes)
+            {
+                _data.Add(typeWallets.Nom);
+            }
+        }  
+        catch (Exception ex)  
+        {  
+            await DisplayAlert("", ""+ex, "Ok");  
+        }  
+    }
+    
+    private void SearchBar_OnTextChanged(object sender, TextChangedEventArgs e)  
+    {  
+        CountryListView.IsVisible = true;  
+        CountryListView.BeginRefresh();  
+  
+        try  
+        {  
+            var dataEmpty = _data.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));  
+  
+            if (string.IsNullOrWhiteSpace(e.NewTextValue))  
+                CountryListView.IsVisible = false;  
+            else if (dataEmpty.Max().Length == 0)  
+                CountryListView.IsVisible = false;  
+            else  
+                CountryListView.ItemsSource = _data.Where(i => i.ToLower().Contains(e.NewTextValue.ToLower()));  
+        }  
+        catch (Exception)  
+        {  
+            CountryListView.IsVisible = false;  
+  
+        }  
+        CountryListView.EndRefresh();  
+  
+    } 
+    
+    private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)  
+    {
+        searchBar.Text =  e.Item as string; ;  
+        CountryListView.IsVisible = false;  
+  
+        ((ListView)sender).SelectedItem = null;  
+    } 
     
     private void ButtonValid_OnClicked(object sender, EventArgs e)
     {
         var walletName = EditorName.Text;
-        var walletType = ComboBoxType.Text;
-        var walletStart = float.Parse(EntryStartSolde.Text.Replace(',', '.'));
-        var color = ComboBoxColor.SelectedItem.ToString();
+        // var walletType = ComboBoxType.Text;
+        var walletStartStr = EntryStartSolde.Text;
+        var color = PickerColor.SelectedItem.ToString();
         Console.WriteLine("hr");
     }
 
-    private void ComboBoxColor_OnSelectedItemChanged(object sender, EventArgs eventArgs)
+    private void PickerColor_OnSelectedItemChanged(object sender, EventArgs eventArgs)
     {
         var combo = sender as Picker;
         var colorName = combo!.SelectedItem as string;

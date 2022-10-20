@@ -2,7 +2,6 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:comboBox="clr-namespace:Xamarin.Forms.ComboBox;assembly=Xamarin.Forms.ComboBox"
              Title="AddWallet"
              x:Class="MyExpenses.Views.AddWallet">
     <ContentPage.Content>
@@ -15,11 +14,32 @@
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="1" Margin="10, 0, 10, 0" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Start">
                 <Label Text="Nom" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                <Editor x:Name="EditorName" Placeholder="Nom du portefeuille"/>
+                <Editor x:Name="EditorName" Placeholder="Nom du portefeuille" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
                 <Label Text="Type" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                <comboBox:ComboBox x:Name="ComboBoxType" Placeholder="Type de portefeuille"/>
+                <!-- <comboBox:ComboBox x:Name="ComboBoxType" Placeholder="Type de portefeuille"/> -->
+                <!-- <Entry x:Name="ComboBoxType" Placeholder="Search Customer"/> -->
+                
+                
+                <StackLayout>  
+                    <Entry TextChanged="SearchBar_OnTextChanged" BackgroundColor="#f9f9f9" TextColor="#FF464859" FontSize="16" PlaceholderColor="#646b7a" x:Name="searchBar" Placeholder="Type de portefeuille"/> 
+                    <ListView x:Name="CountryListView" IsVisible="False"  CachingStrategy="RecycleElement" BackgroundColor="White" ItemTapped="ListView_OnItemTapped">
+                        <ListView.ItemTemplate>  
+                            <DataTemplate>  
+                                <ViewCell>  
+                                    <Frame>  
+                                        <StackLayout BackgroundColor="White">  
+                                            <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859"/>  
+                                        </StackLayout>  
+                                    </Frame>  
+                                </ViewCell>  
+                            </DataTemplate>  
+                        </ListView.ItemTemplate>  
+                    </ListView>  
+                </StackLayout>
+                
+                
                 <Label Text="Solde de départ" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                <Entry x:Name="EntryStartSolde" Placeholder="0" Keyboard="Numeric"/>
+                <Entry x:Name="EntryStartSolde" Placeholder="0" Keyboard="Numeric" BackgroundColor="#FFf9f9f9" FontSize="16" PlaceholderColor="#FF646b7a"/>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -32,7 +52,7 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Couleur" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="Icône" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                    <Picker Grid.Row="1" Grid.Column="0" x:Name="ComboBoxColor" SelectedIndexChanged="ComboBoxColor_OnSelectedItemChanged"/>
+                    <Picker Grid.Row="1" Grid.Column="0" x:Name="PickerColor" BackgroundColor="#FFf9f9f9" FontSize="16" SelectedIndexChanged="PickerColor_OnSelectedItemChanged"/>
                     <Frame Grid.Row="2" Grid.Column="0" x:Name="FrameColor" HeightRequest="5" BorderColor="Black" />
                 </Grid>
             </StackLayout>
