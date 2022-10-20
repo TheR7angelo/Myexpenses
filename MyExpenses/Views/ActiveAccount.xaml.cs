@@ -98,8 +98,9 @@ public partial class ActiveAccount
 
     private void BtnOnClicked(object sender, EventArgs e)
     {
+        // todo à creuser
         var btn = (Button)sender;
-        var i = btn.BindingContext;
-        Console.WriteLine("hey");
+        var i = btn.BindingContext as SqLite.TAccountClass;
+        Console.WriteLine(i);
     }
 }
