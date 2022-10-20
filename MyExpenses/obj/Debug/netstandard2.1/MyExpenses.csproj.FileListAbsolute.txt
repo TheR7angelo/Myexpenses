@@ -82,3 +82,4 @@ C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\M
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\ActiveAccount.xaml.g.cs
 C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\obj\Debug\netstandard2.1\Views\ActiveAccount.xaml.g.cs
 E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\obj\Debug\netstandard2.1\Views\AddWallet.xaml.g.cs
+C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\obj\Debug\netstandard2.1\Views\AddWallet.xaml.g.cs

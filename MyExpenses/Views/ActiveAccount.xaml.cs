@@ -40,15 +40,13 @@ public partial class ActiveAccount
     {
         FlexLayout.Children.Clear();
 
-        // todo find style WalletButton
-
         MakeWallets();
         AddNewWallet();
     }
 
     private void AddNewWallet()
     {
-        var btn = new Button
+        var btnNewWallet = new Button
         {
             Text = "+",
             FontSize = 25,
@@ -56,11 +54,11 @@ public partial class ActiveAccount
             ClassId = "+",
             Style = _styleWallet,
         };
-        btn.Clicked += BtnOnClicked;
-        FlexLayout.Children.Add(btn);
+        btnNewWallet.Clicked += BtnNewWallet_OnClicked;
+        FlexLayout.Children.Add(btnNewWallet);
     }
 
-    private void BtnOnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddWallet());
+    private void BtnNewWallet_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddWallet());
 
     private void MakeWallets()
     {
@@ -72,10 +70,7 @@ public partial class ActiveAccount
         foreach (var account in lstAccount)
         {
             var value = new SqLite.VTotalByAccountClass();
-            if (!lstVTotalByAccountClass.Count.Equals(0))
-            {
-                value = lstVTotalByAccountClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
-            }
+            if (!lstVTotalByAccountClass.Count.Equals(0)) value = lstVTotalByAccountClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
 
             entries.Add(new ChartEntry(value.Remaining)
             {
@@ -90,12 +85,21 @@ public partial class ActiveAccount
                 ClassId = account.Name,
                 FontSize = 10,
                 Style = _styleWallet,
-                BackgroundColor = Color.FromHex(account.Color)
+                BackgroundColor = Color.FromHex(account.Color),
+                BindingContext = account
             };
+            btn.Clicked += BtnOnClicked;
             FlexLayout.Children.Add(btn);
         }
 
         LabelNumberWallet.Text = lstAccount.Count.ToString();
         ChartView.Chart = new PieChart { Entries = entries, LabelTextSize = 30 };
+    }
+
+    private void BtnOnClicked(object sender, EventArgs e)
+    {
+        var btn = (Button)sender;
+        var i = btn.BindingContext;
+        Console.WriteLine("hey");
     }
 }
