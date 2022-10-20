@@ -21,7 +21,7 @@
                 
                 
                 <StackLayout>  
-                    <Entry TextChanged="SearchBar_OnTextChanged" BackgroundColor="#f9f9f9" TextColor="#FF464859" FontSize="16" PlaceholderColor="#646b7a" x:Name="searchBar" Placeholder="Type de portefeuille"/> 
+                    <Entry TextChanged="SearchBar_OnTextChanged" BackgroundColor="#f9f9f9" TextColor="#FF464859" FontSize="16" PlaceholderColor="#646b7a" x:Name="EditorWalletType" Placeholder="Type de portefeuille"/> 
                     <ListView x:Name="CountryListView" IsVisible="False"  CachingStrategy="RecycleElement" BackgroundColor="White" ItemTapped="ListView_OnItemTapped">
                         <ListView.ItemTemplate>  
                             <DataTemplate>  

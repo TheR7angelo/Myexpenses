@@ -33,14 +33,16 @@ public partial class AddWallet
         try
         {
             _walletTypes = SqLite.GetAllWalletType();
-            foreach (var typeWallets in _walletTypes)
+            _walletTypes.Add(new SqLite.TWalletType
             {
-                _data.Add(typeWallets.Nom);
-            }
+                Id = 1,
+                Nom = "test"
+            });
+            foreach (var typeWallets in _walletTypes) _data.Add(typeWallets.Nom);
         }  
         catch (Exception ex)  
         {  
-            await DisplayAlert("", ""+ex, "Ok");  
+            await DisplayAlert("Error", $"{ex}", "Ok");  
         }  
     }
     
@@ -71,7 +73,7 @@ public partial class AddWallet
     
     private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)  
     {
-        searchBar.Text =  e.Item as string; ;  
+        EditorWalletType.Text =  e.Item as string; ;  
         CountryListView.IsVisible = false;  
   
         ((ListView)sender).SelectedItem = null;  
@@ -80,8 +82,11 @@ public partial class AddWallet
     private void ButtonValid_OnClicked(object sender, EventArgs e)
     {
         var walletName = EditorName.Text;
-        // var walletType = ComboBoxType.Text;
-        var walletStartStr = EntryStartSolde.Text;
+        var walletType = EditorWalletType.Text;
+        var walletStart = EntryStartSolde.Text is null ? 0 :
+            decimal.Round(decimal.Parse(EntryStartSolde.Text.Replace(',', '.')), 2, MidpointRounding.AwayFromZero);
+
+        //bug crash ici ?
         var color = PickerColor.SelectedItem.ToString();
         Console.WriteLine("hr");
     }
