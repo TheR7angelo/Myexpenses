@@ -100,7 +100,7 @@ public partial class ActiveAccount
     {
         // todo à creuser
         var btn = (Button)sender;
-        var i = btn.BindingContext as SqLite.TAccountClass;
+        var i = btn.BindingContext as SqLite.VAccountClass;
         Console.WriteLine(i);
     }
 }

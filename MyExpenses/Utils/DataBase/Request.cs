@@ -4,7 +4,17 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
-    public static IEnumerable<VAccountClass> GetAllAccount() => _connection!.QueryAsync<VAccountClass>("SELECT * FROM t_compte").Result;
+    public static List<VAccountClass> GetAllAccount()
+    {
+        const string cmd = @"
+        SELECT c.id, c.nom, ttc.nom as type, tc.nom as color, c.image
+        FROM t_compte c
+        LEFT JOIN t_type_compte ttc
+            ON c.type_compte_fk = ttc.id
+        LEFT JOIN t_colors tc
+            ON c.color = tc.id";
+        return _connection!.QueryAsync<VAccountClass>(cmd).Result;
+    }
 
     #region Color
 
