@@ -33,12 +33,10 @@
                     <Label Grid.Row="0" Grid.Column="0" Text="Couleur" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="Icône" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Picker Grid.Row="1" Grid.Column="0" x:Name="ComboBoxColor" SelectedIndexChanged="ComboBoxColor_OnSelectedItemChanged"/>
-                    <!-- <comboBox:ComboBox  Grid.Row="1" Grid.Column="0" x:Name="ComboBoxColor" SelectedItemChanged="ComboBoxColor_OnSelectedItemChanged"/> -->
                     <Frame Grid.Row="2" Grid.Column="0" x:Name="FrameColor" HeightRequest="5" BorderColor="Black" />
-                    
                 </Grid>
             </StackLayout>
-            <Button Grid.Row="3" Text="Valider" HorizontalOptions="Center" VerticalOptions="Start" Clicked="Button_OnClicked"/>
+            <Button Grid.Row="3" Text="Valider" HorizontalOptions="Center" VerticalOptions="Start" Clicked="ButtonValid_OnClicked"/>
         </Grid>
 
     </ContentPage.Content>

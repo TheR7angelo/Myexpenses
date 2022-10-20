@@ -89,7 +89,9 @@ public static partial class SqLite
         type_compte_fk integer
             constraint t_compte_t_type_compte_id_fk
                 references t_type_compte (id),
-        color          text,
+        color          interval
+            constraint t_compte_t_colors_id_fk
+                        references t_colors (id),
         image          text
     );
     ";
@@ -165,7 +167,7 @@ public static partial class SqLite
         public int Image { get; set; }
     }
     
-    public class VAccountClass
+    public class VWalletClass
     {
         [Column("id")]
         public int Id { get; set; }
@@ -191,7 +193,7 @@ public static partial class SqLite
     }
 
     [Table("v_total_by_categorie")]
-    public class VTotalByAccountClass
+    public class VTotalByWaletClass
     {
         [Column("compte")]
         public string Name { get; set; }

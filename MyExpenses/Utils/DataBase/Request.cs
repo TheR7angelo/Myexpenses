@@ -4,7 +4,7 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
-    public static List<VAccountClass> GetAllAccount()
+    public static List<VWalletClass> GetAllWallet()
     {
         const string cmd = @"
         SELECT c.id, c.nom, ttc.nom as type, tc.nom as color, c.image
@@ -13,7 +13,7 @@ public static partial class SqLite
             ON c.type_compte_fk = ttc.id
         LEFT JOIN t_colors tc
             ON c.color = tc.id";
-        return _connection!.QueryAsync<VAccountClass>(cmd).Result;
+        return _connection!.QueryAsync<VWalletClass>(cmd).Result;
     }
 
     #region Color
@@ -29,7 +29,7 @@ public static partial class SqLite
 
     #endregion
     
-    public static List<VTotalByAccountClass> GetVTotalByAccountClass() => _connection!
-        .QueryAsync<VTotalByAccountClass>(
+    public static List<VTotalByWaletClass> GetVTotalByWalletClass() => _connection!
+        .QueryAsync<VTotalByWaletClass>(
             "SELECT h.compte, round(sum(h.montant), 2) as restant  FROM v_historique h GROUP BY h.compte;").Result;
 }

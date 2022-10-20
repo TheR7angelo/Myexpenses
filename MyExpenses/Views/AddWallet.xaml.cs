@@ -25,9 +25,13 @@ public partial class AddWallet
         // todo à finir marche po cette merde
     }
     
-    private void Button_OnClicked(object sender, EventArgs e)
+    private void ButtonValid_OnClicked(object sender, EventArgs e)
     {
-        throw new NotImplementedException();
+        var walletName = EditorName.Text;
+        var walletType = ComboBoxType.Text;
+        var walletStart = float.Parse(EntryStartSolde.Text.Replace(',', '.'));
+        var color = ComboBoxColor.SelectedItem.ToString();
+        Console.WriteLine("hr");
     }
 
     private void ComboBoxColor_OnSelectedItemChanged(object sender, EventArgs eventArgs)

@@ -64,12 +64,12 @@ public partial class ActiveAccount
     {
         var entries = new List<ChartEntry>();
 
-        var lstAccount = SqLite.GetAllAccount();
-        var lstVTotalByAccountClass = SqLite.GetVTotalByAccountClass();
+        var lstAccount = SqLite.GetAllWallet();
+        var lstVTotalByAccountClass = SqLite.GetVTotalByWalletClass();
 
         foreach (var account in lstAccount)
         {
-            var value = new SqLite.VTotalByAccountClass();
+            var value = new SqLite.VTotalByWaletClass();
             if (!lstVTotalByAccountClass.Count.Equals(0)) value = lstVTotalByAccountClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
 
             entries.Add(new ChartEntry(value.Remaining)
@@ -100,7 +100,7 @@ public partial class ActiveAccount
     {
         // todo à creuser
         var btn = (Button)sender;
-        var i = btn.BindingContext as SqLite.VAccountClass;
+        var i = btn.BindingContext as SqLite.VWalletClass;
         Console.WriteLine(i);
     }
 }
