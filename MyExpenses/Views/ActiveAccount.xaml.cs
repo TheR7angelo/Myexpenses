@@ -64,13 +64,13 @@ public partial class ActiveAccount
     {
         var entries = new List<ChartEntry>();
 
-        var lstAccount = SqLite.GetAllWallet();
-        var lstVTotalByAccountClass = SqLite.GetVTotalByWalletClass();
+        var lstWallet = SqLite.GetAllWallet();
+        var lstVTotalByWalletClass = SqLite.GetVTotalByWalletClass();
 
-        foreach (var account in lstAccount)
+        foreach (var account in lstWallet)
         {
             var value = new SqLite.VTotalByWaletClass();
-            if (!lstVTotalByAccountClass.Count.Equals(0)) value = lstVTotalByAccountClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
+            if (!lstVTotalByWalletClass.Count.Equals(0)) value = lstVTotalByWalletClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
 
             entries.Add(new ChartEntry(value.Remaining)
             {
@@ -92,7 +92,7 @@ public partial class ActiveAccount
             FlexLayout.Children.Add(btn);
         }
 
-        LabelNumberWallet.Text = lstAccount.Count.ToString();
+        LabelNumberWallet.Text = lstWallet.Count.ToString();
         ChartView.Chart = new PieChart { Entries = entries, LabelTextSize = 30 };
     }
 
