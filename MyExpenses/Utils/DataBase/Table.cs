@@ -153,6 +153,9 @@ public static partial class SqLite
     #region Class
 
     [Table("t_compte")]
+
+    #region Table
+
     public class TAccountClass
     {
         [PrimaryKey, AutoIncrement ,Column("id")]
@@ -165,6 +168,39 @@ public static partial class SqLite
         public int Color { get; set; }
         [Column("image")]
         public int Image { get; set; }
+    }
+    
+    [Table("t_colors")]
+    public class TColorsClass
+    {
+        [PrimaryKey, AutoIncrement ,Column("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Nom { get; set; }
+        [Column("value")]
+        public string Value { get; set; }
+    }
+
+    [Table("t_type_compte")]
+    public class TWalletType
+    {
+        [PrimaryKey, AutoIncrement, Column("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Nom { get; set; }
+    }
+
+    #endregion
+
+    #region Vue
+
+    [Table("v_total_by_categorie")]
+    public class VTotalByWaletClass
+    {
+        [Column("compte")]
+        public string Name { get; set; }
+        [Column("restant")]
+        public float Remaining { get; set; }
     }
     
     public class VWalletClass
@@ -181,25 +217,7 @@ public static partial class SqLite
         public string Image { get; set; }
     }
 
-    [Table("t_colors")]
-    public class TColorsClass
-    {
-        [PrimaryKey, AutoIncrement ,Column("id")]
-        public int Id { get; set; }
-        [Column("nom")]
-        public string Nom { get; set; }
-        [Column("value")]
-        public string Value { get; set; }
-    }
-
-    [Table("v_total_by_categorie")]
-    public class VTotalByWaletClass
-    {
-        [Column("compte")]
-        public string Name { get; set; }
-        [Column("restant")]
-        public float Remaining { get; set; }
-    }
+    #endregion
 
     #endregion
 }

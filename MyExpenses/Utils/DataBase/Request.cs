@@ -16,6 +16,9 @@ public static partial class SqLite
         return _connection!.QueryAsync<VWalletClass>(cmd).Result;
     }
 
+    public static List<TWalletType> GetAllWalletType() =>
+        _connection!.QueryAsync<TWalletType>("SELECT * FROM main.t_type_compte").Result;
+
     #region Color
 
     public static IEnumerable<TColorsClass> GetAllColor() =>
