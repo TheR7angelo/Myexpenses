@@ -19,9 +19,10 @@
                 <Label Text="Type" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                 <comboBox:ComboBox x:Name="ComboBoxType" Placeholder="Type de portefeuille"/>
                 <Label Text="Solde de départ" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                <Entry x:Name="EntryStartSolde" Placeholder="Nom du portefeuille" Keyboard="Numeric"/>
+                <Entry x:Name="EntryStartSolde" Placeholder="0" Keyboard="Numeric"/>
                 <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
@@ -31,9 +32,10 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Couleur" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="Icône" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                    <comboBox:ComboBox  Grid.Row="1" Grid.Column="0" x:Name="ComboBoxColor"/>
-                    <!-- <Picker Grid.Row="1" Grid.Column="0" x:Name="PickerColor"/> -->
-                    <!-- <SelectableItemsView Grid.Row="1" Grid.Column="0" x:Name="SelectableItemsView"/> -->
+                    <Picker Grid.Row="1" Grid.Column="0" x:Name="ComboBoxColor" SelectedIndexChanged="ComboBoxColor_OnSelectedItemChanged"/>
+                    <!-- <comboBox:ComboBox  Grid.Row="1" Grid.Column="0" x:Name="ComboBoxColor" SelectedItemChanged="ComboBoxColor_OnSelectedItemChanged"/> -->
+                    <Frame Grid.Row="2" Grid.Column="0" x:Name="FrameColor" HeightRequest="5" BorderColor="Black" />
+                    
                 </Grid>
             </StackLayout>
             <Button Grid.Row="3" Text="Valider" HorizontalOptions="Center" VerticalOptions="Start" Clicked="Button_OnClicked"/>

@@ -26,7 +26,10 @@ namespace MyExpenses.Views {
         private global::Xamarin.Forms.Entry EntryStartSolde;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.ComboBox.ComboBox ComboBoxColor;
+        private global::Xamarin.Forms.Picker ComboBoxColor;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Frame FrameColor;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
@@ -34,7 +37,8 @@ namespace MyExpenses.Views {
             EditorName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Editor>(this, "EditorName");
             ComboBoxType = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ComboBox.ComboBox>(this, "ComboBoxType");
             EntryStartSolde = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "EntryStartSolde");
-            ComboBoxColor = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ComboBox.ComboBox>(this, "ComboBoxColor");
+            ComboBoxColor = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Picker>(this, "ComboBoxColor");
+            FrameColor = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Frame>(this, "FrameColor");
         }
     }
 }

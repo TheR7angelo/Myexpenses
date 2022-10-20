@@ -4,6 +4,8 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
+    #region Script
+
     #region TableBase
 
     private const string TColors = @"
@@ -75,6 +77,8 @@ public static partial class SqLite
 
     #endregion
 
+    #region Table Foreigner
+
     private const string TCompte = @"
     create table t_compte
     (
@@ -139,9 +143,29 @@ public static partial class SqLite
             constraint t_historique_t_credit_id_fk
                 references t_credit (id)
     );";
-    
+
+#endregion
+
+    #endregion
+
+    #region Class
+
     [Table("t_compte")]
     public class TAccountClass
+    {
+        [PrimaryKey, AutoIncrement ,Column("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Name { get; set; }
+        [Column("type_compte_fk")]
+        public int TypeCompteFk { get; set; }
+        [Column("color")]
+        public int Color { get; set; }
+        [Column("image")]
+        public int Image { get; set; }
+    }
+    
+    public class VAccountClass
     {
         [Column("id")]
         public int Id { get; set; }
@@ -152,7 +176,7 @@ public static partial class SqLite
         [Column("color")]
         public string Color { get; set; }
         [Column("image")]
-        public int Image { get; set; }
+        public string Image { get; set; }
     }
 
     [Table("t_colors")]
@@ -174,4 +198,6 @@ public static partial class SqLite
         [Column("restant")]
         public float Remaining { get; set; }
     }
+
+    #endregion
 }

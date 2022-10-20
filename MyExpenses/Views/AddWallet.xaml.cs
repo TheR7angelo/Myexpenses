@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 using MyExpenses.Utils.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,20 +20,22 @@ public partial class AddWallet
     private void FillComboColor()
     {
         var colors = SqLite.GetAllColor();
-        var i = new List<string>();
-        foreach (var color in colors)
-        {
-            
-            // var la = new Label { BackgroundColor = Color.FromHex(color.Value), Text = color.Nom};
-            i.Add(color.Nom);
-        }
-
-        ComboBoxColor.ItemsSource = i;
+        ComboBoxColor.ItemsSource = colors.OrderBy(s => s.Nom).Select(color => color.Nom).ToList();
+        
         // todo à finir marche po cette merde
     }
     
     private void Button_OnClicked(object sender, EventArgs e)
     {
         throw new NotImplementedException();
+    }
+
+    private void ComboBoxColor_OnSelectedItemChanged(object sender, EventArgs eventArgs)
+    {
+        var combo = sender as Picker;
+        var colorName = combo!.SelectedItem as string;
+        var colorValue = colorName.GetColorHex();
+        FrameColor.BackgroundColor = Color.FromHex(colorValue);
+
     }
 }
