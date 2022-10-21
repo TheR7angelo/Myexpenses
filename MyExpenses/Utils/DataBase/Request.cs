@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
+    
+    #region Get
+
     public static List<VWalletClass> GetAllWallet()
     {
         const string cmd = @"
@@ -35,4 +39,27 @@ public static partial class SqLite
     public static List<VTotalByWaletClass> GetVTotalByWalletClass() => _connection!
         .QueryAsync<VTotalByWaletClass>(
             "SELECT h.compte, round(sum(h.montant), 2) as restant  FROM v_historique h GROUP BY h.compte;").Result;
+
+    #endregion
+
+    #region Insert
+
+    public static TWalletClass InsertWallet(this TWalletClass walletClass)
+    {
+        _connection!.InsertAsync(walletClass).Wait();
+        return walletClass;
+    }
+    
+    public static TWalletType InsertWalletType(this TWalletType walletType)
+    {
+        _connection!.InsertAsync(walletType).Wait();
+        return walletType;
+    }
+
+    // public static void Insert<T>(this T a) where T : new()
+    // {
+    //     _connection!.InsertAsync(a).Wait();
+    // }
+
+    #endregion
 }
