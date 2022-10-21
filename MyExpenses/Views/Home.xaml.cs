@@ -24,11 +24,18 @@ public partial class Home
         switch (btn!.ClassId)
         {
             case "ButtonConnexion":
-                await Navigation.PushAsync( new SelectedAccount());
+                SelectAccount();
                 break;
             case "ButtonNewAccount":
                 await Navigation.PushAsync(new AddAccount());
                 break;
         }
+    }
+
+    private async void SelectAccount()
+    {
+        if (!Directory.Exists(Db)) await DisplayAlert("Alert", "Aucun compte n'a étais crée merci d'en crée un", "OK");
+        
+        await Navigation.PushAsync( new SelectedAccount());
     }
 }

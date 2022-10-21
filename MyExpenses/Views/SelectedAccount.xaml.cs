@@ -21,7 +21,6 @@ public partial class SelectedAccount
     private void CreateButton()
     {
         var listeDb = Directory.GetFiles(Db, "*.sqlite").Select(Path.GetFileNameWithoutExtension).ToList();
-
         const int size = 75;
         foreach (var btn in listeDb.Select(db => new Button{ Text = db, ClassId = db, }))
         {
