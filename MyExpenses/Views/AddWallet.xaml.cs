@@ -11,11 +11,19 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddWallet
 {
+    private ActiveAccount _previous;
+    
     private readonly ObservableCollection<string> _data = new ();
+    
+    private List<SqLite.TColorsClass> _dataColor;
     private List<SqLite.TWalletType> _walletTypes = new();
 
-    public AddWallet()
+    private Random _random = new();
+    
+    public AddWallet(ActiveAccount previous)
     {
+        _previous = previous;
+        
         InitializeComponent();
         FillWalletType(); 
         FillComboColor();
@@ -24,8 +32,9 @@ public partial class AddWallet
 
     private void FillComboColor()
     {
-        var colors = SqLite.GetAllColor();
-        PickerColor.ItemsSource = colors.OrderBy(s => s.Nom).Select(color => color.Nom).ToList();
+        _dataColor = SqLite.GetAllColor().OrderBy(s => s.Nom).ToList();
+        PickerColor.ItemsSource = _dataColor.Select(color => color.Nom).ToList();
+        PickerColor.SelectedIndex = _random.Next(0, _dataColor.Count - 1);
     }
 
     private async void FillWalletType() //List of Countries  
@@ -73,7 +82,7 @@ public partial class AddWallet
     
     private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)  
     {
-        EditorWalletType.Text =  e.Item as string; ;  
+        EditorWalletType.Text =  e.Item as string;
         CountryListView.IsVisible = false;  
   
         ((ListView)sender).SelectedItem = null;  
@@ -85,9 +94,18 @@ public partial class AddWallet
         var walletType = EditorWalletType.Text;
         var walletStart = EntryStartSolde.Text is null ? 0 :
             decimal.Round(decimal.Parse(EntryStartSolde.Text.Replace(',', '.')), 2, MidpointRounding.AwayFromZero);
+        
+        var colorName = PickerColor.SelectedItem as string;
+        var color = _dataColor.Where(s => s.Nom.Equals(colorName)).ToList()[0];
 
-        //bug crash ici ?
-        var color = PickerColor.SelectedItem.ToString();
+        
+        
+        
+        _previous.DisplayWallet();
+        Navigation.PopAsync();
+        
+        
+        
         Console.WriteLine("hr");
     }
 

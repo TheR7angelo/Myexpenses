@@ -13,21 +13,21 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class ActiveAccount
 {
-    private static Style _styleWallet = new (typeof(Button));
+    private static readonly Style StyleWallet = new (typeof(Button));
     public ActiveAccount(string account)
     {
         InitializeComponent();
         
         //todo à refaire car pas beau
-        _styleWallet.Setters.Add(new Setter{Property = View.MarginProperty, Value = 7});
-        _styleWallet.Setters.Add(new Setter{Property = HeightRequestProperty, Value = 50});
-        _styleWallet.Setters.Add(new Setter{Property = WidthRequestProperty, Value = 100});
-        _styleWallet.Setters.Add(new Setter{Property = View.HorizontalOptionsProperty, Value = LayoutOptions.Center});
-        _styleWallet.Setters.Add(new Setter{Property = View.VerticalOptionsProperty, Value = LayoutOptions.Start});
-        _styleWallet.Setters.Add(new Setter{Property = Button.BorderColorProperty, Value = Color.Black});
-        _styleWallet.Setters.Add(new Setter{Property = Button.BorderWidthProperty, Value = 2});
-        _styleWallet.Setters.Add(new Setter{Property = Button.CornerRadiusProperty, Value = 10});
-        _styleWallet.Setters.Add(new Setter{Property = BackgroundColorProperty, Value = Color.LightGray});
+        StyleWallet.Setters.Add(new Setter{Property = View.MarginProperty, Value = 7});
+        StyleWallet.Setters.Add(new Setter{Property = HeightRequestProperty, Value = 50});
+        StyleWallet.Setters.Add(new Setter{Property = WidthRequestProperty, Value = 100});
+        StyleWallet.Setters.Add(new Setter{Property = View.HorizontalOptionsProperty, Value = LayoutOptions.Center});
+        StyleWallet.Setters.Add(new Setter{Property = View.VerticalOptionsProperty, Value = LayoutOptions.Start});
+        StyleWallet.Setters.Add(new Setter{Property = Button.BorderColorProperty, Value = Color.Black});
+        StyleWallet.Setters.Add(new Setter{Property = Button.BorderWidthProperty, Value = 2});
+        StyleWallet.Setters.Add(new Setter{Property = Button.CornerRadiusProperty, Value = 10});
+        StyleWallet.Setters.Add(new Setter{Property = BackgroundColorProperty, Value = Color.LightGray});
         
         Title = account;
 
@@ -36,7 +36,7 @@ public partial class ActiveAccount
         FlexLayout.ForceLayout();
     }
 
-    private void DisplayWallet()
+    public void DisplayWallet()
     {
         FlexLayout.Children.Clear();
 
@@ -52,13 +52,13 @@ public partial class ActiveAccount
             FontSize = 25,
             FontAttributes = FontAttributes.Bold,
             ClassId = "+",
-            Style = _styleWallet,
+            Style = StyleWallet,
         };
         btnNewWallet.Clicked += BtnNewWallet_OnClicked;
         FlexLayout.Children.Add(btnNewWallet);
     }
 
-    private void BtnNewWallet_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddWallet());
+    private void BtnNewWallet_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddWallet(this));
 
     private void MakeWallets()
     {
@@ -84,7 +84,7 @@ public partial class ActiveAccount
                 Text = account.Name,
                 ClassId = account.Name,
                 FontSize = 10,
-                Style = _styleWallet,
+                Style = StyleWallet,
                 BackgroundColor = Color.FromHex(account.Color),
                 BindingContext = account
             };
