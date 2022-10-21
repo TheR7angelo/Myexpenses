@@ -60,6 +60,7 @@ public partial class ActiveAccount
 
     private void BtnNewWallet_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddWallet(this));
 
+
     private void MakeWallets()
     {
         var entries = new List<ChartEntry>();
@@ -67,26 +68,26 @@ public partial class ActiveAccount
         var lstWallet = SqLite.GetAllWallet();
         var lstVTotalByWalletClass = SqLite.GetVTotalByWalletClass();
 
-        foreach (var account in lstWallet)
+        foreach (var wallet in lstWallet)
         {
             var value = new SqLite.VTotalByWaletClass();
-            if (!lstVTotalByWalletClass.Count.Equals(0)) value = lstVTotalByWalletClass.Where(s => s.Name.Equals(account.Name)).ToList()[0];
+            if (!lstVTotalByWalletClass.Count.Equals(0)) value = lstVTotalByWalletClass.Where(s => s.Name.Equals(wallet.Name)).ToList()[0];
 
             entries.Add(new ChartEntry(value.Remaining)
             {
                 ValueLabel = value.Remaining.ToString(CultureInfo.InvariantCulture),
-                ValueLabelColor = SKColor.Parse(account.Color),
-                Color = SKColor.Parse(account.Color)
+                ValueLabelColor = SKColor.Parse(wallet.ColorValue),
+                Color = SKColor.Parse(wallet.ColorValue)
             });
 
             var btn = new Button
             {
-                Text = account.Name,
-                ClassId = account.Name,
+                Text = wallet.Name,
+                ClassId = wallet.Name,
                 FontSize = 10,
                 Style = StyleWallet,
-                BackgroundColor = Color.FromHex(account.Color),
-                BindingContext = account
+                BackgroundColor = Color.FromHex(wallet.ColorValue),
+                BindingContext = wallet
             };
             btn.Clicked += BtnOnClicked;
             FlexLayout.Children.Add(btn);

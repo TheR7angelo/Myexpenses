@@ -18,7 +18,7 @@ public partial class AddWallet
     private List<SqLite.TColorsClass> _dataColor;
     private List<SqLite.TWalletType> _walletTypes = new();
 
-    private Random _random = new();
+    private readonly Random _random = new();
     
     public AddWallet(ActiveAccount previous)
     {
@@ -42,12 +42,7 @@ public partial class AddWallet
         try
         {
             _walletTypes = SqLite.GetAllWalletType();
-            _walletTypes.Add(new SqLite.TWalletType
-            {
-                Id = 1,
-                Nom = "test"
-            });
-            foreach (var typeWallets in _walletTypes) _data.Add(typeWallets.Nom);
+            foreach (var typeWallets in _walletTypes) _data.Add(typeWallets.Name);
         }  
         catch (Exception ex)  
         {  
@@ -91,22 +86,27 @@ public partial class AddWallet
     private void ButtonValid_OnClicked(object sender, EventArgs e)
     {
         var walletName = EditorName.Text;
-        var walletType = EditorWalletType.Text;
+        var typeName = EditorWalletType.Text;
+        var colorName = PickerColor.SelectedItem as string;
+        
         var walletStart = EntryStartSolde.Text is null ? 0 :
             decimal.Round(decimal.Parse(EntryStartSolde.Text.Replace(',', '.')), 2, MidpointRounding.AwayFromZero);
-        
-        var colorName = PickerColor.SelectedItem as string;
+
+        var type = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList()[0];
         var color = _dataColor.Where(s => s.Nom.Equals(colorName)).ToList()[0];
 
-        
-        
+        type ??= SqLite.InsertWalletType(new SqLite.TWalletType { Name = typeName });
+
+        SqLite.InsertWallet(new SqLite.TWalletClass
+        {
+            Name = walletName,
+            Color = color.Id,
+            Image = 0,
+            TypeCompteFk = type.Id
+        });
         
         _previous.DisplayWallet();
         Navigation.PopAsync();
-        
-        
-        
-        Console.WriteLine("hr");
     }
 
     private void PickerColor_OnSelectedItemChanged(object sender, EventArgs eventArgs)

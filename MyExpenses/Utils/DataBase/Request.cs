@@ -11,7 +11,7 @@ public static partial class SqLite
     public static List<VWalletClass> GetAllWallet()
     {
         const string cmd = @"
-        SELECT c.id, c.nom, ttc.nom as type, tc.nom as color, c.image
+        SELECT c.id, c.nom, ttc.nom as type, tc.nom as color_name, tc.value as color_value, c.image
         FROM t_compte c
         LEFT JOIN t_type_compte ttc
             ON c.type_compte_fk = ttc.id
