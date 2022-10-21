@@ -156,7 +156,7 @@ public static partial class SqLite
 
     #region Table
 
-    public class TAccountClass
+    public class TWalletClass
     {
         [PrimaryKey, AutoIncrement ,Column("id")]
         public int Id { get; set; }
@@ -187,7 +187,7 @@ public static partial class SqLite
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
         [Column("nom")]
-        public string Nom { get; set; }
+        public string Name { get; set; }
     }
 
     #endregion
