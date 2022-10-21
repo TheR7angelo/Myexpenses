@@ -44,6 +44,12 @@ public static partial class SqLite
 
     #region Insert
 
+    public static THistoriqueClass InsertHistorique(this THistoriqueClass historiqueClass)
+    {
+        _connection!.InsertAsync(historiqueClass).Wait();
+        return historiqueClass;
+    }
+    
     public static TWalletClass InsertWallet(this TWalletClass walletClass)
     {
         _connection!.InsertAsync(walletClass).Wait();

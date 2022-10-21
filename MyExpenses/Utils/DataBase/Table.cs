@@ -152,10 +152,34 @@ public static partial class SqLite
 
     #region Class
 
-    [Table("t_compte")]
-
     #region Table
 
+    [Table("t_historique")]
+    public class THistoriqueClass
+    {
+        [PrimaryKey, AutoIncrement, Column("id")]
+        public int Id { get; set; }
+        [Column("compte_fk")]
+        public int WalletFk { get; set; }
+        [Column("ordre")]
+        public string Order { get; set; }
+        [Column("type_categorie_fk")]
+        public int? TypeCategorieFk { get; set; }
+        [Column("type_payement_fk")]
+        public int? TypePayementFk { get; set; }
+        [Column("montant")]
+        public decimal Montant { get; set; }
+        [Column("date")]
+        public string date { get; set; }
+        [Column("lieu_fk")]
+        public int? LieuFk { get; set; }
+        [Column("ticket_fk")]
+        public int? TicketFk { get; set; }
+        [Column("credit_fk")]
+        public int? CreditFk { get; set; }
+    }
+    
+    [Table("t_compte")]
     public class TWalletClass
     {
         [PrimaryKey, AutoIncrement ,Column("id")]
@@ -167,7 +191,7 @@ public static partial class SqLite
         [Column("color")]
         public int Color { get; set; }
         [Column("image")]
-        public int Image { get; set; }
+        public int? Image { get; set; }
     }
     
     [Table("t_colors")]

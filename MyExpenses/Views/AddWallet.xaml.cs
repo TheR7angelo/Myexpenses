@@ -95,15 +95,23 @@ public partial class AddWallet
         var type = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList()[0];
         var color = _dataColor.Where(s => s.Nom.Equals(colorName)).ToList()[0];
 
-        type ??= SqLite.InsertWalletType(new SqLite.TWalletType { Name = typeName });
+        type ??= new SqLite.TWalletType { Name = typeName }.InsertWalletType();
 
-        SqLite.InsertWallet(new SqLite.TWalletClass
+        var wallet = new SqLite.TWalletClass
         {
             Name = walletName,
             Color = color.Id,
             Image = 0,
             TypeCompteFk = type.Id
-        });
+        }.InsertWallet();
+
+        new SqLite.THistoriqueClass
+        {
+            Order = "Init",
+            WalletFk = wallet.Id,
+            Montant = walletStart,
+            date = DateTime.Now.ToString("yyyy-MM-dd"),
+        }.InsertHistorique();
         
         _previous.DisplayWallet();
         Navigation.PopAsync();

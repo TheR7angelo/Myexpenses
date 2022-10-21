@@ -70,15 +70,16 @@ public partial class ActiveAccount
 
         foreach (var wallet in lstWallet)
         {
-            var value = new SqLite.VTotalByWaletClass();
-            if (!lstVTotalByWalletClass.Count.Equals(0)) value = lstVTotalByWalletClass.Where(s => s.Name.Equals(wallet.Name)).ToList()[0];
-
-            entries.Add(new ChartEntry(value.Remaining)
+            var value = lstVTotalByWalletClass.Where(s => s.Name.Equals(wallet.Name)).ToList();
+            if (!value.Count.Equals(0))
             {
-                ValueLabel = value.Remaining.ToString(CultureInfo.InvariantCulture),
-                ValueLabelColor = SKColor.Parse(wallet.ColorValue),
-                Color = SKColor.Parse(wallet.ColorValue)
-            });
+                entries.Add(new ChartEntry(value[0].Remaining)
+                {
+                    ValueLabel = value[0].Remaining.ToString(CultureInfo.InvariantCulture),
+                    ValueLabelColor = SKColor.Parse(wallet.ColorValue),
+                    Color = SKColor.Parse(wallet.ColorValue)
+                });
+            }
 
             var btn = new Button
             {
