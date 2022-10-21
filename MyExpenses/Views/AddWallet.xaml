@@ -16,10 +16,8 @@
                 <Label Text="Nom" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                 <Editor x:Name="EditorName" Placeholder="Nom du portefeuille" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
                 <Label Text="Type" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                <!-- <comboBox:ComboBox x:Name="ComboBoxType" Placeholder="Type de portefeuille"/> -->
-                <!-- <Entry x:Name="ComboBoxType" Placeholder="Search Customer"/> -->
                 
-                
+                <!-- todo externaliser -->
                 <StackLayout>  
                     <Entry TextChanged="SearchBar_OnTextChanged" BackgroundColor="#f9f9f9" TextColor="#FF464859" FontSize="16" PlaceholderColor="#646b7a" x:Name="EditorWalletType" Placeholder="Type de portefeuille"/> 
                     <ListView x:Name="CountryListView" IsVisible="False"  CachingStrategy="RecycleElement" BackgroundColor="White" ItemTapped="ListView_OnItemTapped">
