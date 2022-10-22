@@ -6,7 +6,7 @@ namespace MyExpenses.Utils.Ressources.Style;
 
 public static class Button
 {
-    private static readonly List<Abs.StrucStyle> List = new();
+    private static readonly List<Structs.Style> List = new();
 
     static Button()
     {
@@ -16,10 +16,10 @@ public static class Button
     public static Xamarin.Forms.Style GetStyle(this string name)
     {
         var st = List.Where(s => s.Name.Equals(name)).ToList();
-        return st.Count.Equals(0) ? null : st[0].Style;
+        return st.Count.Equals(0) ? null : st[0].VStyle;
     }
     
-    private static Abs.StrucStyle StyleWallet()
+    private static Structs.Style StyleWallet()
     {
         var style = new Xamarin.Forms.Style(typeof(Xamarin.Forms.Button));
         
@@ -33,6 +33,6 @@ public static class Button
         style.Setters.Add(new Setter{Property = Xamarin.Forms.Button.CornerRadiusProperty, Value = 10});
         style.Setters.Add(new Setter{Property = VisualElement.BackgroundColorProperty, Value = Color.LightGray});
 
-        return new Abs.StrucStyle { Name = "ButtonWallet", Style = style };
+        return new Structs.Style { Name = "ButtonWallet", VStyle = style };
     }
 }
