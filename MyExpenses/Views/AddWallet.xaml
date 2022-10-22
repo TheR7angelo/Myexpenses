@@ -2,6 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              Title="AddWallet"
              x:Class="MyExpenses.Views.AddWallet">
     <ContentPage.Content>
@@ -54,7 +55,8 @@
                     <Picker Grid.Row="1" Grid.Column="1" x:Name="PickerImage" BackgroundColor="#FFf9f9f9" FontSize="16" SelectedIndexChanged="PickerImage_OnSelectedIndexChanged"/>
                     <Frame Grid.Row="2" Grid.Column="0" x:Name="FrameColor" HeightRequest="5" BorderColor="Black" />
                     <Frame Grid.Row="2" Grid.Column="1" HeightRequest="5" BorderColor="Black">
-                        <Path x:Name="PathImage" Stroke="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <!-- <Path x:Name="PathImage" Stroke="Black" HorizontalOptions="Center" VerticalOptions="Center"/> -->
+                        <skia:SKCanvasView x:Name="SkCanvasView" PaintSurface="SkCanvasView_OnPaintSurface"/>
                     </Frame>
                 </Grid>
             </StackLayout>
