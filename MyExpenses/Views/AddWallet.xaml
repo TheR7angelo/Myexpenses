@@ -51,7 +51,11 @@
                     <Label Grid.Row="0" Grid.Column="0" Text="Couleur" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Label Grid.Row="0" Grid.Column="1" Text="Icône" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Picker Grid.Row="1" Grid.Column="0" x:Name="PickerColor" BackgroundColor="#FFf9f9f9" FontSize="16" SelectedIndexChanged="PickerColor_OnSelectedItemChanged"/>
+                    <Picker Grid.Row="1" Grid.Column="1" x:Name="PickerImage" BackgroundColor="#FFf9f9f9" FontSize="16" SelectedIndexChanged="PickerImage_OnSelectedIndexChanged"/>
                     <Frame Grid.Row="2" Grid.Column="0" x:Name="FrameColor" HeightRequest="5" BorderColor="Black" />
+                    <Frame Grid.Row="2" Grid.Column="1" HeightRequest="5" BorderColor="Black">
+                        <Path x:Name="PathImage" Stroke="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Frame>
                 </Grid>
             </StackLayout>
             <Button Grid.Row="3" Text="Valider" HorizontalOptions="Center" VerticalOptions="Start" Clicked="ButtonValid_OnClicked"/>
