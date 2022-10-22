@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.Shapes;
 
 namespace MyExpenses.Utils.Ressources.Style;
 
@@ -11,9 +12,9 @@ public static partial class Structs
     }
     
     
-    public struct Images
+    public struct Paths
     {
         public string Name;
-        public ImageSource VImageSource;
+        public Path VPath;
     }
 }

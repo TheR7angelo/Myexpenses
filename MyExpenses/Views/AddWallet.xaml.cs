@@ -16,6 +16,7 @@ public partial class AddWallet
     private readonly ObservableCollection<string> _data = new ();
     
     private List<SqLite.TColorsClass> _dataColor;
+    private List<SqLite.TImageClass> _dataImage;
     private List<SqLite.TWalletType> _walletTypes = new();
 
     private readonly Random _random = new();
@@ -27,9 +28,17 @@ public partial class AddWallet
         InitializeComponent();
         FillWalletType(); 
         FillComboColor();
+        FillComboImage();
         //todo finir les inputs et récupérer les données
     }
 
+    private void FillComboImage()
+    {
+        _dataImage = SqLite.GetAllImages().OrderBy(s => s.Name).ToList();
+        PickerImage.ItemsSource = _dataImage.Select(image => image.Name).ToList();
+        PickerImage.SelectedIndex = _random.Next(0, _dataImage.Count - 1);
+    }
+    
     private void FillComboColor()
     {
         _dataColor = SqLite.GetAllColor().OrderBy(s => s.Nom).ToList();
@@ -124,5 +133,13 @@ public partial class AddWallet
         var colorValue = colorName.GetColorHex();
         FrameColor.BackgroundColor = Color.FromHex(colorValue);
 
+    }
+
+    private void PickerImage_OnSelectedIndexChanged(object sender, EventArgs e)
+    {
+        var combo = sender as Picker;
+        var imageName = combo!.SelectedItem as string;
+        var image = Utils.Ressources.Images.GetImage(imageName);
+        PathImage.Data = image.Data;
     }
 }
