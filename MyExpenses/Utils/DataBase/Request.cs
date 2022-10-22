@@ -35,6 +35,13 @@ public static partial class SqLite
     }
 
     #endregion
+
+    #region Image
+
+    public static IEnumerable<TImageClass> GetAllImages() =>
+        _connection!.QueryAsync<TImageClass>("SELECT * FROM t_images").Result;
+
+    #endregion
     
     public static List<VTotalByWaletClass> GetVTotalByWalletClass() => _connection!
         .QueryAsync<VTotalByWaletClass>(

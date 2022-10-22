@@ -29,7 +29,7 @@ public static partial class SqLite
             
                 #region Tables
 
-                foreach (var cmd in new List<string> { TColors, TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
+                foreach (var cmd in new List<string> { TColors, TImages, TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
                 {
                     Execute(cmd);
                 }
@@ -47,6 +47,7 @@ public static partial class SqLite
                 #endregion
                 
                 FillColors();
+                FillImages();
             
                 return Task.FromResult(false);
             }

@@ -5,6 +5,8 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
+    #region Color
+
     private static void FillColors()
     {
         var colorType  = typeof(Color);
@@ -31,4 +33,21 @@ public static partial class SqLite
 
         return hex;
     } 
+
+    #endregion
+
+
+    #region Images
+
+    private static void FillImages()
+    {
+        var images = Ressources.Images.GetAllImages();
+        foreach (var image in images)
+        {
+            var insert = new TImageClass { Name = image.Name };
+            _connection!.InsertAsync(insert).Wait();
+        }
+    }
+
+    #endregion
 }
