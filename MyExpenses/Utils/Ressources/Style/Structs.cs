@@ -1,5 +1,4 @@
-﻿using Xamarin.Forms;
-using Xamarin.Forms.Shapes;
+﻿using SkiaSharp;
 
 namespace MyExpenses.Utils.Ressources.Style;
 
@@ -12,9 +11,9 @@ public static partial class Structs
     }
     
     
-    public struct Paths
+    public struct Canvas
     {
         public string Name;
-        public Path VPath;
+        public SKBitmap VCanvas;
     }
 }
