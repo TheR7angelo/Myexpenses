@@ -105,27 +105,27 @@ public static partial class Images
         var p29 = SKPath.ParseSvgPathData(s29);
         var p30 = SKPath.ParseSvgPathData(s30);
 
-        canvas.DrawPaths(new List<DrawPath>
+        canvas.DrawPaths(new List<Structs.DrawPath>
         {
             new(){ Path = p0, Paint = st0}, new(){ Path = p1, Paint = st1}, new(){ Path = p2, Paint = st2},
             new(){ Path = p3, Paint = st0}
         });
 
         canvas.DrawOval(256f, 174.5f, 93.1f, 104.7f, st0);
-        canvas.DrawCircles(new List<DrawCircle>
+        canvas.DrawCircles(new List<Structs.DrawCircle>
         {
             new(){ Point = new SKPoint{ X = 116.4f, Y = 174.5f }, Radius = 23.3f, Paint = st0},
             new(){ Point = new SKPoint{ X = 395.6f, Y = 174.5f }, Radius = 23.3f, Paint = st0}
         });
         
         canvas.DrawPath(p4, st3);
-        canvas.DrawCircles(new List<DrawCircle>
+        canvas.DrawCircles(new List<Structs.DrawCircle>
         {
             new(){Point = new SKPoint{X = 302.5f, Y = 337.5f}, Radius = 81.5f, Paint = st4},
             new(){Point = new SKPoint{X = 407.3f, Y = 314.2f}, Radius = 81.5f, Paint = st5}
         });
         
-        canvas.DrawPaths(new List<DrawPath>
+        canvas.DrawPaths(new List<Structs.DrawPath>
         {
             new(){ Path = p5, Paint = st6}, new(){ Path = p6, Paint = st5}, new(){ Path = p7, Paint = st7},
             new(){ Path = p8, Paint = st8}, new(){ Path = p9, Paint = st6}, new(){ Path = p10, Paint = st8},
@@ -136,7 +136,7 @@ public static partial class Images
         
         canvas.DrawCircle(302.5f, 337.5f, 81.5f, st5);
         
-        canvas.DrawPaths(new List<DrawPath>
+        canvas.DrawPaths(new List<Structs.DrawPath>
         {
             new(){Path = p17, Paint = st8}, new(){Path = p18, Paint = st6}, new(){Path = p19, Paint = st5},
             new(){Path = p20, Paint = st7}, new(){Path = p21, Paint = st8}, new(){Path = p22, Paint = st6},
@@ -145,7 +145,7 @@ public static partial class Images
         
         canvas.DrawCircle(360.7f, 407.3f, 81.5f, st5);
         
-        canvas.DrawPaths(new List<DrawPath>
+        canvas.DrawPaths(new List<Structs.DrawPath>
         {
             new(){Path = p25, Paint = st6}, new(){Path = p26, Paint = st5}, new(){Path = p27, Paint = st7},
             new(){Path = p28, Paint = st8}, new(){Path = p29, Paint = st6}, new(){Path = p30, Paint = st8}
@@ -156,18 +156,5 @@ public static partial class Images
             Name = "Money",
             VCanvas = bitmap
         };
-    }
-
-    public struct DrawPath
-    {
-        public SKPath Path;
-        public SKPaint Paint;
-    }
-    
-    public struct DrawCircle
-    {
-        public SKPoint Point;
-        public float Radius;
-        public SKPaint Paint;
     }
 }
