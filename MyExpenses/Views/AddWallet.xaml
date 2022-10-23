@@ -11,7 +11,7 @@
                 <RowDefinition Height="10"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="10"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="1" Margin="10, 0, 10, 0" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Start">
@@ -61,7 +61,8 @@
                     </Frame>
                 </Grid>
             </StackLayout>
-            <skia:SKCanvasView Grid.Row="3" x:Name="SkCanvasView" PaintSurface="SkCanvasView_OnPaintSurface"/>
+            <!-- todo à bouger -->
+            <skia:SKCanvasView Grid.Row="3" x:Name="SkCanvasView" HeightRequest="512" WidthRequest="512" PaintSurface="SkCanvasView_OnPaintSurface"/>
             <Button Grid.Row="4" Text="Valider" HorizontalOptions="Center" VerticalOptions="Start" Clicked="ButtonValid_OnClicked"/>
         </Grid>
 

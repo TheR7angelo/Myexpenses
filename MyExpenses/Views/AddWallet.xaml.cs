@@ -154,10 +154,10 @@ public partial class AddWallet
         var imageName = PickerImage.SelectedItem as string;
         var image = Utils.Ressources.Images.GetImage(imageName);
 
-        // todo a fini xD
+        // resize ?
         canvas.Clear();
         var make = image.Resize(info, SKFilterQuality.High);
 
-        canvas.DrawBitmap(make, 0, 0);
+        canvas.DrawBitmap(image, 0, 0);
     }
 }

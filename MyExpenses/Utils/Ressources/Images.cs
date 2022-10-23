@@ -32,20 +32,42 @@ public static class Images
     {
         var bitmap = new SKBitmap(512, 512);
         var canvas = new SKCanvas(bitmap);
-        //todo la path se génére mal
-        const string str1 = "M488.727,325.818H23.273C10.473,325.818,0,315.345,0,302.545V-256C0-12.8,10.473-23.273,23.273-23.273h465.455c12.8,0,23.273,10.473,23.273,23.273v256C512,315.345,501.527,325.818,488.727,325.818z";
-        var p1 = SKPath.ParseSvgPathData(str1.ToUpper());
-        var s1 = new SKPaint
+
+        var st0 = "#FF0E9347"._SkPaint();
+        var st1 = "#FF0D8944"._SkPaint();
+        var st2 = "#FF3BB54A"._SkPaint();
+        
+        const string s0 = 
+            "M488.7,325.8H23.3C10.5,325.8,0,315.3,0,302.5v-256c0-12.8,10.5-23.3,23.3-23.3h465.5c12.8,0,23.3,10.5,23.3,23.3v256C512,315.3,501.5,325.8,488.7,325.8z";
+        var p0 = SKPath.ParseSvgPathData(s0);
+        
+        
+        const string s1 = 
+            "M430.5,232.7c-26.8,0-51.2,12.8-65.2,33.7c-11.6-5.8-24.4-10.5-39.6-10.5c-40.7,0-74.5,30.3-80.3,69.8h243.2c11.6,0,20.9-8.1,23.3-19.8C507.3,265.3,472.4,232.7,430.5,232.7z";
+        var p1 = SKPath.ParseSvgPathData(s1);
+        
+        
+        const string s2 =
+            "M442.2,302.5H69.8c0-25.6-20.9-46.5-46.5-46.5V93.1c25.6,0,46.5-20.9,46.5-46.5h372.4c0,25.6,20.9,46.5,46.5,46.5V256C463.1,256,442.2,276.9,442.2,302.5z";
+        var p2 = SKPath.ParseSvgPathData(s2);
+
+
+        const string s3 =
+            "M430.5,232.7c-26.8,0-51.2,12.8-65.2,33.7c-11.6-5.8-24.4-10.5-39.6-10.5c-32.6,0-60.5,18.6-73.3,46.5h189.7c0-25.6,19.8-45.4,45.4-46.5C472.4,242,452.7,232.7,430.5,232.7z";
+        var p3 = SKPath.ParseSvgPathData(s3);
+            
+        var list = new List<DrawPath>
         {
-            Style = SKPaintStyle.StrokeAndFill,
-            Color = SKColor.Parse("#FF0E9347"),
+            new(){ Path = p0, Paint = st0}, new(){ Path = p1, Paint = st1}, new(){ Path = p2, Paint = st2},
+            new(){ Path = p3, Paint = st0}
         };
-        // canvas.DrawLine(0, 0, 2, 50, pathStyle);
 
-        canvas.DrawPath(p1, s1);
+        foreach (var lDrawPath in list) canvas.DrawPath(lDrawPath.Path, lDrawPath.Paint);
 
-        // var i = _geometry(
-        //     "M430.545,232.727c-26.764,0-51.2,12.8-65.164,33.745C353.745,260.655,340.945,256,325.818,256\n\tc-40.727,0-74.473,30.255-80.291,69.818h243.2c11.636,0,20.945-8.145,23.273-19.782\n\tC507.345,265.309,472.436,232.727,430.545,232.727z");
+        canvas.DrawOval(256f, 174.5f, 93.1f, 104.7f, st0);
+        canvas.DrawCircle(116.4f, 174.5f, 23.3f, st0);
+        canvas.DrawCircle(395.6f, 174.5f, 23.3f, st0);
+        
         return new Structs.Canvas()
         {
             Name = "Money",
@@ -53,10 +75,15 @@ public static class Images
         };
     }
 
-    private static Geometry _geometry(this string geom)
-    {
-        var path = new PathGeometryConverter();
-        return (Geometry)path.ConvertFromInvariantString(geom);
-    }
 
+    private static SKPaint _SkPaint(this string color) => new()
+    {
+        Style = SKPaintStyle.StrokeAndFill, Color = SKColor.Parse(color)
+    };
+
+    public struct DrawPath
+    {
+        public SKPath Path;
+        public SKPaint Paint;
+    }
 }
