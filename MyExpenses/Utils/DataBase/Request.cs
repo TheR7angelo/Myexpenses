@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MyExpenses.Utils.Database;
 
@@ -69,10 +68,16 @@ public static partial class SqLite
         return walletType;
     }
 
-    // public static void Insert<T>(this T a) where T : new()
-    // {
-    //     _connection!.InsertAsync(a).Wait();
-    // }
+    #endregion
+
+    #region Set
+
+    public static void RefreshImage()
+    {
+        Execute("DROP TABLE IF EXISTS t_images;");
+        Execute(TImages);
+        FillImages();
+    }
 
     #endregion
 }

@@ -16,7 +16,7 @@ public static partial class Images
     {
         List = new List<Structs.Canvas>
         {
-            Money()
+            Bank(), Money()
         };
     }
     
@@ -30,13 +30,34 @@ public static partial class Images
 
     private static Structs.Canvas Bank()
     {
-        
         var bitmap = new SKBitmap(_size.Width, _size.Height);
         var canvas = new SKCanvas(bitmap);
 
+        var st0 = "#FFAEE69C"._SkPaint();
+        var st1 = "#FF89DAA4"._SkPaint();
+        var st2 = "#FFFFE179"._SkPaint();
+        var st3 = "#FFFBD268"._SkPaint();
+        var st4 = "#FFFFFFFF"._SkPaint();
+        var st5 = "#FF3D6D93"._SkPaint();
+        var st6 = "#FF335E80"._SkPaint();
+        var st7 = "#FFEAF6FF"._SkPaint();
+        var st8 = "#FFD8ECFE"._SkPaint();
+
+        const string s0 = "M0,137.6L241,3.9c9.3-5.2,20.6-5.2,30,0l241,133.7H0z";
+        const string s1 = "M271,3.9c-9.3-5.2-20.6-5.2-30,0l-4.6,2.5l236.4,131.1H512L271,3.9z";
+
+        var p0 = SKPath.ParseSvgPathData(s0);
+        var p1 = SKPath.ParseSvgPathData(s1);
+        
+        canvas.DrawPaths(new List<Structs.DrawPath>
+        {
+            new(){ Path = p0, Paint = st0}, new(){ Path = p1, Paint = st1}
+        });
+        
         return new Structs.Canvas
         {
-            
+            Name = "Bank",
+            VCanvas = bitmap
         };
     }
     

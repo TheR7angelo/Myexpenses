@@ -51,7 +51,10 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Text="Couleur" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-                    <Label Grid.Row="0" Grid.Column="1" Text="Icône" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+                        <Label Text="Icône" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+                        <Button Text="refresh" Clicked="Button_OnClicked"/>
+                    </StackLayout>
                     <Picker Grid.Row="1" Grid.Column="0" x:Name="PickerColor" BackgroundColor="#FFf9f9f9" FontSize="16" SelectedIndexChanged="PickerColor_OnSelectedItemChanged"/>
                     <Picker Grid.Row="1" Grid.Column="1" x:Name="PickerImage" BackgroundColor="#FFf9f9f9" FontSize="16" SelectedIndexChanged="PickerImage_OnSelectedIndexChanged"/>
                     <Frame Grid.Row="2" Grid.Column="0" x:Name="FrameColor" HeightRequest="5" BorderColor="Black" />

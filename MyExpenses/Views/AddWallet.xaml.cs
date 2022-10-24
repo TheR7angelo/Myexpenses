@@ -89,13 +89,13 @@ public partial class AddWallet
     private void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)  
     {
         EditorWalletType.Text =  e.Item as string;
-        CountryListView.IsVisible = false;  
-  
+        CountryListView.IsVisible = false;
         ((ListView)sender).SelectedItem = null;  
     } 
     
     private void ButtonValid_OnClicked(object sender, EventArgs e)
     {
+        // todo add id image 
         var walletName = EditorName.Text;
         var typeName = EditorWalletType.Text;
         var colorName = PickerColor.SelectedItem as string;
@@ -159,5 +159,11 @@ public partial class AddWallet
         var make = image.Resize(info, SKFilterQuality.High);
 
         canvas.DrawBitmap(image, 0, 0);
+    }
+
+    private void Button_OnClicked(object sender, EventArgs e)
+    {
+        SqLite.RefreshImage();
+        FillComboImage();
     }
 }
