@@ -45,14 +45,27 @@ public static partial class Images
 
         const string s0 = "M0,137.6L241,3.9c9.3-5.2,20.6-5.2,30,0l241,133.7H0z";
         const string s1 = "M271,3.9c-9.3-5.2-20.6-5.2-30,0l-4.6,2.5l236.4,131.1H512L271,3.9z";
+        const string s2 = "M256,243.9c-5.3,0-10.4,0.5-15.5,1.5c37.2,7.2,65.4,40,65.4,79.4s-28.1,72.1-65.4,79.4c5,1,10.2,1.5,15.5,1.544.6,0,80.8-36.2,80.8-80.8S300.6,243.9,256,243.9L256,243.9z";
+        const string s3 = "M265.4,317h-1.7v-26.8h1.7c3.4,0,6.4,3.7,6.4,8.1c0,4.3,3.5,7.7,7.7,7.7s7.7-3.5,7.7-7.7c0-13-9.8-23.6-21.8-23.6h-1.7v-4.3c0-4.3-3.5-7.7-7.7-7.7s-7.7,3.5-7.7,7.7v4.3h-1.7c-12,0-21.8,10.6-21.8,23.6v10.6c0,13,9.8,23.6,21.8,23.6h1.7v26.8h-1.7c-3.4,0-6.4-3.7-6.4-8.1c0-4.3-3.5-7.7-7.7-7.7s-7.7,3.5-7.7,7.7c0,13,9.8,23.6,21.8,23.6h1.7v4.3c0,4.3,3.5,7.7,7.7,7.7c4.3,0,7.7-3.5,7.7-7.7v-4.3h1.7c12,0,21.8-10.6,21.8-23.6v-10.6C287.2,327.6,277.4,317,265.4,317zc0,4.4-2.9,8.1-6.4,8.1h-1.7v-26.8h1.7c3.4,0,6.4,3.7,6.4,8.1L271.8,351.2z";
 
         var p0 = SKPath.ParseSvgPathData(s0);
         var p1 = SKPath.ParseSvgPathData(s1);
+        var p2 = SKPath.ParseSvgPathData(s2);
+        var p3 = SKPath.ParseSvgPathData(s3);
         
         canvas.DrawPaths(new List<Structs.DrawPath>
         {
             new(){ Path = p0, Paint = st0}, new(){ Path = p1, Paint = st1}
         });
+        
+        canvas.DrawOval(256f, 324.8f, 80.8f, 80.8f, st1);
+        
+        canvas.DrawPaths(new List<Structs.DrawPath>
+        {
+            new(){ Path = p2, Paint = st3}, new(){ Path = p3, Paint = st4}
+        });
+        
+        canvas.DrawOval(256f, 74.5f, 27.8f, 27.8f, st5);
         
         return new Structs.Canvas
         {
