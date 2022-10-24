@@ -130,8 +130,7 @@ public static partial class Images
             new(){ Path = p5, Paint = st6}, new(){ Path = p6, Paint = st5}, new(){ Path = p7, Paint = st7},
             new(){ Path = p8, Paint = st8}, new(){ Path = p9, Paint = st6}, new(){ Path = p10, Paint = st8},
             new(){ Path = p11, Paint = st8}, new(){ Path =  p12, Paint = st9}, new(){ Path = p13, Paint = st9},
-            new(){ Path = p14, Paint = st5}, new(){ Path =  p15, Paint = st8}, new(){ Path = p16, Paint = st6},
-            
+            new(){ Path = p14, Paint = st5}, new(){ Path =  p15, Paint = st8}, new(){ Path = p16, Paint = st6}
         });
         
         canvas.DrawCircle(302.5f, 337.5f, 81.5f, st5);
