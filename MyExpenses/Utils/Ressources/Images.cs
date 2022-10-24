@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using MyExpenses.Utils.Ressources.Style;
 using SkiaSharp;
@@ -7,6 +8,8 @@ namespace MyExpenses.Utils.Ressources;
 
 public static partial class Images
 {
+    private static readonly Size _size = new(512, 512);
+    
     private static readonly List<Structs.Canvas> List;
 
     static Images()
@@ -25,9 +28,21 @@ public static partial class Images
         return st.Count.Equals(0) ? null : st[0].VCanvas;
     }
 
+    private static Structs.Canvas Bank()
+    {
+        
+        var bitmap = new SKBitmap(_size.Width, _size.Height);
+        var canvas = new SKCanvas(bitmap);
+
+        return new Structs.Canvas
+        {
+            
+        };
+    }
+    
     private static Structs.Canvas Money()
     {
-        var bitmap = new SKBitmap(512, 512);
+        var bitmap = new SKBitmap(_size.Width, _size.Height);
         var canvas = new SKCanvas(bitmap);
 
         var st0 = "#FF0E9347"._SkPaint();
