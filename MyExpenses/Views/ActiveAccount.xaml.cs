@@ -16,6 +16,7 @@ public partial class ActiveAccount
     private static readonly Style StyleWallet = Utils.Ressources.Style.Button.GetStyle("ButtonWallet");
     public ActiveAccount(string account)
     {
+        //to a finir
         InitializeComponent();
         Title = account;
 
