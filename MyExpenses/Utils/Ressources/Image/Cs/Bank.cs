@@ -6,7 +6,9 @@ namespace MyExpenses.Utils.Ressources;
 
 public static partial class Images
 {
-        private static Structs.Canvas Bank()
+    
+    //todo a corriger l'image se génére mal
+    private static Structs.Canvas Bank()
     {
         var bitmap = new SKBitmap(Size.Width, Size.Height);
         var canvas = new SKCanvas(bitmap);
@@ -32,7 +34,16 @@ public static partial class Images
         const string s8 = "M450.2,183.9l-30.9,43.5h30.9l30.9-43.5H450.2z";
         const string s9 = "M388.1,227.5h62.1v194.6h-62.1V227.5z";
         const string s10 = "M419.3,227.5h30.9v194.6h-30.9V227.5z";
-        
+        const string s11 = "M154.8,465.6H30.9l30.9-43.5h62.1L154.8,465.6z";
+        const string s12 = "M154.8,183.9H30.9l30.9,43.5h62.1L154.8,183.9z";
+        const string s13 = "M61.8,227.5h62.1v194.6H61.8L61.8,227.5z";
+        const string s14 = "M123.9,422.1H93l30.9,43.5h30.9L123.9,422.1z";
+        const string s15 = "M123.9,183.9L93,227.5h30.9l30.9-43.5H123.9z";
+        const string s16 = "M93,227.5h30.9v194.6H93V227.5z";
+        const string s17 = "M0,137.6h512v23.2c0,12.8-10.4,23.2-23.2,23.2H23.2C10.4,183.9,0,173.6,0,160.7L0,137.6z";
+        const string s18 = "M481.1,137.6v23.2c0,12.8-10.4,23.2-23.2,23.2h30.9c12.8,0,23.2-10.4,23.2-23.2v-23.2H481.1z";
+        const string s19 = "M10.3,465.6h491.4c5.7,0,10.3,4.6,10.3,10.3v25.8c0,5.7-4.6,10.3-10.3,10.3H10.3C4.6,512,0,507.4,0,501.7v-25.8C0,470.2,4.6,465.6,10.3,465.6L10.3,465.6z";
+        const string s20 = "M501.7,465.6h-30.9c5.7,0,10.3,4.6,10.3,10.3v25.8c0,5.7-4.6,10.3-10.3,10.3h30.9c5.7,0,10.3-4.6,10.3-10.3v-25.8C512,470.2,507.4,465.6,501.7,465.6L501.7,465.6z";
         
         var p0 = SKPath.ParseSvgPathData(s0);
         var p1 = SKPath.ParseSvgPathData(s1);
@@ -45,13 +56,23 @@ public static partial class Images
         var p8 = SKPath.ParseSvgPathData(s8);
         var p9 = SKPath.ParseSvgPathData(s9);
         var p10 = SKPath.ParseSvgPathData(s10);
-        
+        var p11 = SKPath.ParseSvgPathData(s11);
+        var p12 = SKPath.ParseSvgPathData(s12);
+        var p13 = SKPath.ParseSvgPathData(s13);
+        var p14 = SKPath.ParseSvgPathData(s14);
+        var p15 = SKPath.ParseSvgPathData(s15);
+        var p16 = SKPath.ParseSvgPathData(s16);
+        var p17 = SKPath.ParseSvgPathData(s17);
+        var p18 = SKPath.ParseSvgPathData(s18);
+        var p19 = SKPath.ParseSvgPathData(s19);
+        var p20 = SKPath.ParseSvgPathData(s20);
+
         canvas.DrawPaths(new List<Structs.DrawPath>
         {
             new(){ Path = p0, Paint = st0}, new(){ Path = p1, Paint = st1}
         });
         
-        canvas.DrawOval(256f, 324.8f, 80.8f, 80.8f, st1);
+        canvas.DrawOval(256f, 324.8f, 80.8f, 80.8f, st2);
         
         canvas.DrawPaths(new List<Structs.DrawPath>
         {
@@ -64,13 +85,12 @@ public static partial class Images
         {
             new(){ Path = p4, Paint = st6}, new(){ Path = p5, Paint = st0}, new(){ Path = p6, Paint = st1},
             new(){ Path = p7, Paint = st0}, new(){ Path = p8, Paint = st1}, new(){ Path = p9, Paint = st7},
-            new(){ Path = p10, Paint = st8}
+            new(){ Path = p10, Paint = st8}, new(){ Path = p11, Paint = st0}, new(){ Path = p12, Paint = st0},
+            new(){ Path = p13, Paint = st7}, new(){ Path = p14, Paint = st1}, new(){ Path = p15, Paint = st1},
+            new(){ Path = p16, Paint = st8}, new(){ Path = p17, Paint = st5}, new(){ Path = p18, Paint = st6},
+            new(){ Path = p19, Paint = st5}, new(){ Path = p20, Paint = st6}
         });
-        
-        
-        
-        
-        
+
         return new Structs.Canvas
         {
             Name = "Bank",
