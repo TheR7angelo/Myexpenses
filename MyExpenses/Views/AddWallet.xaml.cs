@@ -31,7 +31,6 @@ public partial class AddWallet
         FillWalletType(); 
         FillComboColor();
         FillComboImage();
-        //todo finir les inputs et récupérer les données
     }
 
     private void FillComboImage()
@@ -48,7 +47,7 @@ public partial class AddWallet
         PickerColor.SelectedIndex = _random.Next(0, _dataColor.Count - 1);
     }
 
-    private async void FillWalletType() //List of Countries  
+    private async void FillWalletType()
     {  
         try
         {
@@ -91,28 +90,49 @@ public partial class AddWallet
         EditorWalletType.Text =  e.Item as string;
         CountryListView.IsVisible = false;
         ((ListView)sender).SelectedItem = null;  
-    } 
-    
-    private void ButtonValid_OnClicked(object sender, EventArgs e)
+    }
+
+    private static IEnumerable<string> CheckError(string walletName, string typeName)
     {
-        // todo add id image 
-        var walletName = EditorName.Text;
-        var typeName = EditorWalletType.Text;
-        var colorName = PickerColor.SelectedItem as string;
+        const string msg = "- Le {0} du portefeuille ne peut pas etre vide";
+        var error = new List<string>();
         
+        if (walletName.Equals(string.Empty)) error.Add(string.Format(msg, "nom"));
+        if (typeName.Equals(string.Empty)) error.Add(string.Format(msg, "type"));
+
+        return error;
+    }
+
+    private async void ButtonValid_OnClicked(object sender, EventArgs e)
+    {
+
+        var walletName = EditorName.Text ?? string.Empty;
+        var typeName = EditorWalletType.Text ?? string.Empty;
+
+        var check = CheckError(walletName, typeName).ToList();
+        
+        if (!check.Count.Equals(0))
+        {
+            var msg = string.Join(Environment.NewLine, check);
+            await DisplayAlert("Alert", msg, "OK");
+            return;
+        }
+
         var walletStart = EntryStartSolde.Text is null ? 0 :
             decimal.Round(decimal.Parse(EntryStartSolde.Text.Replace(',', '.')), 2, MidpointRounding.AwayFromZero);
 
         var type = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList()[0];
-        var color = _dataColor.Where(s => s.Nom.Equals(colorName)).ToList()[0];
+        
+        var color = FrameColor.BindingContext as SqLite.TColorsClass;
+        var image = SkCanvasView.BindingContext as SqLite.TImageClass;
 
         type ??= new SqLite.TWalletType { Name = typeName }.InsertWalletType();
 
         var wallet = new SqLite.TWalletClass
         {
             Name = walletName,
-            Color = color.Id,
-            Image = 0,
+            Color = color!.Id,
+            Image = image!.Id,
             TypeCompteFk = type.Id
         }.InsertWallet();
 
@@ -125,16 +145,18 @@ public partial class AddWallet
         }.InsertHistorique();
         
         _previous.DisplayWallet();
-        Navigation.PopAsync();
+        await Navigation.PopAsync();
     }
 
     private void PickerColor_OnSelectedItemChanged(object sender, EventArgs eventArgs)
     {
         var combo = sender as Picker;
         var colorName = combo!.SelectedItem as string;
-        var colorValue = colorName.GetColorHex();
-        FrameColor.BackgroundColor = Color.FromHex(colorValue);
 
+        var color = _dataColor.Where(s => s.Nom.Equals(colorName)).ToList()[0];
+        
+        FrameColor.BackgroundColor = Color.FromHex(color.Value);
+        FrameColor.BindingContext = color;
     }
 
     private void PickerImage_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -149,6 +171,7 @@ public partial class AddWallet
         var canvas = surface.Canvas;
         
         var imageName = PickerImage.SelectedItem as string;
+        var img = _dataImage.Where(s => s.Name.Equals(imageName)).ToList()[0];
         var bitmap = Utils.Ressources.Images.GetImage(imageName);
         
         canvas.Clear();
@@ -158,6 +181,7 @@ public partial class AddWallet
         var y = (info.Height - resize.Height) / 2f;
         
         canvas.DrawBitmap(resize, x, y);
+        SkCanvasView.BindingContext = img;
     }
 
     private void Button_OnClicked(object sender, EventArgs e)
