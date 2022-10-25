@@ -139,9 +139,6 @@ public partial class AddWallet
 
     private void PickerImage_OnSelectedIndexChanged(object sender, EventArgs e)
     {
-        // var combo = sender as Picker;
-        // var imageName = combo!.SelectedItem as string;
-        // var image = Utils.Ressources.Images.GetImage(imageName);
         SkCanvasView.InvalidateSurface();
     }
 
@@ -152,13 +149,15 @@ public partial class AddWallet
         var canvas = surface.Canvas;
         
         var imageName = PickerImage.SelectedItem as string;
-        var image = Utils.Ressources.Images.GetImage(imageName);
-
-        // resize ?
+        var bitmap = Utils.Ressources.Images.GetImage(imageName);
+        
         canvas.Clear();
-        var make = image.Resize(info, SKFilterQuality.High);
-
-        canvas.DrawBitmap(image, 0, 0);
+        var resize = bitmap.Resize(info, SKFilterQuality.High);
+        
+        var x = (info.Width - resize.Width) / 2f;
+        var y = (info.Height - resize.Height) / 2f;
+        
+        canvas.DrawBitmap(resize, x, y);
     }
 
     private void Button_OnClicked(object sender, EventArgs e)
