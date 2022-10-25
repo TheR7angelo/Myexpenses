@@ -16,7 +16,7 @@ public static partial class Images
     {
         List = new List<Structs.Canvas>
         {
-            Bank(), Money()
+            Bank(), Card(), Money()
         };
     }
     
