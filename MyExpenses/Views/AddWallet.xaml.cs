@@ -121,12 +121,12 @@ public partial class AddWallet
         var walletStart = EntryStartSolde.Text is null ? 0 :
             decimal.Round(decimal.Parse(EntryStartSolde.Text.Replace(',', '.')), 2, MidpointRounding.AwayFromZero);
 
-        var type = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList()[0];
+        var lstType = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList();
         
+        var type = lstType.Count.Equals(0) ? new SqLite.TWalletType { Name = typeName }.InsertWalletType() : lstType[0];
+
         var color = FrameColor.BindingContext as SqLite.TColorsClass;
         var image = SkCanvasView.BindingContext as SqLite.TImageClass;
-
-        type ??= new SqLite.TWalletType { Name = typeName }.InsertWalletType();
 
         var wallet = new SqLite.TWalletClass
         {
