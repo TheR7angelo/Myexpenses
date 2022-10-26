@@ -4,6 +4,9 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
+    
+    //todo t_virement
+    
     #region Script
 
     #region TableBase
@@ -80,8 +83,7 @@ public static partial class SqLite
             constraint t_type_compte_pk
                 primary key autoincrement,
         nom TEXT
-    );
-    ";
+    );";
 
     #endregion
 
@@ -152,6 +154,21 @@ public static partial class SqLite
         credit_fk        integer
             constraint t_historique_t_credit_id_fk
                 references t_credit (id)
+    );";
+    
+    private const string TVirement = @"
+    create table t_virement
+    (
+        id  INTEGER
+            constraint t_type_compte_pk
+                primary key autoincrement,
+        montant REAL,
+        compte_depart integer
+            constraint t_virement_t_compte_id_fk
+                references t_compte(id),
+        compte_reception integer
+            constraint t_virement_t_compte_id_fk
+                references t_compte(id)
     );";
 
     #endregion

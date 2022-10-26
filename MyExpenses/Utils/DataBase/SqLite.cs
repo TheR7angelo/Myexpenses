@@ -29,10 +29,9 @@ public static partial class SqLite
             
                 #region Tables
 
-                foreach (var cmd in new List<string> { TColors, TImages, TLieu, TTypeRecurence, TTypePayement, TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique })
-                {
-                    Execute(cmd);
-                }
+                foreach (var cmd in new List<string> { TColors, TImages, TLieu, TTypeRecurence, TTypePayement,
+                             TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique, TVirement })
+                { Execute(cmd); }
 
                 #endregion
 
@@ -40,9 +39,7 @@ public static partial class SqLite
                 #region View
 
                 foreach (var cmd in new List<string> { VHistorique, VToto, VTotoCategorie })
-                {
-                    Execute(cmd);
-                }
+                { Execute(cmd); }
 
                 #endregion
                 
