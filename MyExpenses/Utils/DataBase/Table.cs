@@ -4,9 +4,7 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
-    
-    //todo t_virement
-    
+
     #region Script
 
     #region TableBase
