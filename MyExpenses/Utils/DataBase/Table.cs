@@ -153,7 +153,10 @@ public static partial class SqLite
                 references t_ticket (id),
         credit_fk        integer
             constraint t_historique_t_credit_id_fk
-                references t_credit (id)
+                references t_credit (id),
+        virement_fk     integer
+            constraint t_historique_t_virement_id_fk
+                references t_virement(id)
     );";
     
     private const string TVirement = @"

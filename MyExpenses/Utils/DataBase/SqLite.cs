@@ -30,7 +30,7 @@ public static partial class SqLite
                 #region Tables
 
                 foreach (var cmd in new List<string> { TColors, TImages, TLieu, TTypeRecurence, TTypePayement,
-                             TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, THistorique, TVirement })
+                             TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, TVirement, THistorique})
                 { Execute(cmd); }
 
                 #endregion
