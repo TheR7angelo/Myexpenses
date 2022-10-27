@@ -29,6 +29,8 @@ public static partial class Images
         return st.Count.Equals(0) ? null : st[0].VCanvas;
     }
 
+    public static ImageSource GetImageSource(this string name) => ParseToImageSource(GetSkBitmap(name));
+
     public static ImageSource ParseToImageSource(this SKBitmap bitmap)
     {
         var sk = SKImage.FromPixels(bitmap.PeekPixels());

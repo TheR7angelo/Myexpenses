@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using MyExpenses.Utils.Database;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
@@ -105,7 +106,6 @@ public partial class AddWallet
 
     private async void ButtonValid_OnClicked(object sender, EventArgs e)
     {
-
         var walletName = EditorName.Text ?? string.Empty;
         var typeName = EditorWalletType.Text ?? string.Empty;
 
@@ -126,7 +126,7 @@ public partial class AddWallet
         var type = lstType.Count.Equals(0) ? new SqLite.TWalletType { Name = typeName }.InsertWalletType() : lstType[0];
 
         var color = FrameColor.BindingContext as SqLite.TColorsClass;
-        var image = SkCanvasView.BindingContext as SqLite.TImageClass;
+        var image = ImageLogo.BindingContext as SqLite.TImageClass;
 
         var wallet = new SqLite.TWalletClass
         {
@@ -161,32 +161,52 @@ public partial class AddWallet
 
     private void PickerImage_OnSelectedIndexChanged(object sender, EventArgs e)
     {
-        SkCanvasView.InvalidateSurface();
+        // SkCanvasView.InvalidateSurface();
+        SetImage();
     }
 
-    private void SkCanvasView_OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
+    // private void SkCanvasView_OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
+    // {
+    //     var info = e.Info;
+    //     var surface = e.Surface;
+    //     var canvas = surface.Canvas;
+    //     
+    //     var imageName = PickerImage.SelectedItem as string;
+    //     var img = _dataImage.Where(s => s.Name.Equals(imageName)).ToList()[0];
+    //     var bitmap = Utils.Ressources.Images.GetSkBitmap(imageName);
+    //     
+    //     canvas.Clear();
+    //     var resize = bitmap.Resize(info, SKFilterQuality.High);
+    //     
+    //     var x = (info.Width - resize.Width) / 2f;
+    //     var y = (info.Height - resize.Height) / 2f;
+    //     
+    //     canvas.DrawBitmap(resize, x, y);
+    //     SkCanvasView.BindingContext = img;
+    // }
+
+    private void SetImage()
     {
-        var info = e.Info;
-        var surface = e.Surface;
-        var canvas = surface.Canvas;
-        
+
         var imageName = PickerImage.SelectedItem as string;
         var img = _dataImage.Where(s => s.Name.Equals(imageName)).ToList()[0];
-        var bitmap = Utils.Ressources.Images.GetSkBitmap(imageName);
-        
-        canvas.Clear();
-        var resize = bitmap.Resize(info, SKFilterQuality.High);
-        
-        var x = (info.Width - resize.Width) / 2f;
-        var y = (info.Height - resize.Height) / 2f;
-        
-        canvas.DrawBitmap(resize, x, y);
-        SkCanvasView.BindingContext = img;
+        var image = Utils.Ressources.Images.GetImageSource(imageName);
+
+        ImageLogo.Source = image;
+        ImageLogo.BindingContext = img;
     }
 
     private void Button_OnClicked(object sender, EventArgs e)
     {
-        SqLite.RefreshImage();
-        FillComboImage();
+        //bug de merde
+        try
+        {
+            SqLite.RefreshImage();
+            FillComboImage();
+        }
+        catch(Exception msg)
+        {
+            DisplayAlert("Alert", msg.ToString(), "OK");
+        }
     }
 }

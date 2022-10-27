@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Linq;
 using System.Reflection;
 
 namespace MyExpenses.Utils.Database;
@@ -42,8 +43,12 @@ public static partial class SqLite
     private static void FillImages()
     {
         var images = Ressources.Images.GetAllImages();
+        var sqlImage = GetAllImages().Select(s => s.Name).ToList();
+        
         foreach (var image in images)
         {
+            if (sqlImage.Contains(image.Name)) continue;
+            
             var insert = new TImageClass { Name = image.Name };
             _connection!.InsertAsync(insert).Wait();
         }

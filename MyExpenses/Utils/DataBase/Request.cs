@@ -76,8 +76,6 @@ public static partial class SqLite
 
     public static void RefreshImage()
     {
-        Execute("DROP TABLE IF EXISTS t_images;");
-        Execute(TImages);
         FillImages();
     }
 

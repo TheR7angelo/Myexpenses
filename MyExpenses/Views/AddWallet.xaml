@@ -44,7 +44,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="25"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -60,7 +60,8 @@
                     <Picker Grid.Row="1" Grid.Column="1" x:Name="PickerImage" BackgroundColor="#FFf9f9f9" FontSize="16" SelectedIndexChanged="PickerImage_OnSelectedIndexChanged"/>
                     <Frame Grid.Row="2" Grid.Column="0" x:Name="FrameColor" HeightRequest="5" BorderColor="Black" />
                     <Frame Grid.Row="2" Grid.Column="1" Padding="1" BorderColor="Black">
-                        <skia:SKCanvasView x:Name="SkCanvasView" PaintSurface="SkCanvasView_OnPaintSurface"/>
+                        <!-- <skia:SKCanvasView x:Name="SkCanvasView" PaintSurface="SkCanvasView_OnPaintSurface"/> -->
+                        <Image x:Name="ImageLogo"/>
                     </Frame>
                 </Grid>
             </StackLayout>
