@@ -97,10 +97,12 @@ public static partial class SqLite
         type_compte_fk integer
             constraint t_compte_t_type_compte_id_fk
                 references t_type_compte (id),
-        color          interval
+        color_fk          int
             constraint t_compte_t_colors_id_fk
                         references t_colors (id),
-        image          text
+        image_fk        int
+            constraint t_compte_t_images_id_fk
+                        references t_images(id)
     );
     ";
 
@@ -205,8 +207,8 @@ public static partial class SqLite
 
         [Column("nom")] public string Name { get; set; }
         [Column("type_compte_fk")] public int TypeCompteFk { get; set; }
-        [Column("color")] public int Color { get; set; }
-        [Column("image")] public int? Image { get; set; }
+        [Column("color_fk")] public int Color { get; set; }
+        [Column("image_fk")] public int Image { get; set; }
     }
 
     [Table("t_colors")]

@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using Microcharts;
 using MyExpenses.Utils.Database;
+using MyExpenses.Utils.Ressources;
 using SkiaSharp;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -55,6 +56,9 @@ public partial class ActiveAccount
         var entries = new List<ChartEntry>();
 
         var lstWallet = SqLite.GetAllWallet();
+        
+        ////////////////////////////////
+        
         var lstVTotalByWalletClass = SqLite.GetVTotalByWalletClass();
 
         foreach (var wallet in lstWallet)
@@ -70,6 +74,9 @@ public partial class ActiveAccount
                 });
             }
 
+            var image = wallet.Image.GetImage();
+            //todo à mettre sur le boutton
+            
             var btn = new Button
             {
                 Text = wallet.Name,

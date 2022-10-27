@@ -10,12 +10,14 @@ public static partial class SqLite
     public static List<VWalletClass> GetAllWallet()
     {
         const string cmd = @"
-        SELECT c.id, c.nom, ttc.nom as type, tc.nom as color_name, tc.value as color_value, c.image
+        SELECT c.id, c.nom, ttc.nom as type, tc.nom as color_name, tc.value as color_value, ti.name as image
         FROM t_compte c
         LEFT JOIN t_type_compte ttc
             ON c.type_compte_fk = ttc.id
         LEFT JOIN t_colors tc
-            ON c.color = tc.id";
+            ON c.color_fk = tc.id
+        LEFT JOIN t_images ti
+            ON c.image_fk = ti.id";
         return _connection!.QueryAsync<VWalletClass>(cmd).Result;
     }
 
