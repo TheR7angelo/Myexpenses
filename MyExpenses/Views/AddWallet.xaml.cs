@@ -172,7 +172,7 @@ public partial class AddWallet
         
         var imageName = PickerImage.SelectedItem as string;
         var img = _dataImage.Where(s => s.Name.Equals(imageName)).ToList()[0];
-        var bitmap = Utils.Ressources.Images.GetImage(imageName);
+        var bitmap = Utils.Ressources.Images.GetSkBitmap(imageName);
         
         canvas.Clear();
         var resize = bitmap.Resize(info, SKFilterQuality.High);

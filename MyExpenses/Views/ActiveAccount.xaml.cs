@@ -74,16 +74,19 @@ public partial class ActiveAccount
                 });
             }
 
-            var image = wallet.Image.GetImage();
-            //todo à mettre sur le boutton
-            
+            var bitmap = wallet.Image.GetSkBitmap();
+            bitmap = bitmap.Resize(new SKImageInfo(39, 39), SKFilterQuality.High);
+            var image = bitmap.ParseToImageSource();
+
             var btn = new Button
             {
                 Text = wallet.Name,
                 ClassId = wallet.Name,
                 FontSize = 10,
                 Style = StyleWallet,
+                ImageSource = image,
                 BackgroundColor = Color.FromHex(wallet.ColorValue),
+                ContentLayout = new Button.ButtonContentLayout(Button.ButtonContentLayout.ImagePosition.Bottom, 0.1f),
                 BindingContext = wallet
             };
             btn.Clicked += BtnOnClicked;
