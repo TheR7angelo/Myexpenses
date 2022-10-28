@@ -9,6 +9,6 @@ public partial class ActiveWallet
     public ActiveWallet(SqLite.VWalletClass wallet)
     {
         InitializeComponent();
-        
+        //todo à finir
     }
 }
