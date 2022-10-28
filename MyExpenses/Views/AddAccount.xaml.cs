@@ -32,7 +32,13 @@ public partial class AddAccount
     private async void Button_OnClicked(object sender, EventArgs e)
     {
         var password = string.Empty;
-        
+        var accountName = EditorNameAccount.Text;
+
+        if (Home.Dbs.Contains(accountName))
+        {
+            await DisplayAlert("erreur", $"Le compte \"{accountName}\" existe déja", "ok");
+            return;
+        }
         if (CheckBoxPassword.IsChecked)
         {
             if (!EntryPassword.Text.Equals(EntryPasswordConfirm.Text))
@@ -49,10 +55,11 @@ public partial class AddAccount
         await DisplayAlert("Alert", msg, "OK");
 
         if (error) return;
-        //todo a tester
-        await Navigation.PopAsync();
-        await Navigation.PushAsync(new ActiveAccount(EditorNameAccount.Text));
-
+        Home.Dbs.Add(accountName);
+        
+        var previousPage = Navigation.NavigationStack.LastOrDefault();
+        await Navigation.PushAsync(new ActiveAccount(accountName));
+        Navigation.RemovePage(previousPage);
     }
 
     private void CheckBoxPassword_OnCheckedChanged(object sender, CheckedChangedEventArgs e) => StackLayoutPassword.IsVisible = ((CheckBox)sender).IsChecked;
