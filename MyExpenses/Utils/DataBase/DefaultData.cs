@@ -44,7 +44,7 @@ public static partial class SqLite
     {
         var images = Ressources.Images.GetAllImages();
         var sqlImage = GetAllImages().Select(s => s.Name).ToList();
-        
+
         foreach (var image in images)
         {
             if (sqlImage.Contains(image.Name)) continue;
