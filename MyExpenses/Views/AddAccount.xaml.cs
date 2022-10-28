@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using MyExpenses.Utils.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -56,9 +57,14 @@ public partial class AddAccount
 
         if (error) return;
         Home.Dbs.Add(accountName);
-        
+
+        await PopPush(new ActiveAccount(accountName));
+    }
+
+    private async Task PopPush(Page page)
+    {
         var previousPage = Navigation.NavigationStack.LastOrDefault();
-        await Navigation.PushAsync(new ActiveAccount(accountName));
+        await Navigation.PushAsync(page);
         Navigation.RemovePage(previousPage);
     }
 
