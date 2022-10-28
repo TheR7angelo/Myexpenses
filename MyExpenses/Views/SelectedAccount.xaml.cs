@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using MyExpenses.Utils.Database;
@@ -11,6 +12,7 @@ namespace MyExpenses.Views;
 public partial class SelectedAccount
 {
     private static readonly string Db = Home.Db;
+    private static readonly List<string> Dbs = Home.Dbs;
     public SelectedAccount()
     {
         InitializeComponent();
@@ -19,9 +21,8 @@ public partial class SelectedAccount
 
     private void CreateButton()
     {
-        var listeDb = Directory.GetFiles(Db, "*.sqlite").Select(Path.GetFileNameWithoutExtension).ToList();
         const int size = 75;
-        foreach (var btn in listeDb.Select(db => new Button{ Text = db, ClassId = db, }))
+        foreach (var btn in Dbs.Select(db => new Button{ Text = db, ClassId = db, }))
         {
             btn.HeightRequest = size;
             btn.WidthRequest = size;

@@ -60,7 +60,6 @@ public static partial class SqLite
         }
     }
 
-
     private static void Execute(string cmd) => _connection!.ExecuteAsync(cmd).Wait();
 
 }

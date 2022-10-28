@@ -87,7 +87,7 @@ public partial class ActiveAccount
                 ContentLayout = new Button.ButtonContentLayout(Button.ButtonContentLayout.ImagePosition.Bottom, 0.1f),
                 BindingContext = wallet
             };
-            btn.Clicked += BtnOnClicked;
+            btn.Clicked += Wallet_OnClicked;
             FlexLayout.Children.Add(btn);
         }
 
@@ -95,11 +95,11 @@ public partial class ActiveAccount
         ChartView.Chart = new PieChart { Entries = entries, LabelTextSize = 30 };
     }
 
-    private void BtnOnClicked(object sender, EventArgs e)
+    private void Wallet_OnClicked(object sender, EventArgs e)
     {
-        // todo à creuser
         var btn = (Button)sender;
         var i = btn.BindingContext as SqLite.VWalletClass;
-        Console.WriteLine(i);
+
+        Navigation.PushAsync(new ActiveWallet(i));
     }
 }
