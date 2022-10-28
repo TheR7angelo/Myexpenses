@@ -2,10 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading.Tasks;
 using MyExpenses.Utils.Database;
-using SkiaSharp;
-using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,8 +24,9 @@ public partial class AddWallet
     public AddWallet(ActiveAccount previous)
     {
         _previous = previous;
-        
+
         InitializeComponent();
+        
         FillWalletType(); 
         FillComboColor();
         FillComboImage();
@@ -189,24 +187,19 @@ public partial class AddWallet
     {
 
         var imageName = PickerImage.SelectedItem as string;
-        var img = _dataImage.Where(s => s.Name.Equals(imageName)).ToList()[0];
+        var img = _dataImage.Where(s => s.Name.Equals(imageName)).ToList();
+
+        if (img.Count.Equals(0)) return;
+
         var image = Utils.Ressources.Images.GetImageSource(imageName);
 
         ImageLogo.Source = image;
-        ImageLogo.BindingContext = img;
+        ImageLogo.BindingContext = img[0];
     }
 
     private void Button_OnClicked(object sender, EventArgs e)
     {
-        //bug de merde
-        try
-        {
-            SqLite.RefreshImage();
-            FillComboImage();
-        }
-        catch(Exception msg)
-        {
-            DisplayAlert("Alert", msg.ToString(), "OK");
-        }
+        SqLite.RefreshImage(); 
+        FillComboImage();
     }
 }

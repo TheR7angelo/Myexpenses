@@ -56,9 +56,7 @@ public partial class ActiveAccount
         var entries = new List<ChartEntry>();
 
         var lstWallet = SqLite.GetAllWallet();
-        
-        ////////////////////////////////
-        
+
         var lstVTotalByWalletClass = SqLite.GetVTotalByWalletClass();
 
         foreach (var wallet in lstWallet)

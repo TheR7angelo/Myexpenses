@@ -14,7 +14,6 @@ public partial class SelectedAccount
     public SelectedAccount()
     {
         InitializeComponent();
-
         CreateButton();
     }
 
