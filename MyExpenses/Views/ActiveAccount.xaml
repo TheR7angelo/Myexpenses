@@ -5,32 +5,30 @@
              xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
              x:Class="MyExpenses.Views.ActiveAccount">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="1"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="1"/>
-                    <RowDefinition Height="150"/>
-                </Grid.RowDefinitions>
-                
-                <Grid Grid.Row="0" BackgroundColor="Aqua">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="PORTEFEUILLE" FontAttributes="Bold" HorizontalOptions="Start"/>
-                    <Label Grid.Column="2" x:Name="LabelNumberWallet" Text="0" HorizontalOptions="End"/>
-                </Grid>
-                
-                <!-- <Line Grid.Row="1" BackgroundColor="Gray"/> -->
-                
-                <FlexLayout Grid.Row="2" BackgroundColor="Aqua" x:Name="FlexLayout" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
-                
-                <microcharts:ChartView Grid.Row="4" x:Name="ChartView" HeightRequest="25"/>
+        <StackLayout Orientation="Vertical" VerticalOptions="Start">
+            <Grid BackgroundColor="Aqua">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="PORTEFEUILLE" FontAttributes="Bold" HorizontalOptions="Start"/>
+                <Label Grid.Column="2" x:Name="LabelNumberWallet" Text="0" HorizontalOptions="End"/>
             </Grid>
+            
+            <Line BackgroundColor="Black" HeightRequest="1" FlowDirection="LeftToRight"/>
+            
+            <FlexLayout BackgroundColor="Aqua" x:Name="FlexLayout" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center"/>
+            
+            <Line BackgroundColor="Black" HeightRequest="1" FlowDirection="LeftToRight"/>
+            
+            <microcharts:ChartView x:Name="ChartView" HeightRequest="250"/>
+            
+            <Line BackgroundColor="Black" HeightRequest="1" FlowDirection="LeftToRight"/>
+            
+            <FlexLayout BackgroundColor="Red" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button Text="Gestion magasin" BorderColor="Black" BorderWidth="1" Clicked="ButtonMagasin_OnClicked"/>
+            </FlexLayout>
 
         </StackLayout>
     </ContentPage.Content>
