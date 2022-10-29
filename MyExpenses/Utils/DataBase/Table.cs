@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using System;
+using SQLite;
 
 namespace MyExpenses.Utils.Database;
 
@@ -228,6 +229,31 @@ public static partial class SqLite
         public int Id { get; set; }
 
         [Column("name")] public string Name { get; set; }
+    }
+    
+    [Table("t_lieu")]
+    public class TLieuClass
+    {
+        [PrimaryKey, AutoIncrement, Collation("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Name { get; set; }
+        [Column("numeros")]
+        public string Nums { get; set; }
+        [Column("rue")]
+        public string Rue { get; set; }
+        [Column("postal")]
+        public string Postal { get; set; }
+        [Column("ville")]
+        public string City { get; set; }
+        [Column("pays")]
+        public string Pays { get; set; }
+        [Column("date_ajout")]
+        public DateTime DateAdd { get; set; }
+        [Column("latitude")]
+        public float Latitude { get; set; }
+        [Column("longitude")]
+        public float Longitude { get; set; }
     }
 
     [Table("t_type_compte")]
