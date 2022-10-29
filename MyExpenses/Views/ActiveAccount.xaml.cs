@@ -103,5 +103,5 @@ public partial class ActiveAccount
         Navigation.PushAsync(new ActiveWallet(i));
     }
 
-    private void ButtonStore_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayMagasin());
+    private void ButtonStore_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayStore());
 }

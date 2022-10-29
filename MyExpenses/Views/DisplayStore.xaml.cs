@@ -5,10 +5,10 @@ using Xamarin.Forms.Xaml;
 namespace MyExpenses.Views;
 
 [XamlCompilation(XamlCompilationOptions.Compile)]
-public partial class DisplayMagasin
+public partial class DisplayStore
 {
     private static List<SqLite.TLieuClass> _dataStore;
-    public DisplayMagasin()
+    public DisplayStore()
     {
         InitializeComponent();
         _dataStore = SqLite.GetAllLieu();
