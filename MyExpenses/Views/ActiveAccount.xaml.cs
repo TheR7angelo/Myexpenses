@@ -102,4 +102,9 @@ public partial class ActiveAccount
 
         Navigation.PushAsync(new ActiveWallet(i));
     }
+
+    private void ButtonMagasin_OnClicked(object sender, EventArgs e)
+    {
+        throw new NotImplementedException();
+    }
 }

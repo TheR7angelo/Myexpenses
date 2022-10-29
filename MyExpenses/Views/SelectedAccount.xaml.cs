@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using MyExpenses.Utils.Database;
 using Xamarin.Forms;
@@ -11,7 +10,6 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class SelectedAccount
 {
-    private static readonly string Db = Home.Db;
     private static readonly List<string> Dbs = Home.Dbs;
     public SelectedAccount()
     {
