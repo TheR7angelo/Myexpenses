@@ -103,8 +103,5 @@ public partial class ActiveAccount
         Navigation.PushAsync(new ActiveWallet(i));
     }
 
-    private void ButtonMagasin_OnClicked(object sender, EventArgs e)
-    {
-        throw new NotImplementedException();
-    }
+    private void ButtonStore_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayMagasin());
 }
