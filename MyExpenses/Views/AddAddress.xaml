@@ -2,10 +2,10 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyExpenses.Views.DisplayStore">
+             x:Class="MyExpenses.Views.AddAddress">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout x:Name="StackLayoutAddress" HorizontalOptions="Center" VerticalOptions="Start"/>
+            <Label x:Name="LabelTest"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

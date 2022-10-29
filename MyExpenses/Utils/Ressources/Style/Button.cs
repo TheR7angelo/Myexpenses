@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace MyExpenses.Utils.Ressources.Style;
 
-public static class Button
+public class Button
 {
     private static readonly List<Structs.Style> List = new();
 
@@ -13,7 +13,7 @@ public static class Button
         List.Add(StyleWallet());
     }
     
-    public static Xamarin.Forms.Style GetStyle(this string name)
+    public static Xamarin.Forms.Style GetStyle(string name)
     {
         var st = List.Where(s => s.Name.Equals(name)).ToList();
         return st.Count.Equals(0) ? null : st[0].VStyle;
