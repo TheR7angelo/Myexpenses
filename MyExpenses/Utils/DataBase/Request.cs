@@ -7,6 +7,19 @@ public static partial class SqLite
     
     #region Get
 
+    #region Color
+
+    public static IEnumerable<TColorsClass> GetAllColor() =>
+        _connection!.QueryAsync<TColorsClass>("SELECT * FROM t_colors").Result;
+
+    public static string GetColorHex(this string name)
+    {
+        var colors = _connection!.QueryAsync<TColorsClass>($"SELECT * FROM t_colors WHERE nom='{name}'").Result;
+        return colors[0].Value;
+    }
+
+    #endregion
+    
     public static List<VWalletClass> GetAllWallet()
     {
         const string cmd = @"
@@ -22,20 +35,9 @@ public static partial class SqLite
     }
 
     public static List<TWalletType> GetAllWalletType() =>
-        _connection!.QueryAsync<TWalletType>("SELECT * FROM main.t_type_compte").Result;
+        _connection!.QueryAsync<TWalletType>("SELECT * FROM t_type_compte").Result;
 
-    #region Color
-
-    public static IEnumerable<TColorsClass> GetAllColor() =>
-        _connection!.QueryAsync<TColorsClass>("SELECT * FROM t_colors").Result;
-
-    public static string GetColorHex(this string name)
-    {
-        var colors = _connection!.QueryAsync<TColorsClass>($"SELECT * FROM t_colors WHERE nom='{name}'").Result;
-        return colors[0].Value;
-    }
-
-    #endregion
+    public static List<TLieuClass> GetAllLieu() => _connection!.QueryAsync<TLieuClass>("SELECT * FROM t_lieu").Result;
 
     #region Image
 
