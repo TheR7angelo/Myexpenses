@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Mapsui;
 using Mapsui.Extensions;
@@ -56,5 +57,19 @@ public partial class AddAddress
         var location = await Geolocation.GetLocationAsync(request, cts);
 
         return location;
+    }
+
+    private void MapView_OnMapClicked(object sender, MapClickedEventArgs e)
+    {
+        MapView.Pins.Clear();
+        var position = e.Point;
+        
+        MapView.Pins.Add(new Pin(new MapView())
+        {
+            Position = position,
+            Type = PinType.Pin
+        });
+        
+        Console.WriteLine("hey");
     }
 }
