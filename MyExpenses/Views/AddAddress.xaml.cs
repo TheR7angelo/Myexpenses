@@ -2,11 +2,14 @@
 using System.Threading.Tasks;
 using Mapsui;
 using Mapsui.Extensions;
+using Mapsui.Projections;
 using Mapsui.Tiling;
+using Mapsui.UI.Forms;
 using Mapsui.Widgets;
 using Mapsui.Widgets.ScaleBar;
 using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
+using Map = Xamarin.Essentials.Map;
 
 namespace MyExpenses.Views;
 
@@ -33,12 +36,16 @@ public partial class AddAddress
             HorizontalAlignment = HorizontalAlignment.Left,
             VerticalAlignment = VerticalAlignment.Bottom
         });
-
-        var location = await GetCurrentLocation();
-        //todo point centrale ?
-        map.Home = n => n.NavigateTo(new MPoint(location.Longitude, location.Latitude), 10);
-
         MapView.Map = map;
+        
+        var location = await GetCurrentLocation();
+        if (location is null) return;
+        var smc = SphericalMercator.FromLonLat(location.Longitude, location.Latitude);
+            
+        MapView.MyLocationLayer.UpdateMyLocation(new Position(location.Latitude, location.Longitude));
+
+        MapView.Navigator!.NavigateTo(new MPoint(smc.x, smc.y), MapView.Map.Resolutions[17]);
+
     }
 
     private static async Task<Location> GetCurrentLocation()
