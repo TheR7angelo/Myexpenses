@@ -43,6 +43,10 @@
       "frameworks": {
         "monoandroid12.0": {
           "dependencies": {
+            "Mapsui.Forms": {
+              "target": "Package",
+              "version": "[4.0.0-beta.5, )"
+            },
             "Microcharts.Forms": {
               "target": "Package",
               "version": "[1.0.0-preview1, )"
@@ -57,7 +61,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2196, )"
+              "version": "[5.0.0.2515, )"
             },
             "Xamarin.Forms.ComboBox": {
               "target": "Package",
@@ -109,6 +113,10 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "dependencies": {
+            "Mapsui.Forms": {
+              "target": "Package",
+              "version": "[4.0.0-beta.5, )"
+            },
             "Microcharts.Forms": {
               "target": "Package",
               "version": "[1.0.0-preview1, )"
@@ -131,7 +139,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2196, )"
+              "version": "[5.0.0.2515, )"
             },
             "Xamarin.Forms.ComboBox": {
               "target": "Package",

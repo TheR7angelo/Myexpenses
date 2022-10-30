@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddee753-c0f4-4cc5-b969-f9ae20bfc31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyExpenses/.idea/riderMarkupCache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyExpenses/.idea/riderMarkupCache.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyExpenses/Utils/Ressources/Style/RadioButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/Utils/Ressources/Style/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Utils/Ressources/Style/Button.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/DisplayStore.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/DisplayStore.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/DisplayStore.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/DisplayStore.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="test img" uuid="e9fdd4d4-1c6e-44e2-a54e-bb31aa0401d8">
+    <data-source source="LOCAL" name="test magasin" uuid="6c41a532-e4a2-425b-ad1e-de90b1f79065">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test img.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test magasin.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
@@ -13,11 +13,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="yolo" uuid="07c9e865-80fa-47d1-8eb6-541b519327a5">
+    <data-source source="LOCAL" name="test" uuid="cd57688e-dfa2-40e2-a43d-fe77a5b63eef">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\yolo.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>

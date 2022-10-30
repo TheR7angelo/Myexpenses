@@ -2,10 +2,12 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mapsui="clr-namespace:Mapsui.UI.Forms;assembly=Mapsui.UI.Forms"
              x:Class="MyExpenses.Views.AddAddress">
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="LabelTest"/>
+            <!-- <Label x:Name="LabelTest"/> -->
+            <mapsui:MapView x:Name="MapView" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Gray"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
