@@ -10,7 +10,7 @@ public static partial class SqLite
 
     #region TableBase
 
-    private const string TColors = @"
+    private const string Colors = @"
     create table t_colors
     (
         id         INTEGER NOT NULL
@@ -19,7 +19,7 @@ public static partial class SqLite
         value      TEXT
     );";
 
-    private const string TImages = @"
+    private const string Images = @"
     CREATE TABLE t_images
     (
         id INTEGER NOT NULL
@@ -27,7 +27,7 @@ public static partial class SqLite
         name TEXT
     );";
 
-    private const string TLieu = @"
+    private const string Lieu = @"
     create table t_lieu
     (
         id         INTEGER NOT NULL
@@ -38,12 +38,13 @@ public static partial class SqLite
         postal     TEXT,
         ville      TEXT,
         pays       TEXT,
+        country_code TEXT,
         date_ajout TEXT default CURRENT_DATE,
         latitude   REAL,
         longitude  REAL
     );";
 
-    private const string TTypeRecurence = @"
+    private const string TypeRecurence = @"
     create table t_type_recurence
     (
         id  INTEGER NOT NULL
@@ -51,7 +52,7 @@ public static partial class SqLite
         nom TEXT
     );";
 
-    private const string TTypePayement = @"
+    private const string TypePayement = @"
     create table t_type_payement
     (
         id  INTEGER NOT NULL
@@ -59,7 +60,7 @@ public static partial class SqLite
         nom TEXT
     );";
 
-    private const string TTypeCategorie = @"
+    private const string TypeCategorie = @"
     create table t_type_categorie
     (
         id  INTEGER NOT NULL
@@ -67,7 +68,7 @@ public static partial class SqLite
         nom TEXT
     );";
 
-    private const string TTicket = @"
+    private const string Ticket = @"
     create table t_ticket
     (
         id   INTEGER NOT NULL
@@ -75,7 +76,7 @@ public static partial class SqLite
         path TEXT
     );";
 
-    private const string TTypeCompte = @"
+    private const string TypeCompte = @"
     create table t_type_compte
     (
         id  INTEGER
@@ -88,7 +89,7 @@ public static partial class SqLite
 
     #region Table Foreigner
 
-    private const string TCompte = @"
+    private const string Compte = @"
     create table t_compte
     (
         id             integer
@@ -107,7 +108,7 @@ public static partial class SqLite
     );
     ";
 
-    private const string TCredit = @"
+    private const string Credit = @"
     create table t_credit
     (
         id                integer
@@ -128,7 +129,7 @@ public static partial class SqLite
     );
     ";
 
-    private const string THistorique = @"
+    private const string Historique = @"
     create table t_historique
     (
         id               integer
@@ -160,7 +161,7 @@ public static partial class SqLite
                 references t_virement(id)
     );";
     
-    private const string TVirement = @"
+    private const string Virement = @"
     create table t_virement
     (
         id  INTEGER
@@ -184,70 +185,76 @@ public static partial class SqLite
     #region Table
 
     [Table("t_historique")]
-    public class THistoriqueClass
+    public class HistoriqueClass
     {
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
-
-        [Column("compte_fk")] public int WalletFk { get; set; }
-        [Column("ordre")] public string Order { get; set; }
+        [Column("compte_fk")] public int? WalletFk { get; set; }
+        [Column("ordre")] public string? Order { get; set; }
         [Column("type_categorie_fk")] public int? TypeCategorieFk { get; set; }
         [Column("type_payement_fk")] public int? TypePayementFk { get; set; }
-        [Column("montant")] public decimal Montant { get; set; }
-        [Column("date")] public string date { get; set; }
+        [Column("montant")] public decimal? Montant { get; set; }
+        [Column("date")] public string? Date { get; set; }
         [Column("lieu_fk")] public int? LieuFk { get; set; }
         [Column("ticket_fk")] public int? TicketFk { get; set; }
         [Column("credit_fk")] public int? CreditFk { get; set; }
     }
 
     [Table("t_compte")]
-    public class TWalletClass
+    public class WalletClass
     {
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
 
-        [Column("nom")] public string Name { get; set; }
+        [Column("nom")] public string Name { get; set; } = null!;
         [Column("type_compte_fk")] public int TypeCompteFk { get; set; }
         [Column("color_fk")] public int Color { get; set; }
         [Column("image_fk")] public int Image { get; set; }
     }
 
     [Table("t_colors")]
-    public class TColorsClass
+    public class ColorsClass
     {
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
 
-        [Column("nom")] public string Nom { get; set; }
-        [Column("value")] public string Value { get; set; }
+        [Column("nom")] public string Nom { get; set; } = null!;
+        [Column("value")] public string Value { get; set; } = null!;
     }
 
     [Table("t_images")]
-    public class TImageClass
+    public class ImageClass
     {
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
-
-        [Column("name")] public string Name { get; set; }
+        [Column("name")] public string Name { get; set; } = null!;
     }
     
     [Table("t_lieu")]
-    public class TLieuClass
+    public class LieuClass
     {
         [PrimaryKey, AutoIncrement, Collation("id")]
         public int Id { get; set; }
         [Column("nom")]
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
+
         [Column("numeros")]
-        public string Nums { get; set; }
+        public string? Nums { get; set; }
         [Column("rue")]
-        public string Rue { get; set; }
+        public string Rue { get; set; } = null!;
+
         [Column("postal")]
-        public string Postal { get; set; }
+        public string Postal { get; set; } = null!;
+
         [Column("ville")]
-        public string City { get; set; }
+        public string City { get; set; } = null!;
+
         [Column("pays")]
-        public string Pays { get; set; }
+        public string Pays { get; set; } = null!;
+
+        [Column("country_code")]
+        public string CountryCode { get; set; } = null!;
+
         [Column("date_ajout")]
         public DateTime DateAdd { get; set; }
         [Column("latitude")]
@@ -257,12 +264,12 @@ public static partial class SqLite
     }
 
     [Table("t_type_compte")]
-    public class TWalletType
+    public class WalletType
     {
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
 
-        [Column("nom")] public string Name { get; set; }
+        [Column("nom")] public string Name { get; set; } = null!;
     }
 
     #endregion
@@ -272,18 +279,18 @@ public static partial class SqLite
     [Table("v_total_by_categorie")]
     public class VTotalByWaletClass
     {
-        [Column("compte")] public string Name { get; set; }
+        [Column("compte")] public string Name { get; set; } = null!;
         [Column("restant")] public float Remaining { get; set; }
     }
 
     public class VWalletClass
     {
         [Column("id")] public int Id { get; set; }
-        [Column("nom")] public string Name { get; set; }
-        [Column("type")] public string Type { get; set; }
-        [Column("color_name")] public string ColorName { get; set; }
-        [Column("color_value")] public string ColorValue { get; set; }
-        [Column("image")] public string Image { get; set; }
+        [Column("nom")] public string Name { get; set; } = null!;
+        [Column("type")] public string Type { get; set; } = null!;
+        [Column("color_name")] public string ColorName { get; set; } = null!;
+        [Column("color_value")] public string ColorValue { get; set; } = null!;
+        [Column("image")] public string Image { get; set; } = null!;
     }
 
     #endregion

@@ -11,20 +11,23 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddWallet
 {
-    private ActiveAccount _previous;
+    private readonly ActiveAccount _previous;
     
     private readonly ObservableCollection<string> _data = new ();
     
-    private List<SqLite.TColorsClass> _dataColor;
-    private List<SqLite.TImageClass> _dataImage;
-    private List<SqLite.TWalletType> _walletTypes = new();
+    private readonly List<SqLite.ColorsClass> _dataColor;
+    private readonly List<SqLite.ImageClass> _dataImage;
+    private List<SqLite.WalletType> _walletTypes = new();
 
     private readonly Random _random = new();
     
     public AddWallet(ActiveAccount previous)
     {
         _previous = previous;
-
+        _dataImage = SqLite.GetAllImages().OrderBy(s => s.Name).ToList();
+        _dataColor = SqLite.GetAllColor().OrderBy(s => s.Nom).ToList();
+        
+        
         InitializeComponent();
         
         FillWalletType(); 
@@ -34,14 +37,14 @@ public partial class AddWallet
 
     private void FillComboImage()
     {
-        _dataImage = SqLite.GetAllImages().OrderBy(s => s.Name).ToList();
+        // _dataImage = SqLite.GetAllImages().OrderBy(s => s.Name).ToList();
         PickerImage.ItemsSource = _dataImage.Select(image => image.Name).ToList();
         PickerImage.SelectedIndex = _random.Next(0, _dataImage.Count - 1);
     }
     
     private void FillComboColor()
     {
-        _dataColor = SqLite.GetAllColor().OrderBy(s => s.Nom).ToList();
+        // _dataColor = SqLite.GetAllColor().OrderBy(s => s.Nom).ToList();
         PickerColor.ItemsSource = _dataColor.Select(color => color.Nom).ToList();
         PickerColor.SelectedIndex = _random.Next(0, _dataColor.Count - 1);
     }
@@ -121,12 +124,12 @@ public partial class AddWallet
 
         var lstType = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList();
         
-        var type = lstType.Count.Equals(0) ? new SqLite.TWalletType { Name = typeName }.InsertWalletType() : lstType[0];
+        var type = lstType.Count.Equals(0) ? new SqLite.WalletType { Name = typeName }.InsertWalletType() : lstType[0];
 
-        var color = FrameColor.BindingContext as SqLite.TColorsClass;
-        var image = ImageLogo.BindingContext as SqLite.TImageClass;
+        var color = FrameColor.BindingContext as SqLite.ColorsClass;
+        var image = ImageLogo.BindingContext as SqLite.ImageClass;
 
-        var wallet = new SqLite.TWalletClass
+        var wallet = new SqLite.WalletClass
         {
             Name = walletName,
             Color = color!.Id,
@@ -134,12 +137,12 @@ public partial class AddWallet
             TypeCompteFk = type.Id
         }.InsertWallet();
 
-        new SqLite.THistoriqueClass
+        new SqLite.HistoriqueClass
         {
             Order = "Init",
             WalletFk = wallet.Id,
             Montant = walletStart,
-            date = DateTime.Now.ToString("yyyy-MM-dd"),
+            Date = DateTime.Now.ToString("yyyy-MM-dd"),
         }.InsertHistorique();
         
         _previous.DisplayWallet();
@@ -191,7 +194,7 @@ public partial class AddWallet
 
         if (img.Count.Equals(0)) return;
 
-        var image = Utils.Ressources.Images.GetImageSource(imageName);
+        var image = Utils.Ressources.Images.GetImageSource(imageName!);
 
         ImageLogo.Source = image;
         ImageLogo.BindingContext = img[0];

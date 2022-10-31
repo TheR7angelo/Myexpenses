@@ -9,12 +9,12 @@ public static partial class SqLite
 
     #region Color
 
-    public static IEnumerable<TColorsClass> GetAllColor() =>
-        _connection!.QueryAsync<TColorsClass>("SELECT * FROM t_colors").Result;
+    public static IEnumerable<ColorsClass> GetAllColor() =>
+        _connection!.QueryAsync<ColorsClass>("SELECT * FROM t_colors").Result;
 
     public static string GetColorHex(this string name)
     {
-        var colors = _connection!.QueryAsync<TColorsClass>($"SELECT * FROM t_colors WHERE nom='{name}'").Result;
+        var colors = _connection!.QueryAsync<ColorsClass>($"SELECT * FROM t_colors WHERE nom='{name}'").Result;
         return colors[0].Value;
     }
 
@@ -34,15 +34,15 @@ public static partial class SqLite
         return _connection!.QueryAsync<VWalletClass>(cmd).Result;
     }
 
-    public static List<TWalletType> GetAllWalletType() =>
-        _connection!.QueryAsync<TWalletType>("SELECT * FROM t_type_compte").Result;
+    public static List<WalletType> GetAllWalletType() =>
+        _connection!.QueryAsync<WalletType>("SELECT * FROM t_type_compte").Result;
 
-    public static List<TLieuClass> GetAllLieu() => _connection!.QueryAsync<TLieuClass>("SELECT * FROM t_lieu").Result;
+    public static List<LieuClass> GetAllLieu() => _connection!.QueryAsync<LieuClass>("SELECT * FROM t_lieu").Result;
 
     #region Image
 
-    public static IEnumerable<TImageClass> GetAllImages() =>
-        _connection!.QueryAsync<TImageClass>("SELECT * FROM t_images").Result;
+    public static IEnumerable<ImageClass> GetAllImages() =>
+        _connection!.QueryAsync<ImageClass>("SELECT * FROM t_images").Result;
 
     #endregion
     
@@ -54,19 +54,19 @@ public static partial class SqLite
 
     #region Insert
 
-    public static THistoriqueClass InsertHistorique(this THistoriqueClass historiqueClass)
+    public static HistoriqueClass InsertHistorique(this HistoriqueClass historiqueClass)
     {
         _connection!.InsertAsync(historiqueClass).Wait();
         return historiqueClass;
     }
     
-    public static TWalletClass InsertWallet(this TWalletClass walletClass)
+    public static WalletClass InsertWallet(this WalletClass walletClass)
     {
         _connection!.InsertAsync(walletClass).Wait();
         return walletClass;
     }
     
-    public static TWalletType InsertWalletType(this TWalletType walletType)
+    public static WalletType InsertWalletType(this WalletType walletType)
     {
         _connection!.InsertAsync(walletType).Wait();
         return walletType;

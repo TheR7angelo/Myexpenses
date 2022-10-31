@@ -29,8 +29,8 @@ public static partial class SqLite
             
                 #region Tables
 
-                foreach (var cmd in new List<string> { TColors, TImages, TLieu, TTypeRecurence, TTypePayement,
-                             TTypeCategorie, TTicket, TTypeCompte, TCredit, TCompte, TVirement, THistorique})
+                foreach (var cmd in new List<string> { Colors, Images, Lieu, TypeRecurence, TypePayement,
+                             TypeCategorie, Ticket, TypeCompte, Credit, Compte, Virement, Historique})
                 { Execute(cmd); }
 
                 #endregion

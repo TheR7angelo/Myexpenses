@@ -22,7 +22,7 @@ public static partial class SqLite
             
             var hex = $"#{a}{r}{g}{b}".ToUpper();
 
-            var insert = new TColorsClass { Nom = propInfo.Name, Value = hex };
+            var insert = new ColorsClass { Nom = propInfo.Name, Value = hex };
             _connection!.InsertAsync(insert).Wait();
         }
     }
@@ -49,7 +49,7 @@ public static partial class SqLite
         {
             if (sqlImage.Contains(image.Name)) continue;
             
-            var insert = new TImageClass { Name = image.Name };
+            var insert = new ImageClass { Name = image.Name };
             _connection!.InsertAsync(insert).Wait();
         }
     }

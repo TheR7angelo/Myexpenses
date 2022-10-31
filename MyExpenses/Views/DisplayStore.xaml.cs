@@ -11,7 +11,7 @@ public partial class DisplayStore
 {
     private static readonly Style RdAddressStyle = Utils.Ressources.Style.RadioButton.GetStyle("rdAddress");
     
-    private static List<SqLite.TLieuClass> _dataStore;
+    private static List<SqLite.LieuClass> _dataStore;
     public DisplayStore()
     {
         InitializeComponent();
