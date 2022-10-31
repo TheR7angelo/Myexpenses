@@ -10,11 +10,11 @@ namespace MyExpenses.Utils.Function.WebApi;
 
 public partial class Nominatim : Http
 {
-    private static string UserAgent { get; set; } = "C#";
-    private static HttpClient HttpClient { get; } = GetHttpClient(UserAgent, "https://nominatim.openstreetmap.org");
+    private static HttpClient HttpClient { get; set; } = null!;
+
     public Nominatim(string userAgent)
     {
-        UserAgent = userAgent;
+        HttpClient = GetHttpClient(userAgent, "https://nominatim.openstreetmap.org");
     }
 
     public List<NominatimStruc>? AddressToNominatim(string address) => _AddressToNominatim(address).Result;

@@ -18,7 +18,8 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddAddress
 {
-    private static readonly Nominatim Nominatim = new("C#");
+    private const string UserAgent = "C#";
+    private static readonly Nominatim Nominatim = new(UserAgent);
     public AddAddress()
     {
         //todo finir
@@ -30,7 +31,7 @@ public partial class AddAddress
     private async void Ui()
     {
         var map = new Mapsui.Map { CRS = "EPSG:4326" };
-        var tileLayer = OpenStreetMap.CreateTileLayer();
+        var tileLayer = OpenStreetMap.CreateTileLayer(UserAgent);
         map.Layers.Add(tileLayer);
 
         map.Widgets.Add(new ScaleBarWidget(map)
