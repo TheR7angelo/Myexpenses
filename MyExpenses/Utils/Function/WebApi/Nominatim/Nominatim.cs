@@ -13,29 +13,24 @@ public partial class Nominatim : Http
     //todo application name
     private static HttpClient HttpClient { get; } = GetHttpClient("C#", "https://nominatim.openstreetmap.org");
     
-    public Position AddressToPoint(string address) => _AddressToPosition(address).Result;
-    public NominatimStruc? PointToAddress(Position position) => _PositionToAddress(position).Result;
-    private static async Task<Position> _AddressToPosition(string address)
+    public List<NominatimStruc>? AddressToNominatim(string address) => _AddressToNominatim(address).Result;
+    public NominatimStruc? PointToNominatim(Position position) => _PositionToNominatim(position).Result;
+    private static async Task<List<NominatimStruc>?> _AddressToNominatim(string address)
     {
-        var latitude = 0f;
-        var longitude = 0f;
         try
         {
             var httpResult = await HttpClient.GetAsync($"search?q={ParseToUrlFormat(address)}&format=json&polygon=1&addressdetails=1").ConfigureAwait(false);
             var result = await httpResult.Content.ReadAsStringAsync();
         
-            var r = JsonConvert.DeserializeObject<List<NominatimStruc>>(result);
-            latitude = r![0].lat;
-            longitude = r[0].lon;
+            return JsonConvert.DeserializeObject<List<NominatimStruc>>(result);
         }
         catch (Exception)
         {
-            // ignored
+            return null;
         }
-        return new Position (latitude, longitude);
     }
     
-    private static async Task<NominatimStruc?> _PositionToAddress(Position position)
+    private static async Task<NominatimStruc?> _PositionToNominatim(Position position)
     {
         try
         {
