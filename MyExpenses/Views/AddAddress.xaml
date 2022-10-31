@@ -5,8 +5,36 @@
              xmlns:mapsui="clr-namespace:Mapsui.UI.Forms;assembly=Mapsui.UI.Forms"
              x:Class="MyExpenses.Views.AddAddress">
     <ContentPage.Content>
-        <StackLayout>
-            <!-- <Label x:Name="LabelTest"/> -->
+        <StackLayout Orientation="Vertical">
+            <Line HeightRequest="10" BackgroundColor="Transparent"/>
+            <Label Text="Nom du lieu" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Editor x:Name="EditorName" Placeholder="Nom du lieu" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+            <Label Text="Numéros" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Editor x:Name="EditorNums" Placeholder="Numéros" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+            <StackLayout Orientation="Horizontal">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Grid.Row="0" Grid.Column="0" Text="Ville" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Code postale" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Pays" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                    
+                    <Editor Grid.Row="1" Grid.Column="0" x:Name="EditorCityName" AutoSize="TextChanges" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Ville" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+                    <Editor Grid.Row="1" Grid.Column="1" x:Name="EditorCityPostal" AutoSize="TextChanges" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Code postale" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+                    <Editor Grid.Row="1" Grid.Column="2" x:Name="EditorCityCountry" AutoSize="TextChanges" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Pays" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+                </Grid>
+            </StackLayout>
+            
+            <Line BackgroundColor="Black" WidthRequest="3"/>
+            
             <mapsui:MapView x:Name="MapView" IsNorthingButtonVisible="False" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Gray" MapClicked="MapView_OnMapClicked"/>
         </StackLayout>
     </ContentPage.Content>
