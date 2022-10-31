@@ -18,7 +18,7 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddAddress
 {
-    private static readonly Nominatim Nominatim = new();
+    private static readonly Nominatim Nominatim = new("C#");
     public AddAddress()
     {
         //todo finir
@@ -71,6 +71,32 @@ public partial class AddAddress
         UpdatePosition(e.Point);
     }
 
+    private void EditorAddress_OnCompleted(object sender, EventArgs e)
+    {
+        var nums = ParseToEmpty(EditorNums.Text);
+        var road = ParseToEmpty(EditorRoad.Text);
+        var cityName = ParseToEmpty(EditorCityName.Text);
+        var postal = ParseToEmpty(EditorCityPostal.Text);
+        var country =  ParseToEmpty(EditorCityCountry.Text);
+
+        if (nums.Equals(string.Empty) || road.Equals(string.Empty) || cityName.Equals(string.Empty) || 
+            postal.Equals(string.Empty) || country.Equals(string.Empty)) return;
+        
+        var address = Nominatim.AddressToNominatim($"{nums} {road}, {postal} {cityName} {country}");
+        if (address is null) return;
+        if (address.Count.Equals(0)) return;
+        var position = new Position(address[0].lat, address[0].lon);
+        UpdatePosition(position);
+    }
+
+    private void EditorCoord_OnCompleted(object sender, EventArgs e)
+    {
+        var latitude = ParseToEmpty(EditorLatitude.Text).Replace(',', '.');
+        var longitude = ParseToEmpty(EditorLongitude.Text).Replace(',', '.');
+    }
+
+    private static string ParseToEmpty(string? str) => str ?? string.Empty;
+    
     private void UpdatePosition(Position position)
     {
         Task.Run(() =>
@@ -81,21 +107,25 @@ public partial class AddAddress
                 Position = position,
                 Type = PinType.Pin
             });
+            // var smc = SphericalMercator.FromLonLat(position.Longitude, position.Latitude);
+            // MapView.Navigator!.ZoomIn(new MPoint(smc.x, smc.y));
         });
 
         EditorLatitude.Text = position.Latitude.ToString(CultureInfo.InvariantCulture);
         EditorLongitude.Text = position.Longitude.ToString(CultureInfo.InvariantCulture);
-        
+
         var nums = string.Empty;
+        var road = string.Empty;
         var cityName = string.Empty;
         var postal = string.Empty;
         var country = string.Empty;
         var countryCode = string.Empty;
         
-        var address = Nominatim.PointToAddress(position);
+        var address = Nominatim.PointToNominatim(position);
         if (address is not null)
         {
             nums = address.Value.address.house_number;
+            road = address.Value.address.road;
             cityName = address.Value.address.city ?? address.Value.address.village;
             postal = address.Value.address.postcode.ToString();
             country = address.Value.address.country;
@@ -103,25 +133,10 @@ public partial class AddAddress
         }
 
         EditorNums.Text = nums;
+        EditorRoad.Text = road;
         EditorCityName.Text = cityName;
         EditorCityPostal.Text = postal;
         EditorCityCountry.Text = country;
         EditorCityCountryCode.Text = countryCode;
     }
-
-    private void EditorAddress_OnCompleted(object sender, EventArgs e)
-    {
-        var nums = ParseToEmpty(EditorNums.Text);
-        var cityName = ParseToEmpty(EditorCityName.Text);
-        var postal = ParseToEmpty(EditorCityPostal.Text);
-        var country =  ParseToEmpty(EditorCityCountry.Text);
-    }
-
-    private void EditorCoord_OnCompleted(object sender, EventArgs e)
-    {
-        var latitude = ParseToEmpty(EditorLatitude.Text).Replace(',', '.');
-        var longitude = ParseToEmpty(EditorLongitude.Text).Replace(',', '.');
-    }
-
-    private static string ParseToEmpty(string? str) => str ?? string.Empty;
 }

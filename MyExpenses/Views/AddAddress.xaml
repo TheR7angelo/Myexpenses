@@ -7,44 +7,48 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <Line HeightRequest="10" BackgroundColor="Transparent"/>
-            <Label Text="Nom du lieu" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
+            <Label Text="Nom du lieu" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
             <Editor x:Name="EditorName" Placeholder="Nom du lieu" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
-            <Label Text="Numéros" HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold"/>
-            <Editor x:Name="EditorNums" Placeholder="Numéros" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                    
-                <Label Grid.Row="0" Grid.Column="0" Text="Ville" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
-                <Label Grid.Row="0" Grid.Column="1" Text="Code postale" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
                 
-                <Editor Grid.Row="1" Grid.Column="0" x:Name="EditorCityName" MinimumWidthRequest="20" AutoSize="TextChanges" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Ville" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorAddress_OnCompleted"/>
-                <Editor Grid.Row="1" Grid.Column="1" x:Name="EditorCityPostal" MinimumWidthRequest="20" AutoSize="TextChanges" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Code postale" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorAddress_OnCompleted"/>
+                <Label Grid.Row="0" Grid.Column="0" Text="Numéros" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Rue" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
                 
-                <Label Grid.Row="2" Grid.Column="0" Text="Pays" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
-                <Label Grid.Row="2" Grid.Column="1" Text="Code pays" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Editor Grid.Row="1" Grid.Column="0" x:Name="EditorNums" Placeholder="Numéros" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+                <Editor Grid.Row="1" Grid.Column="1" x:Name="EditorRoad" Placeholder="Rue" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
                 
-                <Editor Grid.Row="3" Grid.Column="0" x:Name="EditorCityCountry" MinimumWidthRequest="20" AutoSize="TextChanges" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Pays" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorAddress_OnCompleted"/>
-                <Editor Grid.Row="3" Grid.Column="1" x:Name="EditorCityCountryCode" MinimumWidthRequest="20" TextTransform="Lowercase" AutoSize="TextChanges" HorizontalOptions="Center" VerticalOptions="Center" Placeholder="Code pays" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Ville" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="Code postale" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
                 
-                <Label Grid.Row="4" Grid.Column="0" Text="Latitude" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
-                <Label Grid.Row="4" Grid.Column="1" Text="Longitude" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Editor Grid.Row="3" Grid.Column="0" x:Name="EditorCityName" Placeholder="Ville" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorAddress_OnCompleted"/>
+                <Editor Grid.Row="3" Grid.Column="1" x:Name="EditorCityPostal" Placeholder="Code postale" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorAddress_OnCompleted"/>
                 
-                <Editor Grid.Row="5" Grid.Column="0" x:Name="EditorLatitude" Keyboard="Numeric" Placeholder="Latitude" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorCoord_OnCompleted"/>
-                <Editor Grid.Row="5" Grid.Column="1" x:Name="EditorLongitude" Keyboard="Numeric" Placeholder="Longitude" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorCoord_OnCompleted"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="Pays" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="Code pays" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                
+                <Editor Grid.Row="5" Grid.Column="0" x:Name="EditorCityCountry" Placeholder="Pays" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorAddress_OnCompleted"/>
+                <Editor Grid.Row="5" Grid.Column="1" x:Name="EditorCityCountryCode" VerticalOptions="Center" Placeholder="Code pays" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a"/>
+                
+                <Label Grid.Row="6" Grid.Column="0" Text="Latitude" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Label Grid.Row="6" Grid.Column="1" Text="Longitude" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+                
+                <Editor Grid.Row="7" Grid.Column="0" x:Name="EditorLatitude" Keyboard="Numeric" Placeholder="Latitude" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorCoord_OnCompleted"/>
+                <Editor Grid.Row="7" Grid.Column="1" x:Name="EditorLongitude" Keyboard="Numeric" Placeholder="Longitude" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorCoord_OnCompleted"/>
             </Grid>
-            
-            <Line BackgroundColor="Black" WidthRequest="3"/>
             
             <mapsui:MapView x:Name="MapView" IsNorthingButtonVisible="False" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Gray" MapClicked="MapView_OnMapClicked"/>
         </StackLayout>

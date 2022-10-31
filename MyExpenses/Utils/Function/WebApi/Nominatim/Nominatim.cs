@@ -10,9 +10,13 @@ namespace MyExpenses.Utils.Function.WebApi;
 
 public partial class Nominatim : Http
 {
-    //todo application name
-    private static HttpClient HttpClient { get; } = GetHttpClient("C#", "https://nominatim.openstreetmap.org");
-    
+    private static string UserAgent { get; set; } = "C#";
+    private static HttpClient HttpClient { get; } = GetHttpClient(UserAgent, "https://nominatim.openstreetmap.org");
+    public Nominatim(string userAgent)
+    {
+        UserAgent = userAgent;
+    }
+
     public List<NominatimStruc>? AddressToNominatim(string address) => _AddressToNominatim(address).Result;
     public NominatimStruc? PointToNominatim(Position position) => _PositionToNominatim(position).Result;
     private static async Task<List<NominatimStruc>?> _AddressToNominatim(string address)
