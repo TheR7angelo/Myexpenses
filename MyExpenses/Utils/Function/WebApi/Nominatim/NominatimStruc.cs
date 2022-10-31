@@ -5,7 +5,7 @@ namespace MyExpenses.Utils.Function.WebApi;
 
 public partial class Nominatim
 {
-    private struct NominatimStruc
+    public struct NominatimStruc
     {
         public long place_id = 0;
         public string? licence = null;
@@ -22,7 +22,7 @@ public partial class Nominatim
         }
     }
     
-    private struct Address
+    public struct Address
     {
         public string? house_number = null;
         public string? road = null;
