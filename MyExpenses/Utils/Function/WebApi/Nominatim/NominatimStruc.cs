@@ -28,6 +28,7 @@ public partial class Nominatim
         public string? road = null;
         public string? suburb = null;
         public string? city = null;
+        public string? village = null;
         public string? municipality = null;
         public string? county = null;
         public string? state = null;

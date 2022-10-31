@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 using Mapsui;
@@ -47,8 +48,6 @@ public partial class AddAddress
             
         MapView.MyLocationLayer.UpdateMyLocation(position);
         MapView.Navigator!.NavigateTo(new MPoint(smc.x, smc.y), MapView.Map.Resolutions[17]);
-
-        UpdatePosition(position);
     }
 
     private static async Task<Location?> GetCurrentLocation()
@@ -84,15 +83,45 @@ public partial class AddAddress
             });
         });
 
-        Task.Run(() =>
+        EditorLatitude.Text = position.Latitude.ToString(CultureInfo.InvariantCulture);
+        EditorLongitude.Text = position.Longitude.ToString(CultureInfo.InvariantCulture);
+        
+        var nums = string.Empty;
+        var cityName = string.Empty;
+        var postal = string.Empty;
+        var country = string.Empty;
+        var countryCode = string.Empty;
+        
+        var address = Nominatim.PointToAddress(position);
+        if (address is not null)
         {
-            var address = Nominatim.PointToAddress(position);
-            if (address is null) return;
-            EditorNums.Text = address.Value.address.house_number;
-            EditorCityName.Text = address.Value.address.city;
-            EditorCityPostal.Text = address.Value.address.postcode.ToString();
-            EditorCityCountry.Text = address.Value.address.country;
-            EditorCityCountryCode.Text = address.Value.address.country_code;
-        });
+            nums = address.Value.address.house_number;
+            cityName = address.Value.address.city ?? address.Value.address.village;
+            postal = address.Value.address.postcode.ToString();
+            country = address.Value.address.country;
+            countryCode = address.Value.address.country_code;
+        }
+
+        EditorNums.Text = nums;
+        EditorCityName.Text = cityName;
+        EditorCityPostal.Text = postal;
+        EditorCityCountry.Text = country;
+        EditorCityCountryCode.Text = countryCode;
     }
+
+    private void EditorAddress_OnCompleted(object sender, EventArgs e)
+    {
+        var nums = ParseToEmpty(EditorNums.Text);
+        var cityName = ParseToEmpty(EditorCityName.Text);
+        var postal = ParseToEmpty(EditorCityPostal.Text);
+        var country =  ParseToEmpty(EditorCityCountry.Text);
+    }
+
+    private void EditorCoord_OnCompleted(object sender, EventArgs e)
+    {
+        var latitude = ParseToEmpty(EditorLatitude.Text).Replace(',', '.');
+        var longitude = ParseToEmpty(EditorLongitude.Text).Replace(',', '.');
+    }
+
+    private static string ParseToEmpty(string? str) => str ?? string.Empty;
 }
