@@ -159,6 +159,9 @@ public partial class AddAddress
             await DisplayAlert("Erreur", msg, "Ok");
             return;
         }
+
+        var lat = (double)latitude!;
+        var lon = (double)longitude!;
         
         var insert = new SqLite.LieuClass
         {
@@ -169,8 +172,8 @@ public partial class AddAddress
             City = cityName,
             Pays = country,
             CountryCode = countryCode,
-            Latitude = (double)latitude,
-            Longitude = (double)longitude
+            Latitude = lat,
+            Longitude = lon
         };
         insert.InsertLieu();
 
