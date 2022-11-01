@@ -7,6 +7,12 @@ public static partial class SqLite
         _connection!.InsertAsync(historiqueClass).Wait();
         return historiqueClass;
     }
+
+    public static LieuClass InsertLieu(this LieuClass lieuClass)
+    {
+        _connection!.InsertAsync(lieuClass).Wait();
+        return lieuClass;
+    }
     
     public static WalletClass InsertWallet(this WalletClass walletClass)
     {
