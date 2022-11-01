@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,8 +10,8 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class Home
 {
-    public static string Root;
-    public static string Db;
+    public static string Root = null!;
+    public static string Db = null!;
     public static List<string> Dbs = new ();
     public Home()
     {

@@ -10,7 +10,7 @@ namespace MyExpenses.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Capture
     {
-        private static string _root;
+        private static string _root = null!;
         
         public Capture()
         {
@@ -33,7 +33,7 @@ namespace MyExpenses.Views
 
         private static async Task<string> LoadPhotoAsync(FileResult photo)
         {
-
+            //todo à utiliser
             if (photo is null) return string.Empty;
 
             var newFile = Path.Combine(_root, $"hey20{Path.GetExtension(photo.FileName)}");

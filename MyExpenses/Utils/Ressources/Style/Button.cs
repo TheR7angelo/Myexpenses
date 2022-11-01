@@ -16,7 +16,7 @@ public class Button
     public static Xamarin.Forms.Style GetStyle(string name)
     {
         var st = List.Where(s => s.Name.Equals(name)).ToList();
-        return st.Count.Equals(0) ? null : st[0].VStyle;
+        return (st.Count.Equals(0) ? null : st[0].VStyle)!;
     }
     
     private static Structs.Style StyleWallet()

@@ -26,7 +26,7 @@ public static partial class Images
     public static SKBitmap GetSkBitmap(this string name)
     {
         var st = List.Where(s => s.Name.Equals(name)).ToList();
-        return st.Count.Equals(0) ? null : st[0].VCanvas;
+        return (st.Count.Equals(0) ? null : st[0].VCanvas)!;
     }
 
     public static ImageSource GetImageSource(this string name) => ParseToImageSource(GetSkBitmap(name));

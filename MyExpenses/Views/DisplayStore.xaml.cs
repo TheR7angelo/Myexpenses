@@ -11,9 +11,12 @@ public partial class DisplayStore
 {
     private static readonly Style RdAddressStyle = Utils.Ressources.Style.RadioButton.GetStyle("rdAddress");
     
-    private static List<SqLite.LieuClass> _dataStore;
+    private static List<SqLite.LieuClass> _dataStore = null!;
     public DisplayStore()
     {
+        _dataStore = SqLite.GetAllLieu();
+        
+        
         InitializeComponent();
 
         FillAddress();
@@ -21,7 +24,6 @@ public partial class DisplayStore
 
     private void FillAddress()
     {
-        _dataStore = SqLite.GetAllLieu();
         foreach (var store in _dataStore)
         {
             var rdButton = new RadioButton

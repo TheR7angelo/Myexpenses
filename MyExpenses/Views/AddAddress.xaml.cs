@@ -2,9 +2,7 @@
 using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
-using Mapsui;
 using Mapsui.Extensions;
-using Mapsui.Projections;
 using Mapsui.Tiling;
 using Mapsui.UI.Forms;
 using Mapsui.Widgets;
@@ -44,11 +42,10 @@ public partial class AddAddress
         
         var location = await GetCurrentLocation();
         if (location is null) return;
-        var smc = SphericalMercator.FromLonLat(location.Longitude, location.Latitude);
         var position = new Position(location.Latitude, location.Longitude);
             
         MapView.MyLocationLayer.UpdateMyLocation(position);
-        MapView.Navigator!.NavigateTo(new MPoint(smc.x, smc.y), MapView.Map.Resolutions[17]);
+        ZoomToPosition(position, MapView.Map.Resolutions[17]);
     }
 
     private static async Task<Location?> GetCurrentLocation()
@@ -87,14 +84,28 @@ public partial class AddAddress
         if (address is null) return;
         if (address.Count.Equals(0)) return;
         var position = new Position(address[0].lat, address[0].lon);
-        UpdatePosition(position);
+        
+        UpdateZoom(position);
     }
 
     private void EditorCoord_OnCompleted(object sender, EventArgs e)
     {
         var latitude = ParseToEmpty(EditorLatitude.Text).Replace(',', '.');
         var longitude = ParseToEmpty(EditorLongitude.Text).Replace(',', '.');
+
+        if (latitude.Equals(string.Empty) || longitude.Equals(string.Empty)) return;
+
+        var position = new Position(double.Parse(latitude), double.Parse(longitude));
+        UpdateZoom(position);
     }
+
+    private void UpdateZoom(Position position)
+    {
+        UpdatePosition(position);
+        ZoomToPosition(position, MapView.Map!.Resolutions[17]);
+    }
+
+    private void ZoomToPosition(Position position, double resolution) => MapView.Navigator!.NavigateTo(position.ToMapsui(), resolution);
 
     private static string ParseToEmpty(string? str) => str ?? string.Empty;
     
@@ -108,8 +119,6 @@ public partial class AddAddress
                 Position = position,
                 Type = PinType.Pin
             });
-            // var smc = SphericalMercator.FromLonLat(position.Longitude, position.Latitude);
-            // MapView.Navigator!.ZoomIn(new MPoint(smc.x, smc.y));
         });
 
         EditorLatitude.Text = position.Latitude.ToString(CultureInfo.InvariantCulture);

@@ -100,7 +100,7 @@ public partial class ActiveAccount
         var btn = (Button)sender;
         var i = btn.BindingContext as SqLite.VWalletClass;
 
-        Navigation.PushAsync(new ActiveWallet(i));
+        Navigation.PushAsync(new ActiveWallet(i!));
     }
 
     private void ButtonStore_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayStore());
