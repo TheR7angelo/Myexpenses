@@ -258,9 +258,9 @@ public static partial class SqLite
         [Column("date_ajout")]
         public DateTime DateAdd { get; set; }
         [Column("latitude")]
-        public float Latitude { get; set; }
+        public double Latitude { get; set; }
         [Column("longitude")]
-        public float Longitude { get; set; }
+        public double Longitude { get; set; }
     }
 
     [Table("t_type_compte")]
