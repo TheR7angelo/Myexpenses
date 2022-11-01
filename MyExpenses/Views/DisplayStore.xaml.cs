@@ -9,8 +9,6 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class DisplayStore
 {
-    private static readonly Style RdAddressStyle = Utils.Ressources.Style.RadioButton.GetStyle("rdAddress");
-    
     private static List<SqLite.LieuClass> _dataStore = null!;
     public DisplayStore()
     {
