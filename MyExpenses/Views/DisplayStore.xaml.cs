@@ -16,6 +16,7 @@ public partial class DisplayStore
     {
         _dataStore = SqLite.GetAllLieu();
         
+        //todo à finir
         
         InitializeComponent();
 
