@@ -96,11 +96,11 @@ public partial class AddWallet
 
     private static IEnumerable<string> CheckError(string walletName, string typeName)
     {
-        const string msg = "- Le {0} du portefeuille ne peut pas etre vide";
+        const string sMsg = "- Le {0} du portefeuille ne peut pas etre vide";
         var error = new List<string>();
         
-        if (walletName.Equals(string.Empty)) error.Add(string.Format(msg, "nom"));
-        if (typeName.Equals(string.Empty)) error.Add(string.Format(msg, "type"));
+        if (walletName.Equals(string.Empty)) error.Add(string.Format(sMsg, "nom"));
+        if (typeName.Equals(string.Empty)) error.Add(string.Format(sMsg, "type"));
 
         return error;
     }
