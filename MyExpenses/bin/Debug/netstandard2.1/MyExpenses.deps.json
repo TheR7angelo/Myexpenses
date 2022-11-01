@@ -17,8 +17,7 @@
           "Xamarin.Essentials": "1.7.0",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.ComboBox": "1.0.0.3",
-          "sqlite-net-pcl": "1.8.116",
-          "Mono.Android": "0.0.0.0"
+          "sqlite-net-pcl": "1.8.116"
         },
         "runtime": {
           "MyExpenses.dll": {}
@@ -841,14 +840,6 @@
         "dependencies": {
           "Xamarin.Forms": "5.0.0.2515"
         }
-      },
-      "Mono.Android/0.0.0.0": {
-        "runtime": {
-          "Mono.Android.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
       }
     }
   },
@@ -1375,11 +1366,6 @@
       "sha512": "sha512-ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
       "path": "xamarin.forms.visual.material/5.0.0.2012",
       "hashPath": "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
-    },
-    "Mono.Android/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

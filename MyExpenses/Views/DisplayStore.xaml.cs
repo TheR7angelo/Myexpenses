@@ -27,14 +27,36 @@ public partial class DisplayStore
     {
         foreach (var store in _dataStore)
         {
-            var rdButton = new RadioButton
+            var grid = new Grid { HeightRequest = 30 };
+            grid.Children.Add(new Label { Text = store.Name });
+
+            var swipe = new SwipeView
             {
-                // Style = RdAddress,
-                Content = store.Name,
+                LeftItems = { SwipeBehaviorOnInvoked = SwipeBehaviorOnInvoked.RemainOpen },
+                RightItems = { SwipeBehaviorOnInvoked = SwipeBehaviorOnInvoked.Auto }
+            };
+
+            var leftItem = new SwipeItem
+            {
+                Text = "Modifier",
+                BackgroundColor = Color.Orange,
                 BindingContext = store
             };
+            leftItem.Clicked += SwipeModify_OnClicked;
+
+            var rightItem = new SwipeItem
+            {
+                Text = "Supprimer",
+                BackgroundColor = Color.Crimson,
+                BindingContext = store
+            };
+            rightItem.Clicked += SwipeDelete_OnClicked;
             
-            StackLayoutAddress.Children.Add(rdButton);
+            swipe.LeftItems.Add(leftItem);
+            swipe.RightItems.Add(rightItem);
+            swipe.Content = grid;
+            
+            StackLayoutAddress.Children.Add(swipe);
         }
 
         var btn = new Button
@@ -43,6 +65,16 @@ public partial class DisplayStore
         };
         btn.Clicked += BtnOnClicked;
         StackLayoutAddress.Children.Add(btn);
+    }
+
+    private void SwipeDelete_OnClicked(object sender, EventArgs e)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void SwipeModify_OnClicked(object sender, EventArgs e)
+    {
+        throw new NotImplementedException();
     }
 
     private void BtnOnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddAddress());
