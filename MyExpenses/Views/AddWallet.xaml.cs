@@ -161,29 +161,8 @@ public partial class AddWallet
 
     private void PickerImage_OnSelectedIndexChanged(object sender, EventArgs e)
     {
-        // SkCanvasView.InvalidateSurface();
         SetImage();
     }
-
-    // private void SkCanvasView_OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
-    // {
-    //     var info = e.Info;
-    //     var surface = e.Surface;
-    //     var canvas = surface.Canvas;
-    //     
-    //     var imageName = PickerImage.SelectedItem as string;
-    //     var img = _dataImage.Where(s => s.Name.Equals(imageName)).ToList()[0];
-    //     var bitmap = Utils.Ressources.Images.GetSkBitmap(imageName);
-    //     
-    //     canvas.Clear();
-    //     var resize = bitmap.Resize(info, SKFilterQuality.High);
-    //     
-    //     var x = (info.Width - resize.Width) / 2f;
-    //     var y = (info.Height - resize.Height) / 2f;
-    //     
-    //     canvas.DrawBitmap(resize, x, y);
-    //     SkCanvasView.BindingContext = img;
-    // }
 
     private void SetImage()
     {
