@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddee753-c0f4-4cc5-b969-f9ae20bfc31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/07c9e865-80fa-47d1-8eb6-541b519327a5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/07c9e865-80fa-47d1-8eb6-541b519327a5/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/07c9e865-80fa-47d1-8eb6-541b519327a5/storage_v2/_src_/schema/main.uQUzAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e9fdd4d4-1c6e-44e2-a54e-bb31aa0401d8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyExpenses.iOS/obj/iPhone/Debug/MyExpenses.iOS.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.iOS/obj/iPhone/Debug/MyExpenses.iOS.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/Utils/DataBase/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Utils/DataBase/Table.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/AddWallet.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/AddWallet.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/test/test img.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/test/test magasin.sqlite" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

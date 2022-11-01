@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="test magasin" uuid="6c41a532-e4a2-425b-ad1e-de90b1f79065">
+    <data-source source="LOCAL" name="test" uuid="cd57688e-dfa2-40e2-a43d-fe77a5b63eef">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test magasin.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
@@ -13,11 +13,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="test" uuid="cd57688e-dfa2-40e2-a43d-fe77a5b63eef">
+    <data-source source="LOCAL" name="test mgasin" uuid="c2161eda-e2cb-4c77-8600-f2924848e8bf">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses\test\test mgasin.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>

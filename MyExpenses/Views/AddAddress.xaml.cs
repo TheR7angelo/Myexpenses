@@ -7,6 +7,7 @@ using Mapsui.Tiling;
 using Mapsui.UI.Forms;
 using Mapsui.Widgets;
 using Mapsui.Widgets.ScaleBar;
+using MyExpenses.Utils.Database;
 using MyExpenses.Utils.Function.WebApi;
 using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
@@ -20,7 +21,6 @@ public partial class AddAddress
     private static readonly Nominatim Nominatim = new(UserAgent);
     public AddAddress()
     {
-        //todo finir
         InitializeComponent();
 
         Ui();
@@ -64,11 +64,6 @@ public partial class AddAddress
         }
     }
 
-    private void MapView_OnMapClicked(object sender, MapClickedEventArgs e)
-    {
-        UpdatePosition(e.Point);
-    }
-
     private void EditorAddress_OnCompleted(object sender, EventArgs e)
     {
         var nums = ParseToEmpty(EditorNums.Text);
@@ -90,25 +85,15 @@ public partial class AddAddress
 
     private void EditorCoord_OnCompleted(object sender, EventArgs e)
     {
-        var latitude = ParseToEmpty(EditorLatitude.Text).Replace(',', '.');
-        var longitude = ParseToEmpty(EditorLongitude.Text).Replace(',', '.');
+        var latitude = ParseToCoord(EditorLatitude.Text);
+        var longitude = ParseToCoord(EditorLongitude.Text);
 
-        if (latitude.Equals(string.Empty) || longitude.Equals(string.Empty)) return;
+        if (latitude is null || longitude is null) return;
 
-        var position = new Position(double.Parse(latitude), double.Parse(longitude));
+        var position = new Position((double)latitude, (double)longitude);
         UpdateZoom(position);
     }
 
-    private void UpdateZoom(Position position)
-    {
-        UpdatePosition(position);
-        ZoomToPosition(position, MapView.Map!.Resolutions[17]);
-    }
-
-    private void ZoomToPosition(Position position, double resolution) => MapView.Navigator!.NavigateTo(position.ToMapsui(), resolution);
-
-    private static string ParseToEmpty(string? str) => str ?? string.Empty;
-    
     private void UpdatePosition(Position position)
     {
         Task.Run(() =>
@@ -149,4 +134,65 @@ public partial class AddAddress
         EditorCityCountry.Text = country;
         EditorCityCountryCode.Text = countryCode;
     }
+
+    private async void ButtonValid_OnClicked(object sender, EventArgs e)
+    {
+        var name = ParseToEmpty(EditorName.Text);
+        var nums = ParseToEmpty(EditorNums.Text);
+        var road = ParseToEmpty(EditorRoad.Text);
+        var cityName = ParseToEmpty(EditorCityName.Text);
+        var postal = ParseToEmpty(EditorCityPostal.Text);
+        var country = ParseToEmpty(EditorCityCountry.Text);
+        var countryCode = ParseToEmpty(EditorCityCountryCode.Text);
+        var latitude = ParseToCoord(EditorLatitude.Text);
+        var longitude = ParseToCoord(EditorLongitude.Text);
+
+        var error = true;
+        var msg = "Le lieu à étais ajouté";
+        
+        if (name.Equals(string.Empty)) msg = "Le nom du lieu ne peut pas etre vide";
+        else if (latitude is null || longitude is null) msg = "Une des coordonnées ne peut pas etre vide";
+        else error = false;
+
+        if (error)
+        {
+            await DisplayAlert("Erreur", msg, "Ok");
+            return;
+        }
+        
+        var insert = new SqLite.LieuClass
+        {
+            Name = name,
+            Nums = nums,
+            Rue = road,
+            Postal = postal,
+            City = cityName,
+            Pays = country,
+            CountryCode = countryCode,
+            Latitude = (double)latitude,
+            Longitude = (double)longitude
+        };
+        insert.InsertLieu();
+
+        await DisplayAlert("Réussi", msg, "Ok");
+    }
+    
+    private void UpdateZoom(Position position)
+    {
+        UpdatePosition(position);
+        ZoomToPosition(position, MapView.Map!.Resolutions[17]);
+    }
+
+    private void MapView_OnMapClicked(object sender, MapClickedEventArgs e) => UpdatePosition(e.Point);
+    
+    private void ZoomToPosition(Position position, double resolution) => MapView.Navigator!.NavigateTo(position.ToMapsui(), resolution);
+
+    private static string ParseToEmpty(string? str) => str ?? string.Empty;
+
+    private static double? ParseToCoord(string coord)
+    {
+        var value = ParseToEmpty(coord).Replace(',', '.');
+        if (value.Equals(string.Empty)) return null;
+        return double.Parse(value);
+    } 
 }

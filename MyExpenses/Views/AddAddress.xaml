@@ -50,6 +50,8 @@
                 <Editor Grid.Row="7" Grid.Column="1" x:Name="EditorLongitude" Keyboard="Numeric" Placeholder="Longitude" BackgroundColor="#f9f9f9" FontSize="16" PlaceholderColor="#646b7a" Completed="EditorCoord_OnCompleted"/>
             </Grid>
             
+            <Button Text="Valider" Clicked="ButtonValid_OnClicked"/>
+            
             <mapsui:MapView x:Name="MapView" IsNorthingButtonVisible="False" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="Gray" MapClicked="MapView_OnMapClicked"/>
         </StackLayout>
     </ContentPage.Content>

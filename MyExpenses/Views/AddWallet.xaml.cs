@@ -142,7 +142,6 @@ public partial class AddWallet
             Order = "Init",
             WalletFk = wallet.Id,
             Montant = walletStart,
-            Date = DateTime.Now.ToString("yyyy-MM-dd"),
         }.InsertHistorique();
         
         _previous.DisplayWallet();
