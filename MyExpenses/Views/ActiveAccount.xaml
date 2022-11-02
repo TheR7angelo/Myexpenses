@@ -27,6 +27,7 @@
             <Line BackgroundColor="Black" HeightRequest="1" FlowDirection="LeftToRight"/>
             
             <FlexLayout BackgroundColor="Red" Wrap="Wrap" JustifyContent="Center" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button Text="Gestion des catégorie" BorderColor="Black" BorderWidth="1" Clicked="ButtonCategory_OnClicked"/>
                 <Button Text="Gestion magasin" BorderColor="Black" BorderWidth="1" Clicked="ButtonStore_OnClicked"/>
             </FlexLayout>
 
