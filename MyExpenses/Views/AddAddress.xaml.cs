@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 using System.Threading.Tasks;
 using Mapsui;
 using Mapsui.Extensions;
@@ -179,7 +180,11 @@ public partial class AddAddress
         var msg = "Le lieu à étais ajouté";
         
         if (name.Equals(string.Empty)) msg = "Le nom du lieu ne peut pas etre vide";
+        else if (!DisplayStore.DataStore.Where(s => s.Name.Equals(name)).ToList().Count.Equals(0))
+            msg = "Le nom est déja utiliser";
         else error = false;
+
+        if (_modify is not null && error.Equals(true)) error = false;
 
         if (error)
         {
@@ -206,6 +211,7 @@ public partial class AddAddress
             await DisplayAlert("Réussi", msg, "Ok");
             DisplayStore.DataStore.Add(insert);
             _displayStore.AddDisplayStore(insert);
+            _modify = insert;
         }
         else
         {
