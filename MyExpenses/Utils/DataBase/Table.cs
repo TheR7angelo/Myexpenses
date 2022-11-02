@@ -89,6 +89,29 @@ public static partial class SqLite
 
     #region Table Foreigner
 
+    private const string Abonement = @"
+    CREATE TABLE t_abonements(
+        id INTEGER NOT NULL
+            constraint t_abonements_pk
+                PRIMARY KEY AUTOINCREMENT,
+        lieu_fk           integer
+            constraint t_credit_t_lieu_id_fk
+                references t_lieu (id),
+        raison            text,
+        type_payement     integer
+            constraint t_credit_t_type_payement_id_fk
+                references t_type_payement (id),
+        recurence         integer,
+        type_recurence_recurence_fk integer
+            constraint t_credit_t_type_recurence_id_fk
+                references t_type_recurence (id),
+        duree            integer,
+        type_recurence_duree_fk integer
+            constraint t_credit_t_type_recurence_id_fk
+                references t_type_recurence (id),
+        montant           real
+    );";
+    
     private const string Compte = @"
     create table t_compte
     (
@@ -162,7 +185,10 @@ public static partial class SqLite
                 references t_credit (id),
         virement_fk     integer
             constraint t_historique_t_virement_id_fk
-                references t_virement(id)
+                references t_virement(id),
+        abonements_fk   INTEGER
+            constraint t_historique_t_abonements_id_fk
+                references t_abonements(id)
     );";
     
     private const string Virement = @"
