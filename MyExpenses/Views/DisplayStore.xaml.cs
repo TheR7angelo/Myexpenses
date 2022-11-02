@@ -69,8 +69,7 @@ public partial class DisplayStore
 
     private void SwipeModify_OnClicked(object sender, EventArgs e)
     {
-        var swipeItem = (SwipeItem)sender;
-        var lieu = swipeItem.BindingContext as SqLite.LieuClass;
+        var lieu = ((SwipeItem)sender).BindingContext as SqLite.LieuClass;
         Navigation.PushAsync(new AddAddress(this, lieu));
     }
 
