@@ -220,10 +220,10 @@ public static partial class SqLite
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
         [Column("compte_fk")] public int? WalletFk { get; set; }
-        [Column("ordre")] public string? Order { get; set; }
+        [Column("ordre")] public string Order { get; set; } = null!;
         [Column("type_categorie_fk")] public int? TypeCategorieFk { get; set; }
         [Column("type_payement_fk")] public int? TypePayementFk { get; set; }
-        [Column("montant")] public decimal? Montant { get; set; }
+        [Column("montant")] public decimal Montant { get; set; }
         [Column("date")] public DateTime Date { get; set; } = DateTime.UtcNow;
         [Column("lieu_fk")] public int? LieuFk { get; set; }
         [Column("ticket_fk")] public int? TicketFk { get; set; }
