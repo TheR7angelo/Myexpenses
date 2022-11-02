@@ -13,17 +13,17 @@ public partial class DisplayStore
     public DisplayStore()
     {
         DataStore = SqLite.GetAllLieu();
-        
-        //todo à finir
-        
+
         InitializeComponent();
 
-        FillAddress();
+        AddDisplayStore();
     }
 
-    public void FillAddress(SqLite.LieuClass store) => AddStoreDisplay(store);
+    #region Function
+
+    public void AddDisplayStore(SqLite.LieuClass store) => AddStoreDisplay(store);
     
-    private void FillAddress()
+    private void AddDisplayStore()
     {
         foreach (var store in DataStore) AddStoreDisplay(store);
     }
@@ -62,6 +62,10 @@ public partial class DisplayStore
         StackLayoutAddress.Children.Add(swipe);
     }
 
+    #endregion
+
+    #region Actions
+
     private void SwipeDelete_OnClicked(object sender, EventArgs e)
     {
         throw new NotImplementedException();
@@ -74,4 +78,6 @@ public partial class DisplayStore
     }
 
     private void ButtonAddStore_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddAddress(this));
+
+    #endregion
 }

@@ -201,7 +201,7 @@ public partial class AddAddress
 
         await DisplayAlert("Réussi", msg, "Ok");
         DisplayStore.DataStore.Add(insert);
-        _displayStore.FillAddress(insert);
+        _displayStore.AddDisplayStore(insert);
     }
 
     private void MapView_OnMapClicked(object sender, MapClickedEventArgs e) => UpdatePosition(e.Point);
