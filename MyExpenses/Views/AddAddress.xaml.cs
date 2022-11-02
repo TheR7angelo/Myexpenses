@@ -234,7 +234,7 @@ public partial class AddAddress
             
             var index = DisplayStore.DataStore.FindIndex(s => s.Id.Equals(_modify.Id));
             DisplayStore.DataStore[index] = _modify;
-            _displayStore.AddDisplayStoreReset();
+            _displayStore.AddDisplayStore(true);
         }
     }
 

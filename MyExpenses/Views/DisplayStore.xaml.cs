@@ -12,7 +12,7 @@ public partial class DisplayStore
     public static List<SqLite.LieuClass> DataStore = null!;
     public DisplayStore()
     {
-        DataStore = SqLite.GetAllLieu();
+        DataStore = SqLite.GetAllStore();
 
         InitializeComponent();
 
@@ -21,18 +21,13 @@ public partial class DisplayStore
 
     #region Function
 
-    public void AddDisplayStoreReset()
+    public void AddDisplayStore(bool reset = false)
     {
-        StackLayoutStore.Children.Clear();
-        AddDisplayStore();
+        if (reset) StackLayoutStore.Children.Clear();
+        foreach (var store in DataStore) AddStoreDisplay(store);
     }
     
     public void AddDisplayStore(SqLite.LieuClass store) => AddStoreDisplay(store);
-    
-    private void AddDisplayStore()
-    {
-        foreach (var store in DataStore) AddStoreDisplay(store);
-    }
 
     private void AddStoreDisplay(SqLite.LieuClass store)
     {
