@@ -127,7 +127,8 @@ public static partial class SqLite
                         references t_colors (id),
         image_fk        int
             constraint t_compte_t_images_id_fk
-                        references t_images(id)
+                        references t_images(id),
+        externe         int
     );
     ";
 
@@ -201,7 +202,7 @@ public static partial class SqLite
         compte_depart integer
             constraint t_virement_t_compte_id_fk
                 references t_compte(id),
-        compte_reception integer
+        compte_depart integer
             constraint t_virement_t_compte_id_fk
                 references t_compte(id)
     );";
@@ -241,6 +242,7 @@ public static partial class SqLite
         [Column("type_compte_fk")] public int TypeCompteFk { get; set; }
         [Column("color_fk")] public int Color { get; set; }
         [Column("image_fk")] public int Image { get; set; }
+        [Column("externe")] public bool External { get; set; } = false;
     }
 
     [Table("t_colors")]
@@ -322,6 +324,7 @@ public static partial class SqLite
         [Column("color_name")] public string ColorName { get; set; } = null!;
         [Column("color_value")] public string ColorValue { get; set; } = null!;
         [Column("image")] public string Image { get; set; } = null!;
+        [Column("externe")] public bool External { get; set; } = false;
     }
 
     #endregion

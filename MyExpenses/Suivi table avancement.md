@@ -2,6 +2,7 @@
 
 - [ ] abonement
 - [ ] categorie
+- [ ] compte_foreigner
 - [ ] credit
 - [ ] historique
 - [x] portefeuille (compte dans le fichier xlsx)
