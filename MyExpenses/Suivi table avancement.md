@@ -2,12 +2,13 @@
 
 - [ ] abonement
 - [ ] categorie
-- [ ] compte_foreigner
 - [ ] credit
-- [ ] historique
+- [x] historique
 - [x] portefeuille (compte dans le fichier xlsx)
 - [x] lieu
 - [ ] tickets
 - [x] type compte
 - [ ] type payement
 - [ ] type récurence
+
+4/10 == 40%
