@@ -245,6 +245,15 @@ public static partial class SqLite
         [Column("externe")] public bool External { get; set; } = false;
     }
 
+    [Table("t_type_categorie")]
+    public class CategoryClass
+    {
+        [PrimaryKey, AutoIncrement, Column("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Name { get; set; } = null!;
+    }
+
     [Table("t_colors")]
     public class ColorsClass
     {

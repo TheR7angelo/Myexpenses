@@ -16,6 +16,11 @@ public static partial class SqLite
     }
 
     #endregion
+
+    public static List<CategoryClass> GetAllCategory() =>
+        _connection!.QueryAsync<CategoryClass>("SELECT * FROM main.t_type_categorie").Result;
+
+    public static List<LieuClass> GetAllStore() => _connection!.QueryAsync<LieuClass>("SELECT * FROM t_lieu").Result;
     
     public static IEnumerable<VWalletClass> GetAllWallet()
     {
@@ -33,8 +38,6 @@ public static partial class SqLite
 
     public static List<WalletType> GetAllWalletType() =>
         _connection!.QueryAsync<WalletType>("SELECT * FROM t_type_compte").Result;
-
-    public static List<LieuClass> GetAllLieu() => _connection!.QueryAsync<LieuClass>("SELECT * FROM t_lieu").Result;
 
     #region Image
 
