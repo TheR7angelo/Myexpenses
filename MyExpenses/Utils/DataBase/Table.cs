@@ -228,6 +228,7 @@ public static partial class SqLite
         [Column("lieu_fk")] public int? LieuFk { get; set; }
         [Column("ticket_fk")] public int? TicketFk { get; set; }
         [Column("credit_fk")] public int? CreditFk { get; set; }
+        [Column("abonements_fk")] public int? AbonementsFk { get; set; }
     }
 
     [Table("t_compte")]
