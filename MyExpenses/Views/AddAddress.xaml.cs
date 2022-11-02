@@ -17,10 +17,13 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddAddress
 {
-    private DisplayStore _displayStore;
-    
+    private readonly DisplayStore _displayStore;
+
+    private const string Crs = "EPSG:4326";
     private const string UserAgent = "C#";
     private static readonly Nominatim Nominatim = new(UserAgent);
+
+    private static SqLite.LieuClass? _modify; 
     public AddAddress(DisplayStore previous, SqLite.LieuClass? modify=null)
     {
         _displayStore = previous;
@@ -29,7 +32,7 @@ public partial class AddAddress
         InitializeMap();
 
         if (modify is null) return;
-
+        _modify = modify;
         Modify(modify);
     }
 
@@ -37,7 +40,7 @@ public partial class AddAddress
 
     private async void InitializeMap()
     {
-        var map = new Map { CRS = "EPSG:4326" };
+        var map = new Map { CRS = Crs };
         var tileLayer = OpenStreetMap.CreateTileLayer(UserAgent);
         map.Layers.Add(tileLayer);
 
@@ -176,7 +179,7 @@ public partial class AddAddress
         var msg = "Le lieu à étais ajouté";
         
         if (name.Equals(string.Empty)) msg = "Le nom du lieu ne peut pas etre vide";
-        else if (latitude is null || longitude is null) msg = "Une des coordonnées ne peut pas etre vide";
+        // else if (latitude is null || longitude is null) msg = "Une des coordonnées ne peut pas etre vide";
         else error = false;
 
         if (error)
@@ -185,23 +188,51 @@ public partial class AddAddress
             return;
         }
 
-        var insert = new SqLite.LieuClass
+        if (_modify is null)
         {
-            Name = name,
-            Nums = nums,
-            Rue = road,
-            Postal = postal,
-            City = cityName,
-            Pays = country,
-            CountryCode = countryCode,
-            Latitude = latitude,
-            Longitude = longitude
-        };
-        insert.InsertLieu();
+            var insert = new SqLite.LieuClass
+            {
+                Name = name,
+                Nums = nums,
+                Rue = road,
+                Postal = postal,
+                City = cityName,
+                Pays = country,
+                CountryCode = countryCode,
+                Latitude = latitude,
+                Longitude = longitude
+            };
+            insert.InsertLieu();
 
-        await DisplayAlert("Réussi", msg, "Ok");
-        DisplayStore.DataStore.Add(insert);
-        _displayStore.AddDisplayStore(insert);
+            await DisplayAlert("Réussi", msg, "Ok");
+            DisplayStore.DataStore.Add(insert);
+            _displayStore.AddDisplayStore(insert);
+        }
+        else
+        {
+            msg = "Mise à jour réussi";
+            
+            _modify.Name = name;
+            _modify.Nums = nums;
+            _modify.Rue = road;
+            _modify.Postal = postal;
+            _modify.City = cityName;
+            _modify.Pays = country;
+            _modify.CountryCode = countryCode;
+            _modify.Latitude = latitude;
+            _modify.Longitude = longitude;
+            _modify.DateAdd = DateTime.UtcNow;
+
+            _modify.UpdateLieuClass();
+            
+            await DisplayAlert("Réussi", msg, "Ok");
+            
+            var index = DisplayStore.DataStore.FindIndex(s => s.Id.Equals(_modify.Id));
+            DisplayStore.DataStore[index] = _modify;
+            _displayStore.AddDisplayStoreReset();
+        }
+        
+
     }
 
     private void MapView_OnMapClicked(object sender, MapClickedEventArgs e) => UpdatePosition(e.Point);

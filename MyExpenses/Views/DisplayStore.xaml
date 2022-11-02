@@ -6,9 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout x:Name="StackLayoutAddress" Orientation="Vertical"/>
-            
             <Button Text="Add" Clicked="ButtonAddStore_OnClicked"/>
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

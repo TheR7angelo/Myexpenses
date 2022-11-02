@@ -21,6 +21,12 @@ public partial class DisplayStore
 
     #region Function
 
+    public void AddDisplayStoreReset()
+    {
+        StackLayoutAddress.Children.Clear();
+        AddDisplayStore();
+    }
+    
     public void AddDisplayStore(SqLite.LieuClass store) => AddStoreDisplay(store);
     
     private void AddDisplayStore()

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MyExpenses.Utils.Database;
+﻿namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
