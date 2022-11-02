@@ -14,7 +14,7 @@
           "SQLiteNetExtensions": "2.1.0",
           "SQLiteNetExtensions.Async": "2.1.0",
           "SkiaSharp.Views.Forms": "2.88.3",
-          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.ComboBox": "1.0.0.3",
           "sqlite-net-pcl": "1.8.116",
@@ -89,7 +89,7 @@
         "dependencies": {
           "Mapsui": "4.0.0-beta.5",
           "SkiaSharp.Views.Forms": "2.88.3",
-          "Xamarin.Essentials": "1.7.0",
+          "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515"
         },
         "runtime": {
@@ -798,7 +798,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Essentials/1.7.3": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -1348,12 +1348,12 @@
       "path": "topten.richtextkit/0.4.145",
       "hashPath": "topten.richtextkit.0.4.145.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.7.0": {
+    "Xamarin.Essentials/1.7.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
-      "path": "xamarin.essentials/1.7.0",
-      "hashPath": "xamarin.essentials.1.7.0.nupkg.sha512"
+      "sha512": "sha512-b6NfxOfkmMGN54a4OcV/D7KXclWWqFwgixMPzlAku3kfKgUBGW4vBdNaujIBmk57NbGpWB2IS78ek0gDHNKwoQ==",
+      "path": "xamarin.essentials/1.7.3",
+      "hashPath": "xamarin.essentials.1.7.3.nupkg.sha512"
     },
     "Xamarin.Forms/5.0.0.2515": {
       "type": "package",

@@ -108,3 +108,6 @@ C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\M
 C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses.iOS\obj\iPhone\Debug\MyExpenses.iOS.csproj.CopyComplete
 C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses.iOS\obj\iPhone\Debug\MyExpenses.iOS.exe
 C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses.iOS\obj\iPhone\Debug\MyExpenses.iOS.pdb
+C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses.iOS\bin\iPhone\Debug\MyExpenses.iOS.exe.config
+C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses.iOS\obj\iPhone\Debug\MyExpenses.iOS.csproj.SuggestedBindingRedirects.cache
+C:\Users\ZP6177\Creative Cloud Files\Programmation\C#\Ineo Infracom\Myexpenses\MyExpenses.iOS\obj\iPhone\Debug\MyExpenses.iOS.exe.config

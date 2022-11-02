@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5SzVv7I+IYfl3mjqTfgKYLU+AR+maMFMYPbHRCLlrmrrsyNQhH26hL4chQ3Ln+yAb4F1g9G6yk7A5/z+IrGgHg==",
+  "dgSpecHash": "SmlVewGBcGWaK5e25sA9Kctsi6o1fu+wssxflV9xlUCwl4ViX/HvKSDWYU7x/5mlS+EWKDnr8Mx3t2qzipnNRg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj",
   "expectedPackageFiles": [
@@ -74,7 +74,7 @@
     "C:\\Users\\ZP6177\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\topten.richtextkit\\0.4.145\\topten.richtextkit.0.4.145.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.combobox\\1.0.0.3\\xamarin.forms.combobox.1.0.0.3.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"

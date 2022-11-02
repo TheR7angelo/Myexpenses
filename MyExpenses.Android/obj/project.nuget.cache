@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VZmYWC8U/RWimQ99gSDARDbf8UCwyMgSAMLI2P/eFtIHix/qN6wC8nGGjbmU7o5whAN22iVQD4SbHNSYsMJhiw==",
+  "dgSpecHash": "+Gl+btmcnNYSHNPHni5lM5X2pz3fJdWNWqAV5lzGGvZhBWoEjHC8WamSwcP5e7qCjC0v1Jmg2IyAosHo3m76hQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
   "expectedPackageFiles": [
@@ -93,7 +93,7 @@
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.androidx.versionedparcelable\\1.1.1.8\\xamarin.androidx.versionedparcelable.1.1.1.8.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.8\\xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.combobox\\1.0.0.3\\xamarin.forms.combobox.1.0.0.3.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
