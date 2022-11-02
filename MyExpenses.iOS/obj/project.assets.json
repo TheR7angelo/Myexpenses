@@ -454,19 +454,19 @@
           }
         }
       },
-      "System.Memory/4.5.5": {
+      "System.Memory/4.5.4": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         }
@@ -1180,19 +1180,19 @@
           }
         }
       },
-      "System.Memory/4.5.5": {
+      "System.Memory/4.5.4": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         }
@@ -1902,19 +1902,19 @@
           }
         }
       },
-      "System.Memory/4.5.5": {
+      "System.Memory/4.5.4": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         }
@@ -2622,19 +2622,19 @@
           }
         }
       },
-      "System.Memory/4.5.5": {
+      "System.Memory/4.5.4": {
         "type": "package",
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
+          "lib/netstandard2.0/System.Memory.dll": {
             "related": ".xml"
           }
         }
@@ -3626,10 +3626,10 @@
         "system.linq.async.nuspec"
       ]
     },
-    "System.Memory/4.5.5": {
-      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
       "type": "package",
-      "path": "system.memory/4.5.5",
+      "path": "system.memory/4.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3643,7 +3643,7 @@
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.5.nupkg.sha512",
+        "system.memory.4.5.4.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -4215,7 +4215,6 @@
       "Microcharts.Forms >= 1.0.0-preview1",
       "MyExpenses >= 1.0.0",
       "SkiaSharp.Views.Forms >= 2.88.3",
-      "System.Memory >= 4.5.5",
       "Xamarin.Essentials >= 1.7.3",
       "Xamarin.Forms >= 5.0.0.2515",
       "Xamarin.Forms.ComboBox >= 1.0.0.3"
@@ -4229,7 +4228,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
-      "projectName": "MyExpenses.iOS.csproj",
+      "projectName": "MyExpenses.iOS",
       "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
       "packagesPath": "C:\\Users\\ZP6177\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\obj\\",
@@ -4275,11 +4274,6 @@
           "SkiaSharp.Views.Forms": {
             "target": "Package",
             "version": "[2.88.3, )"
-          },
-          "System.Memory": {
-            "include": "None",
-            "target": "Package",
-            "version": "[4.5.5, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

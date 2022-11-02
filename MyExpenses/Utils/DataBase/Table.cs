@@ -122,7 +122,11 @@ public static partial class SqLite
             constraint t_credit_t_type_payement_id_fk
                 references t_type_payement (id),
         recurence         integer,
-        type_recurence_fk integer
+        type_recurence_recurence_fk integer
+            constraint t_credit_t_type_recurence_id_fk
+                references t_type_recurence (id),
+        duree            integer,
+        type_recurence_duree_fk integer
             constraint t_credit_t_type_recurence_id_fk
                 references t_type_recurence (id),
         montant           real

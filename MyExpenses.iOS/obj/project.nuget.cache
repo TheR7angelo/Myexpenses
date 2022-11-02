@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Bk101BxAaS8joslEha7qO4ChYli3zYQvJYRX9s6AJBH6SqaKPMC6d0Uzl3fx29K3u6kI/jEjYijxb+h72VXv7Q==",
+  "dgSpecHash": "WMvaCL1Pe3J/3e1te2fHl7gsiIB+1Bbw7VCiMKPmvMSn0lfbccIf+CftOBQQahzgw1hXv2qoSaGsJe5XuqRWZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,7 @@
     "C:\\Users\\ZP6177\\.nuget\\packages\\svg.skia\\0.5.12\\svg.skia.0.5.12.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\system.linq.async\\6.0.1\\system.linq.async.6.0.1.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
