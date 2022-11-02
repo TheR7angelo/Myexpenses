@@ -5,17 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eddee753-c0f4-4cc5-b969-f9ae20bfc31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyExpenses/Utils/DataBase/Table.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Utils/DataBase/Table.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/AddAddress.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/AddWallet.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/AddWallet.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c41a532-e4a2-425b-ad1e-de90b1f79065.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c41a532-e4a2-425b-ad1e-de90b1f79065/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c41a532-e4a2-425b-ad1e-de90b1f79065/storage_v2/_src_/schema/main.uQUzAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.Android/Resources/Resource.designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.Android/Resources/Resource.designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.Android/obj/MyExpenses.Android.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.Android/obj/MyExpenses.Android.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.Android/obj/MyExpenses.Android.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.Android/obj/MyExpenses.Android.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.Android/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.Android/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.Android/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.Android/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.Android/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.Android/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.iOS/obj/MyExpenses.iOS.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.iOS/obj/MyExpenses.iOS.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.iOS/obj/MyExpenses.iOS.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.iOS/obj/MyExpenses.iOS.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.iOS/obj/iPhone/Debug/MyExpenses.iOS.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.iOS/obj/iPhone/Debug/MyExpenses.iOS.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.iOS/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.iOS/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.iOS/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.iOS/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses.iOS/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses.iOS/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/Views/DisplayStore.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/Views/DisplayStore.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/bin/Debug/netstandard2.1/MyExpenses.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyExpenses/test/test img.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyExpenses/test/test magasin.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/obj/MyExpenses.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/obj/MyExpenses.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/obj/MyExpenses.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/obj/MyExpenses.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyExpenses/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MyExpenses/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +44,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ZP6177/Creative Cloud Files/Programmation/C#/Ineo Infracom/Myexpenses&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ZP6177/Creative Cloud Files/Programmation/Python/INEO Infracom/APCOM v2"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
 </project>

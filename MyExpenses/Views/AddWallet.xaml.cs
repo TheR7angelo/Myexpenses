@@ -124,7 +124,7 @@ public partial class AddWallet
 
         var lstType = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList();
         
-        var type = lstType.Count.Equals(0) ? new SqLite.WalletType { Name = typeName }.InsertWalletType() : lstType[0];
+        var type = lstType.Count.Equals(0) ? new SqLite.WalletType { Name = typeName }.Insert() : lstType[0];
 
         var color = FrameColor.BindingContext as SqLite.ColorsClass;
         var image = ImageLogo.BindingContext as SqLite.ImageClass;
@@ -135,14 +135,14 @@ public partial class AddWallet
             Color = color!.Id,
             Image = image!.Id,
             TypeCompteFk = type.Id
-        }.InsertWallet();
+        }.Insert();
 
         new SqLite.HistoriqueClass
         {
             Order = "Init",
             WalletFk = wallet.Id,
             Montant = walletStart,
-        }.InsertHistorique();
+        }.Insert();
         
         _previous.DisplayWallet();
         await Navigation.PopAsync();

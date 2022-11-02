@@ -17,10 +17,10 @@ public static partial class SqLite
 
     #endregion
     
-    public static List<VWalletClass> GetAllWallet()
+    public static IEnumerable<VWalletClass> GetAllWallet()
     {
         const string cmd = @"
-        SELECT c.id, c.nom, ttc.nom as type, tc.nom as color_name, tc.value as color_value, ti.name as image
+        SELECT c.id, c.nom, ttc.nom as type, tc.nom as color_name, tc.value as color_value, ti.name as image, c.externe
         FROM t_compte c
         LEFT JOIN t_type_compte ttc
             ON c.type_compte_fk = ttc.id

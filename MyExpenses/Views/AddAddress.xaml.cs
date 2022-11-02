@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Globalization;
-using System.Threading;
+using System.Linq;
 using System.Threading.Tasks;
+using Mapsui;
 using Mapsui.Extensions;
 using Mapsui.Tiling;
 using Mapsui.UI.Forms;
 using Mapsui.Widgets;
 using Mapsui.Widgets.ScaleBar;
 using MyExpenses.Utils.Database;
+using MyExpenses.Utils.Function;
 using MyExpenses.Utils.Function.WebApi;
-using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 
 namespace MyExpenses.Views;
@@ -17,18 +18,30 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddAddress
 {
+    private readonly DisplayStore _displayStore;
+
+    private const string Crs = "EPSG:4326";
     private const string UserAgent = "C#";
     private static readonly Nominatim Nominatim = new(UserAgent);
-    public AddAddress()
-    {
-        InitializeComponent();
 
-        Ui();
+    private static SqLite.LieuClass? _modify; 
+    public AddAddress(DisplayStore previous, SqLite.LieuClass? modify=null)
+    {
+        _displayStore = previous;
+        
+        InitializeComponent();
+        InitializeMap();
+
+        if (modify is null) return;
+        _modify = modify;
+        Modify(modify);
     }
 
-    private async void Ui()
+    #region Function
+
+    private async void InitializeMap()
     {
-        var map = new Mapsui.Map { CRS = "EPSG:4326" };
+        var map = new Map { CRS = Crs };
         var tileLayer = OpenStreetMap.CreateTileLayer(UserAgent);
         map.Layers.Add(tileLayer);
 
@@ -40,7 +53,7 @@ public partial class AddAddress
         });
         MapView.Map = map;
         
-        var location = await GetCurrentLocation();
+        var location = await Essential.GetCurrentLocation();
         if (location is null) return;
         var position = new Position(location.Latitude, location.Longitude);
             
@@ -48,50 +61,24 @@ public partial class AddAddress
         ZoomToPosition(position, MapView.Map.Resolutions[17]);
     }
 
-    private static async Task<Location?> GetCurrentLocation()
+    private void Modify(SqLite.LieuClass lieuClass)
     {
-        try
-        {
-            var request = new GeolocationRequest(GeolocationAccuracy.Best);
-            var cts = new CancellationToken();
-
-            var location = await Geolocation.GetLocationAsync(request, cts);
-            return location;
-        }
-        catch (Exception) 
-        {
-            return null;
-        }
-    }
-
-    private void EditorAddress_OnCompleted(object sender, EventArgs e)
-    {
-        var nums = ParseToEmpty(EditorNums.Text);
-        var road = ParseToEmpty(EditorRoad.Text);
-        var cityName = ParseToEmpty(EditorCityName.Text);
-        var postal = ParseToEmpty(EditorCityPostal.Text);
-        var country =  ParseToEmpty(EditorCityCountry.Text);
-
-        if (nums.Equals(string.Empty) || road.Equals(string.Empty) || cityName.Equals(string.Empty) || 
-            postal.Equals(string.Empty) || country.Equals(string.Empty)) return;
+        EditorName.Text = lieuClass.Name;
+        EditorNums.Text = lieuClass.Nums;
+        EditorRoad.Text = lieuClass.Rue;
+        EditorCityName.Text = lieuClass.City;
+        EditorCityPostal.Text = lieuClass.Postal;
+        EditorCityCountry.Text = lieuClass.Pays;
+        EditorCityCountryCode.Text = lieuClass.CountryCode;
         
-        var address = Nominatim.AddressToNominatim($"{nums} {road}, {postal} {cityName} {country}");
-        if (address is null) return;
-        if (address.Count.Equals(0)) return;
-        var position = new Position(address[0].lat, address[0].lon);
+        EditorLongitude.Text = lieuClass.Longitude.ToString();
+
+        if (lieuClass.Latitude is not null) EditorLatitude.Text = lieuClass.Latitude.ToString();
+        if (lieuClass.Longitude is not null) EditorLongitude.Text = lieuClass.Longitude.ToString();
+
+        if (lieuClass.Latitude is null || lieuClass.Longitude is null) return;
         
-        UpdateZoom(position);
-    }
-
-    private void EditorCoord_OnCompleted(object sender, EventArgs e)
-    {
-        var latitude = ParseToCoord(EditorLatitude.Text);
-        var longitude = ParseToCoord(EditorLongitude.Text);
-
-        if (latitude is null || longitude is null) return;
-
-        var position = new Position((double)latitude, (double)longitude);
-        UpdateZoom(position);
+        ZoomToPosition(new Position((double)lieuClass.Latitude, (double)lieuClass.Longitude), MapView.Map!.Resolutions[17]);
     }
 
     private void UpdatePosition(Position position)
@@ -135,6 +122,48 @@ public partial class AddAddress
         EditorCityCountryCode.Text = countryCode;
     }
 
+    private void UpdateZoom(Position position)
+    {
+        UpdatePosition(position);
+        ZoomToPosition(position, MapView.Map!.Resolutions[17]);
+    }
+
+    private void ZoomToPosition(Position position, double resolution) => MapView.Navigator!.NavigateTo(position.ToMapsui(), resolution);
+
+    #endregion
+
+    #region Actions
+
+    private void EditorAddress_OnCompleted(object sender, EventArgs e)
+    {
+        var nums = ParseToEmpty(EditorNums.Text);
+        var road = ParseToEmpty(EditorRoad.Text);
+        var cityName = ParseToEmpty(EditorCityName.Text);
+        var postal = ParseToEmpty(EditorCityPostal.Text);
+        var country =  ParseToEmpty(EditorCityCountry.Text);
+
+        if (nums.Equals(string.Empty) || road.Equals(string.Empty) || cityName.Equals(string.Empty) || 
+            postal.Equals(string.Empty) || country.Equals(string.Empty)) return;
+        
+        var address = Nominatim.AddressToNominatim($"{nums} {road}, {postal} {cityName} {country}");
+        if (address is null) return;
+        if (address.Count.Equals(0)) return;
+        var position = new Position(address[0].lat, address[0].lon);
+        
+        UpdateZoom(position);
+    }
+
+    private void EditorCoord_OnCompleted(object sender, EventArgs e)
+    {
+        var latitude = ParseToCoord(EditorLatitude.Text);
+        var longitude = ParseToCoord(EditorLongitude.Text);
+
+        if (latitude is null || longitude is null) return;
+
+        var position = new Position((double)latitude, (double)longitude);
+        UpdateZoom(position);
+    }
+    
     private async void ButtonValid_OnClicked(object sender, EventArgs e)
     {
         var name = ParseToEmpty(EditorName.Text);
@@ -151,8 +180,11 @@ public partial class AddAddress
         var msg = "Le lieu à étais ajouté";
         
         if (name.Equals(string.Empty)) msg = "Le nom du lieu ne peut pas etre vide";
-        else if (latitude is null || longitude is null) msg = "Une des coordonnées ne peut pas etre vide";
+        else if (!DisplayStore.DataStore.Where(s => s.Name.Equals(name)).ToList().Count.Equals(0))
+            msg = "Le nom est déja utiliser";
         else error = false;
+
+        if (_modify is not null && error.Equals(true)) error = false;
 
         if (error)
         {
@@ -160,35 +192,57 @@ public partial class AddAddress
             return;
         }
 
-        var lat = (double)latitude!;
-        var lon = (double)longitude!;
-        
-        var insert = new SqLite.LieuClass
+        if (_modify is null)
         {
-            Name = name,
-            Nums = nums,
-            Rue = road,
-            Postal = postal,
-            City = cityName,
-            Pays = country,
-            CountryCode = countryCode,
-            Latitude = lat,
-            Longitude = lon
-        };
-        insert.InsertLieu();
+            var insert = new SqLite.LieuClass
+            {
+                Name = name,
+                Nums = nums,
+                Rue = road,
+                Postal = postal,
+                City = cityName,
+                Pays = country,
+                CountryCode = countryCode,
+                Latitude = latitude,
+                Longitude = longitude
+            };
+            insert.Insert();
 
-        await DisplayAlert("Réussi", msg, "Ok");
-    }
-    
-    private void UpdateZoom(Position position)
-    {
-        UpdatePosition(position);
-        ZoomToPosition(position, MapView.Map!.Resolutions[17]);
+            await DisplayAlert("Réussi", msg, "Ok");
+            DisplayStore.DataStore.Add(insert);
+            _displayStore.AddDisplayStore(insert);
+            _modify = insert;
+        }
+        else
+        {
+            msg = "Mise à jour réussi";
+            
+            _modify.Name = name;
+            _modify.Nums = nums;
+            _modify.Rue = road;
+            _modify.Postal = postal;
+            _modify.City = cityName;
+            _modify.Pays = country;
+            _modify.CountryCode = countryCode;
+            _modify.Latitude = latitude;
+            _modify.Longitude = longitude;
+            _modify.DateAdd = DateTime.UtcNow;
+
+            _modify.UpdateLieuClass();
+            
+            await DisplayAlert("Réussi", msg, "Ok");
+            
+            var index = DisplayStore.DataStore.FindIndex(s => s.Id.Equals(_modify.Id));
+            DisplayStore.DataStore[index] = _modify;
+            _displayStore.AddDisplayStoreReset();
+        }
     }
 
     private void MapView_OnMapClicked(object sender, MapClickedEventArgs e) => UpdatePosition(e.Point);
     
-    private void ZoomToPosition(Position position, double resolution) => MapView.Navigator!.NavigateTo(position.ToMapsui(), resolution);
+    #endregion
+
+    #region Parser
 
     private static string ParseToEmpty(string? str) => str ?? string.Empty;
 
@@ -198,4 +252,6 @@ public partial class AddAddress
         if (value.Equals(string.Empty)) return null;
         return double.Parse(value);
     } 
+
+    #endregion
 }

@@ -5,7 +5,8 @@
              x:Class="MyExpenses.Views.DisplayStore">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout x:Name="StackLayoutAddress" Orientation="Vertical"/>
+            <StackLayout x:Name="StackLayoutStore" Orientation="Vertical"/>
+            <Button Text="Add" Clicked="ButtonAddStore_OnClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

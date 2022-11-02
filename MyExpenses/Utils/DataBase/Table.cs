@@ -89,6 +89,29 @@ public static partial class SqLite
 
     #region Table Foreigner
 
+    private const string Abonement = @"
+    CREATE TABLE t_abonements(
+        id INTEGER NOT NULL
+            constraint t_abonements_pk
+                PRIMARY KEY AUTOINCREMENT,
+        lieu_fk           integer
+            constraint t_credit_t_lieu_id_fk
+                references t_lieu (id),
+        raison            text,
+        type_payement     integer
+            constraint t_credit_t_type_payement_id_fk
+                references t_type_payement (id),
+        recurence         integer,
+        type_recurence_recurence_fk integer
+            constraint t_credit_t_type_recurence_id_fk
+                references t_type_recurence (id),
+        duree            integer,
+        type_recurence_duree_fk integer
+            constraint t_credit_t_type_recurence_id_fk
+                references t_type_recurence (id),
+        montant           real
+    );";
+    
     private const string Compte = @"
     create table t_compte
     (
@@ -104,7 +127,8 @@ public static partial class SqLite
                         references t_colors (id),
         image_fk        int
             constraint t_compte_t_images_id_fk
-                        references t_images(id)
+                        references t_images(id),
+        externe         int
     );
     ";
 
@@ -122,7 +146,11 @@ public static partial class SqLite
             constraint t_credit_t_type_payement_id_fk
                 references t_type_payement (id),
         recurence         integer,
-        type_recurence_fk integer
+        type_recurence_recurence_fk integer
+            constraint t_credit_t_type_recurence_id_fk
+                references t_type_recurence (id),
+        duree            integer,
+        type_recurence_duree_fk integer
             constraint t_credit_t_type_recurence_id_fk
                 references t_type_recurence (id),
         montant           real
@@ -158,7 +186,10 @@ public static partial class SqLite
                 references t_credit (id),
         virement_fk     integer
             constraint t_historique_t_virement_id_fk
-                references t_virement(id)
+                references t_virement(id),
+        abonements_fk   INTEGER
+            constraint t_historique_t_abonements_id_fk
+                references t_abonements(id)
     );";
     
     private const string Virement = @"
@@ -171,7 +202,7 @@ public static partial class SqLite
         compte_depart integer
             constraint t_virement_t_compte_id_fk
                 references t_compte(id),
-        compte_reception integer
+        compte_depart integer
             constraint t_virement_t_compte_id_fk
                 references t_compte(id)
     );";
@@ -190,14 +221,15 @@ public static partial class SqLite
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
         [Column("compte_fk")] public int? WalletFk { get; set; }
-        [Column("ordre")] public string? Order { get; set; }
+        [Column("ordre")] public string Order { get; set; } = null!;
         [Column("type_categorie_fk")] public int? TypeCategorieFk { get; set; }
         [Column("type_payement_fk")] public int? TypePayementFk { get; set; }
-        [Column("montant")] public decimal? Montant { get; set; }
+        [Column("montant")] public decimal Montant { get; set; }
         [Column("date")] public DateTime Date { get; set; } = DateTime.UtcNow;
         [Column("lieu_fk")] public int? LieuFk { get; set; }
         [Column("ticket_fk")] public int? TicketFk { get; set; }
         [Column("credit_fk")] public int? CreditFk { get; set; }
+        [Column("abonements_fk")] public int? AbonementsFk { get; set; }
     }
 
     [Table("t_compte")]
@@ -210,6 +242,7 @@ public static partial class SqLite
         [Column("type_compte_fk")] public int TypeCompteFk { get; set; }
         [Column("color_fk")] public int Color { get; set; }
         [Column("image_fk")] public int Image { get; set; }
+        [Column("externe")] public bool External { get; set; } = false;
     }
 
     [Table("t_colors")]
@@ -258,9 +291,9 @@ public static partial class SqLite
         [Column("date_ajout")]
         public DateTime DateAdd { get; set; } = DateTime.UtcNow;
         [Column("latitude")]
-        public double Latitude { get; set; }
+        public double? Latitude { get; set; }
         [Column("longitude")]
-        public double Longitude { get; set; }
+        public double? Longitude { get; set; }
     }
 
     [Table("t_type_compte")]
@@ -291,6 +324,7 @@ public static partial class SqLite
         [Column("color_name")] public string ColorName { get; set; } = null!;
         [Column("color_value")] public string ColorValue { get; set; } = null!;
         [Column("image")] public string Image { get; set; } = null!;
+        [Column("externe")] public bool External { get; set; } = false;
     }
 
     #endregion
