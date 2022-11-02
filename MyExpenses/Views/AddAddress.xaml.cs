@@ -179,7 +179,6 @@ public partial class AddAddress
         var msg = "Le lieu à étais ajouté";
         
         if (name.Equals(string.Empty)) msg = "Le nom du lieu ne peut pas etre vide";
-        // else if (latitude is null || longitude is null) msg = "Une des coordonnées ne peut pas etre vide";
         else error = false;
 
         if (error)
@@ -202,7 +201,7 @@ public partial class AddAddress
                 Latitude = latitude,
                 Longitude = longitude
             };
-            insert.InsertLieu();
+            insert.Insert();
 
             await DisplayAlert("Réussi", msg, "Ok");
             DisplayStore.DataStore.Add(insert);
