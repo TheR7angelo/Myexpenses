@@ -23,7 +23,7 @@ public partial class DisplayStore
 
     public void AddDisplayStoreReset()
     {
-        StackLayoutAddress.Children.Clear();
+        StackLayoutStore.Children.Clear();
         AddDisplayStore();
     }
     
@@ -65,7 +65,7 @@ public partial class DisplayStore
         swipe.RightItems.Add(rightItem);
         swipe.Content = grid;
             
-        StackLayoutAddress.Children.Add(swipe);
+        StackLayoutStore.Children.Add(swipe);
     }
 
     #endregion
@@ -74,7 +74,12 @@ public partial class DisplayStore
 
     private void SwipeDelete_OnClicked(object sender, EventArgs e)
     {
-        throw new NotImplementedException();
+        var lieu = ((SwipeItem)sender).BindingContext as SqLite.LieuClass;
+        lieu!.Delete();
+        
+        var index = DataStore.FindIndex(s => s.Id.Equals(lieu!.Id));
+        StackLayoutStore.Children.RemoveAt(index);
+        DataStore.RemoveAt(index);
     }
 
     private void SwipeModify_OnClicked(object sender, EventArgs e)
