@@ -236,8 +236,6 @@ public partial class AddAddress
             DisplayStore.DataStore[index] = _modify;
             _displayStore.AddDisplayStoreReset();
         }
-        
-
     }
 
     private void MapView_OnMapClicked(object sender, MapClickedEventArgs e) => UpdatePosition(e.Point);
