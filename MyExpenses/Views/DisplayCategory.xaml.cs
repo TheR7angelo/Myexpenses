@@ -102,9 +102,17 @@ public partial class DisplayCategory
 
     #region Actions
 
-    private void SwipeDelete_OnClicked(object sender, EventArgs e)
+    private async void SwipeDelete_OnClicked(object sender, EventArgs e)
     {
         var category = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
+
+        var uses = SqLite.GetAllHistorique().Where(s => s.TypeCategorieFk.Equals(category!.Id)).ToList();
+        if (!uses.Count.Equals(0))
+        {
+            await DisplayAlert("Erreur", "Imposible de supprimer car cette catégorie est en cours d'utilisation", "Ok");
+            return;
+        }
+        
         category!.Delete();
         
         var index = _dataCategory.FindIndex(s => s.Id.Equals(category!.Id));

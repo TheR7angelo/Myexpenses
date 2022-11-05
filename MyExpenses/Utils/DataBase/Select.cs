@@ -18,7 +18,10 @@ public static partial class SqLite
     #endregion
 
     public static List<CategoryClass> GetAllCategory() =>
-        _connection!.QueryAsync<CategoryClass>("SELECT * FROM main.t_type_categorie").Result;
+        _connection!.QueryAsync<CategoryClass>("SELECT * FROM t_type_categorie").Result;
+
+    public static List<HistoriqueClass> GetAllHistorique() =>
+        _connection!.QueryAsync<HistoriqueClass>("SELECT * FROM t_historique").Result;
 
     public static List<LieuClass> GetAllStore() => _connection!.QueryAsync<LieuClass>("SELECT * FROM t_lieu").Result;
     
