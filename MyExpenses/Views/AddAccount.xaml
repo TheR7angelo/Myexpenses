@@ -44,7 +44,7 @@
                 
             </Grid>
             
-            <Button Text="Confirmer" Margin="15" Clicked="Button_OnClicked"/>
+            <Button Text="Confirmer" Margin="15" Clicked="ButtonValid_OnClicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

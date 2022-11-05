@@ -30,7 +30,7 @@ public partial class AddAccount
         }
     }
 
-    private async void Button_OnClicked(object sender, EventArgs e)
+    private async void ButtonValid_OnClicked(object sender, EventArgs e)
     {
         var password = string.Empty;
         var accountName = EditorNameAccount.Text;

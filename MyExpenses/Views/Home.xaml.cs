@@ -50,7 +50,6 @@ public partial class Home
             await DisplayAlert("Alert", "Aucun compte n'a étais crée merci d'en crée un", "OK");
             return;
         }
-        // if (!Directory.Exists(Db)) await DisplayAlert("Alert", "Aucun compte n'a étais crée merci d'en crée un", "OK");
         await Navigation.PushAsync( new SelectedAccount());
     }
 }

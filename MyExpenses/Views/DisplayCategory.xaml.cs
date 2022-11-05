@@ -31,7 +31,8 @@ public partial class DisplayCategory
     private void AddCategoryDisplay(SqLite.CategoryClass category)
     {
         var grid = new Grid { HeightRequest = 30 };
-        grid.Children.Add(new Label { Text = category.Name });
+        grid.Children.Add(new Editor { Text = category.Name, ClassId = $"Editor_{category.Id}", IsVisible = false });
+        grid.Children.Add(new Label { Text = category.Name , ClassId = $"Label_{category.Id}"});
 
         var swipe = new SwipeView
         {
@@ -39,13 +40,22 @@ public partial class DisplayCategory
             RightItems = { SwipeBehaviorOnInvoked = SwipeBehaviorOnInvoked.Auto }
         };
 
-        var leftItem = new SwipeItem
+        var leftItemModify = new SwipeItem
         {
             Text = "Modifier",
             BackgroundColor = Color.Orange,
             BindingContext = category
         };
-        leftItem.Clicked += SwipeModify_OnClicked;
+        leftItemModify.Clicked += SwipeModify_OnClicked;
+
+        var lefItemValid = new SwipeItem
+        {
+            Text = "Valider",
+            IsVisible = false,
+            BackgroundColor = Color.ForestGreen,
+            BindingContext = category
+        };
+        lefItemValid.Clicked += SwipeValid_OnClicked;
 
         var rightItem = new SwipeItem
         {
@@ -55,7 +65,7 @@ public partial class DisplayCategory
         };
         rightItem.Clicked += SwipeDelete_OnClicked;
 
-        swipe.LeftItems.Add(leftItem);
+        swipe.LeftItems.Add(leftItemModify);
         swipe.RightItems.Add(rightItem);
         swipe.Content = grid;
         
@@ -79,7 +89,13 @@ public partial class DisplayCategory
     private void SwipeModify_OnClicked(object sender, EventArgs e)
     {
         var category = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
-        Navigation.PushAsync(new AddCategory(this, category));
+        
+        //Navigation.PushAsync(new AddCategory(this, category));
+    }
+
+    private void SwipeValid_OnClicked(object sender, EventArgs e)
+    {
+        // pass
     }
 
     private void ButtonAddCategory_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddCategory(this));
