@@ -228,7 +228,7 @@ public partial class AddAddress
             _modify.Longitude = longitude;
             _modify.DateAdd = DateTime.UtcNow;
 
-            _modify.UpdateLieuClass();
+            _modify.Update();
             
             await DisplayAlert("Réussi", msg, "Ok");
             

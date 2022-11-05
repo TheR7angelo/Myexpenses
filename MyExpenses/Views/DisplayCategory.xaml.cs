@@ -112,7 +112,7 @@ public partial class DisplayCategory
         _dataCategory.RemoveAt(index);
     }
 
-    private void SwipeModify_OnClicked(object sender, EventArgs e)
+    private static void SwipeModify_OnClicked(object sender, EventArgs e)
     {
         var swipeItem = (SwipeItem)sender;
         var swipeItems = swipeItem.Parent as SwipeItems;
@@ -121,9 +121,44 @@ public partial class DisplayCategory
         SwipeViewIsVisibleInverse(swipeView);
     }
 
-    private void SwipeValidModify_OnClicked(object sender, EventArgs e)
+    private async void SwipeValidModify_OnClicked(object sender, EventArgs e)
     {
-        var category = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
+        Label? label = null;
+        Editor? editor = null;
+        
+        var title = "Erreur";
+        var msg = "Le nom de la catégorie ne peut pas être null";
+        
+        var swipeItems = ((SwipeItem)sender).Parent as SwipeItems;
+        var swipeView = swipeItems!.Parent as SwipeView;
+
+        var grid = swipeView!.Children[0] as Grid;
+
+        foreach (var element in grid!.Children)
+        {
+            if (element.GetType() == typeof(Label)) label = (element as Label)!;
+            else { editor = (element as Editor)!; }
+        }
+
+        if (editor!.Text is not null || !editor.Text!.Equals(string.Empty))
+        {
+            title = "Réussite";
+            msg = "Modification appliquer";
+            
+            var category = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
+            category!.Name = editor.Text;
+
+            category.Update();
+            
+            label!.Text = editor.Text;
+            
+            var index = _dataCategory.FindIndex(s => s.Id.Equals(category.Id));
+            _dataCategory[index] = category;
+            
+            SwipeViewIsVisibleInverse(swipeView);
+        }
+        
+        await DisplayAlert(title, msg, "Ok");
     }
 
     private void ButtonAddCategory_OnClicked(object sender, EventArgs e)
