@@ -117,6 +117,7 @@ public partial class DisplayCategory
         buttonValid.Clicked += ButtonValidCategory_OnClicked;
         
         var buttonCancel = new Button { Text = "Annuler", BackgroundColor = Color.Crimson };
+        buttonCancel.Clicked += (_, _) => DisableAddCategory(GetGridCategory());
         
         var editor = new Editor { Placeholder = "catégorie ?", PlaceholderColor = Color.LightGray };
 
