@@ -63,7 +63,7 @@ public partial class DisplayCategory
             IsVisible = false,
             BackgroundColor = Color.Orange
         };
-        // rightItemCancel.Clicked += SwipeDelete_OnClicked;
+        rightItemCancel.Clicked += (_, _) => SwipeViewIsVisibleInverse(swipe);
         
         var rightItemDelete = new SwipeItem
         {
@@ -103,17 +103,18 @@ public partial class DisplayCategory
         var swipeItems = swipeItem.Parent as SwipeItems;
         var swipeView = (SwipeView)swipeItems!.Parent;
 
+        SwipeViewIsVisibleInverse(swipeView);
+    }
+
+    private static void SwipeViewIsVisibleInverse(SwipeView swipeView)
+    {
+        swipeView.Close();
         var grid = swipeView.Children[0] as Grid;
-
         foreach (var element in grid!.Children) element.IsVisible = !element.IsVisible;
-
         foreach (var swipe in new List<SwipeItems> { swipeView.LeftItems, swipeView.RightItems }.SelectMany(swipes => swipes))
         {
             swipe.IsVisible = !swipe.IsVisible;
         }
-
-        swipeView.Close();
-        swipeView.Open(OpenSwipeItem.LeftItems);
     }
 
     private void SwipeValidModify_OnClicked(object sender, EventArgs e)
