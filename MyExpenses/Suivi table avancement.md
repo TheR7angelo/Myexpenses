@@ -1,7 +1,7 @@
 ﻿# Gestion des tables
 
 - [ ] abonnement
-- [ ] categorie
+- [x] categorie
 - [ ] credit
 - [x] historique
 - [x] portefeuille (compte dans le fichier xlsx)
