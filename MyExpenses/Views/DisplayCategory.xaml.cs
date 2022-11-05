@@ -131,28 +131,20 @@ public partial class DisplayCategory
 
     private async void ButtonValid_OnClicked(object sender, EventArgs e)
     {
-        try
-        {
-            var grid = StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid;
-            var editor = grid!.Children.Where(s => s.GetType() == typeof(Editor)).ToList()[0] as Editor;
+        var grid = StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid;
+        var editor = grid!.Children.Where(s => s.GetType() == typeof(Editor)).ToList()[0] as Editor;
 
-            if (editor!.Text is null || editor.Text.Equals(string.Empty))
-            {
-                await DisplayAlert("Erreur", "Le nom de la catégorie ne peut pas étre vide", "Ok");
-                return;
-            }
-        
-            var category = new SqLite.CategoryClass { Name = editor.Text };
-            category.Insert();
-
-            ButtonAddNew.IsEnabled = StackLayoutCategory.Children.Remove(grid);
-            AddCategoryDisplay(category);
-        }
-        catch (Exception exception)
+        if (editor!.Text is null || editor.Text.Equals(string.Empty))
         {
-            Console.WriteLine(exception);
-            throw;
+            await DisplayAlert("Erreur", "Le nom de la catégorie ne peut pas étre vide", "Ok");
+            return;
         }
+    
+        var category = new SqLite.CategoryClass { Name = editor.Text };
+        category.Insert();
+
+        ButtonAddNew.IsEnabled = StackLayoutCategory.Children.Remove(grid);
+        AddCategoryDisplay(category);
     }
 
     #endregion
