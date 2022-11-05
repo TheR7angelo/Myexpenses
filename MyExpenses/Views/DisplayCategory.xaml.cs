@@ -82,12 +82,12 @@ public partial class DisplayCategory
 
     private void SwipeDelete_OnClicked(object sender, EventArgs e)
     {
-        var lieu = ((SwipeItem)sender).BindingContext as SqLite.LieuClass;
-        lieu!.Delete();
-        
-        var index = _dataCategory.FindIndex(s => s.Id.Equals(lieu!.Id));
-        StackLayoutCategory.Children.RemoveAt(index);
-        _dataCategory.RemoveAt(index);
+        // var lieu = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
+        // lieu!.Delete();
+        //
+        // var index = _dataCategory.FindIndex(s => s.Id.Equals(lieu!.Id));
+        // StackLayoutCategory.Children.RemoveAt(index);
+        // _dataCategory.RemoveAt(index);
     }
 
     private void SwipeModify_OnClicked(object sender, EventArgs e)
@@ -114,7 +114,7 @@ public partial class DisplayCategory
         foreach (var column in new List<ColumnDefinition>{ column0, column1, column2 }) grid.ColumnDefinitions.Add(column);
 
         var buttonValid = new Button { Text = "Valider", BackgroundColor = Color.ForestGreen };
-        buttonValid.Clicked += ButtonValid_OnClicked;
+        buttonValid.Clicked += ButtonValidCategory_OnClicked;
         
         var buttonCancel = new Button { Text = "Annuler", BackgroundColor = Color.Crimson };
         
@@ -129,10 +129,10 @@ public partial class DisplayCategory
         StackLayoutCategory.Children.Add(grid);
     }
 
-    private async void ButtonValid_OnClicked(object sender, EventArgs e)
+    private async void ButtonValidCategory_OnClicked(object sender, EventArgs e)
     {
-        var grid = StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid;
-        var editor = grid!.Children.Where(s => s.GetType() == typeof(Editor)).ToList()[0] as Editor;
+        var grid = GetGridCategory();
+        var editor = grid.Children.Where(s => s.GetType() == typeof(Editor)).ToList()[0] as Editor;
 
         if (editor!.Text is null || editor.Text.Equals(string.Empty))
         {
@@ -142,10 +142,13 @@ public partial class DisplayCategory
     
         var category = new SqLite.CategoryClass { Name = editor.Text };
         category.Insert();
-
-        ButtonAddNew.IsEnabled = StackLayoutCategory.Children.Remove(grid);
+        
+        DisableAddCategory(grid);
         AddCategoryDisplay(category);
     }
+
+    private Grid GetGridCategory() => (StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid)!;
+    private void DisableAddCategory(View grid) => ButtonAddNew.IsEnabled = StackLayoutCategory.Children.Remove(grid);
 
     #endregion
 }
