@@ -5,14 +5,10 @@
       "BruTile/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         }
       },
       "Fizzler/1.2.0": {
@@ -30,14 +26,10 @@
           "HarfBuzzSharp.NativeAssets.iOS": "2.8.2-preview.178"
         },
         "compile": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         }
       },
       "HarfBuzzSharp.NativeAssets.iOS/2.8.2-preview.178": {
@@ -151,14 +143,10 @@
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "NetTopologySuite/2.4.0": {
@@ -167,27 +155,19 @@
           "System.Memory": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "ShimSkiaSharp/0.5.12": {
@@ -205,14 +185,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.HarfBuzz/2.88.0-preview.178": {
@@ -222,14 +198,10 @@
           "SkiaSharp": "2.88.0-preview.178"
         },
         "compile": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -268,14 +240,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -286,14 +254,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -302,14 +266,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -319,14 +279,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -336,14 +292,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -431,27 +383,19 @@
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Linq.Async/6.0.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.1/System.Linq.Async.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/System.Linq.Async.dll": {}
         }
       },
       "System.Memory/4.5.4": {
@@ -461,14 +405,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -492,14 +432,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Text.Encoding.CodePages/6.0.0": {
@@ -537,14 +473,10 @@
           "SkiaSharp.HarfBuzz": "2.80.2"
         },
         "compile": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -558,45 +490,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -726,14 +638,10 @@
           "Xamarin.iOS.MaterialComponents": "92.0.0"
         },
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         }
       },
       "Xamarin.iOS.MaterialComponents/92.0.0": {
@@ -771,14 +679,10 @@
       "BruTile/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         }
       },
       "Fizzler/1.2.0": {
@@ -796,14 +700,10 @@
           "HarfBuzzSharp.NativeAssets.iOS": "2.8.2-preview.178"
         },
         "compile": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         }
       },
       "HarfBuzzSharp.NativeAssets.iOS/2.8.2-preview.178": {
@@ -895,14 +795,10 @@
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "NetTopologySuite/2.4.0": {
@@ -911,27 +807,19 @@
           "System.Memory": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "ShimSkiaSharp/0.5.12": {
@@ -949,14 +837,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.HarfBuzz/2.88.0-preview.178": {
@@ -966,14 +850,10 @@
           "SkiaSharp": "2.88.0-preview.178"
         },
         "compile": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -994,14 +874,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -1012,14 +888,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -1028,14 +900,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -1045,14 +913,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -1062,14 +926,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -1157,27 +1017,19 @@
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Linq.Async/6.0.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.1/System.Linq.Async.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/System.Linq.Async.dll": {}
         }
       },
       "System.Memory/4.5.4": {
@@ -1187,14 +1039,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -1218,14 +1066,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Text.Encoding.CodePages/6.0.0": {
@@ -1238,9 +1082,7 @@
           "lib/xamarinios10/_._": {}
         },
         "runtime": {
-          "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
-            "related": ".xml"
-          }
+          "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -1259,14 +1101,10 @@
           "SkiaSharp.HarfBuzz": "2.80.2"
         },
         "compile": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -1280,45 +1118,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -1448,14 +1266,10 @@
           "Xamarin.iOS.MaterialComponents": "92.0.0"
         },
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         }
       },
       "Xamarin.iOS.MaterialComponents/92.0.0": {
@@ -1493,14 +1307,10 @@
       "BruTile/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         }
       },
       "Fizzler/1.2.0": {
@@ -1518,14 +1328,10 @@
           "HarfBuzzSharp.NativeAssets.iOS": "2.8.2-preview.178"
         },
         "compile": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         }
       },
       "HarfBuzzSharp.NativeAssets.iOS/2.8.2-preview.178": {
@@ -1617,14 +1423,10 @@
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "NetTopologySuite/2.4.0": {
@@ -1633,27 +1435,19 @@
           "System.Memory": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "ShimSkiaSharp/0.5.12": {
@@ -1671,14 +1465,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.HarfBuzz/2.88.0-preview.178": {
@@ -1688,14 +1478,10 @@
           "SkiaSharp": "2.88.0-preview.178"
         },
         "compile": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -1716,14 +1502,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -1734,14 +1516,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -1750,14 +1528,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -1767,14 +1541,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -1784,14 +1554,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -1879,27 +1645,19 @@
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Linq.Async/6.0.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.1/System.Linq.Async.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/System.Linq.Async.dll": {}
         }
       },
       "System.Memory/4.5.4": {
@@ -1909,14 +1667,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -1940,14 +1694,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Text.Encoding.CodePages/6.0.0": {
@@ -1979,14 +1729,10 @@
           "SkiaSharp.HarfBuzz": "2.80.2"
         },
         "compile": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -2000,45 +1746,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -2168,14 +1894,10 @@
           "Xamarin.iOS.MaterialComponents": "92.0.0"
         },
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         }
       },
       "Xamarin.iOS.MaterialComponents/92.0.0": {
@@ -2213,14 +1935,10 @@
       "BruTile/5.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/BruTile.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/BruTile.dll": {}
         }
       },
       "Fizzler/1.2.0": {
@@ -2238,14 +1956,10 @@
           "HarfBuzzSharp.NativeAssets.iOS": "2.8.2-preview.178"
         },
         "compile": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/HarfBuzzSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         }
       },
       "HarfBuzzSharp.NativeAssets.iOS/2.8.2-preview.178": {
@@ -2337,14 +2051,10 @@
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "NetTopologySuite/2.4.0": {
@@ -2353,27 +2063,19 @@
           "System.Memory": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/NetTopologySuite.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
         }
       },
       "Newtonsoft.Json/9.0.1": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "ShimSkiaSharp/0.5.12": {
@@ -2391,14 +2093,10 @@
           "SkiaSharp.NativeAssets.iOS": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
       "SkiaSharp.HarfBuzz/2.88.0-preview.178": {
@@ -2408,14 +2106,10 @@
           "SkiaSharp": "2.88.0-preview.178"
         },
         "compile": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {}
         }
       },
       "SkiaSharp.NativeAssets.iOS/2.88.3": {
@@ -2436,14 +2130,10 @@
           "SkiaSharp": "2.88.3"
         },
         "compile": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
       "SkiaSharp.Views.Forms/2.88.3": {
@@ -2454,14 +2144,10 @@
           "Xamarin.Forms": "4.8.0.1821"
         },
         "compile": {
-          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "sqlite-net-pcl/1.8.116": {
@@ -2470,14 +2156,10 @@
           "SQLitePCLRaw.bundle_green": "2.0.4"
         },
         "compile": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/SQLite-net.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/SQLite-net.dll": {}
         }
       },
       "SQLiteNetExtensions/2.1.0": {
@@ -2487,14 +2169,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
       "SQLiteNetExtensions.Async/2.1.0": {
@@ -2504,14 +2182,10 @@
           "sqlite-net-pcl": "1.4.118"
         },
         "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
+          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/2.0.4": {
@@ -2599,27 +2273,19 @@
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.0/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Buffers.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Buffers.dll": {}
         }
       },
       "System.Linq.Async/6.0.1": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "ref/netstandard2.1/System.Linq.Async.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/System.Linq.Async.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.1/System.Linq.Async.dll": {}
         }
       },
       "System.Memory/4.5.4": {
@@ -2629,14 +2295,10 @@
           "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Numerics.Vectors/4.5.0": {
@@ -2660,14 +2322,10 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "related": ".xml"
-          }
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
       "System.Text.Encoding.CodePages/6.0.0": {
@@ -2699,14 +2357,10 @@
           "SkiaSharp.HarfBuzz": "2.80.2"
         },
         "compile": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.3": {
@@ -2720,45 +2374,25 @@
           "System.Numerics"
         ],
         "compile": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         },
         "runtime": {
-          "lib/xamarinios10/Xamarin.Essentials.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
       "Xamarin.Forms/5.0.0.2515": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
-            "related": ".pdb;.xml"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {
-            "related": ".iOS.pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {
-            "related": ".pdb"
-          },
-          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {
-            "related": ".pdb;.xml"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll": {}
         },
         "resource": {
           "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll": {
@@ -2888,14 +2522,10 @@
           "Xamarin.iOS.MaterialComponents": "92.0.0"
         },
         "compile": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {
-            "related": ".pdb"
-          }
+          "lib/Xamarin.iOS10/Xamarin.Forms.Material.dll": {}
         }
       },
       "Xamarin.iOS.MaterialComponents/92.0.0": {
@@ -4215,31 +3845,30 @@
       "Microcharts.Forms >= 1.0.0-preview1",
       "MyExpenses >= 1.0.0",
       "SkiaSharp.Views.Forms >= 2.88.3",
-      "System.Memory >= 4.5.4",
       "Xamarin.Essentials >= 1.7.3",
       "Xamarin.Forms >= 5.0.0.2515",
       "Xamarin.Forms.ComboBox >= 1.0.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ZP6177\\.nuget\\packages\\": {},
+    "C:\\Users\\Rapha\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
-      "projectName": "MyExpenses.iOS.csproj",
-      "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
-      "packagesPath": "C:\\Users\\ZP6177\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\obj\\",
+      "projectUniqueName": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "projectName": "MyExpenses.iOS",
+      "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
+      "packagesPath": "C:\\Users\\Rapha\\.nuget\\packages\\",
+      "outputPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ZP6177\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4248,14 +3877,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "\\\\bordeaux04\\NuGet\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj": {
-              "projectPath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj"
+            "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj": {
+              "projectPath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj"
             }
           }
         }
@@ -4275,11 +3903,6 @@
           "SkiaSharp.Views.Forms": {
             "target": "Package",
             "version": "[2.88.3, )"
-          },
-          "System.Memory": {
-            "include": "None",
-            "target": "Package",
-            "version": "[4.5.4, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",

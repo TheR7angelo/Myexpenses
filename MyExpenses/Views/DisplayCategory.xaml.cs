@@ -31,7 +31,7 @@ public partial class DisplayCategory
 
     private void AddCategoryDisplay(SqLite.CategoryClass category)
     {
-        var grid = new Grid { HeightRequest = 30 };
+        var grid = new Grid(); //{ HeightRequest = 30 };
         grid.Children.Add(new Editor { Text = category.Name, ClassId = $"Editor_{category.Id}", IsVisible = false });
         grid.Children.Add(new Label { Text = category.Name , ClassId = $"Label_{category.Id}"});
 
@@ -44,30 +44,40 @@ public partial class DisplayCategory
         var leftItemModify = new SwipeItem
         {
             Text = "Modifier",
-            BackgroundColor = Color.Orange,
-            BindingContext = category
+            BackgroundColor = Color.Orange
         };
         leftItemModify.Clicked += SwipeModify_OnClicked;
 
-        var lefItemValid = new SwipeItem
+        var leftItemValid = new SwipeItem
         {
             Text = "Valider",
             IsVisible = false,
             BackgroundColor = Color.ForestGreen,
             BindingContext = category
         };
-        lefItemValid.Clicked += SwipeValid_OnClicked;
+        leftItemValid.Clicked += SwipeValidModify_OnClicked;
 
-        var rightItem = new SwipeItem
+        var rightItemCancel = new SwipeItem
+        {
+            Text = "Annuler",
+            IsVisible = false,
+            BackgroundColor = Color.Orange
+        };
+        // rightItemCancel.Clicked += SwipeDelete_OnClicked;
+        
+        var rightItemDelete = new SwipeItem
         {
             Text = "Supprimer",
             BackgroundColor = Color.Crimson,
             BindingContext = category
         };
-        rightItem.Clicked += SwipeDelete_OnClicked;
+        rightItemDelete.Clicked += SwipeDelete_OnClicked;
 
         swipe.LeftItems.Add(leftItemModify);
-        swipe.RightItems.Add(rightItem);
+        swipe.LeftItems.Add(leftItemValid);
+        
+        swipe.RightItems.Add(rightItemCancel);
+        swipe.RightItems.Add(rightItemDelete);
         swipe.Content = grid;
         
         StackLayoutCategory.Children.Add(swipe);
@@ -89,14 +99,26 @@ public partial class DisplayCategory
 
     private void SwipeModify_OnClicked(object sender, EventArgs e)
     {
-        var category = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
-        
-        //Navigation.PushAsync(new AddCategory(this, category));
+        var swipeItem = (SwipeItem)sender;
+        var swipeItems = swipeItem.Parent as SwipeItems;
+        var swipeView = (SwipeView)swipeItems!.Parent;
+
+        var grid = swipeView.Children[0] as Grid;
+
+        foreach (var element in grid!.Children) element.IsVisible = !element.IsVisible;
+
+        foreach (var swipe in new List<SwipeItems> { swipeView.LeftItems, swipeView.RightItems }.SelectMany(swipes => swipes))
+        {
+            swipe.IsVisible = !swipe.IsVisible;
+        }
+
+        swipeView.Close();
+        swipeView.Open(OpenSwipeItem.LeftItems);
     }
 
-    private void SwipeValid_OnClicked(object sender, EventArgs e)
+    private void SwipeValidModify_OnClicked(object sender, EventArgs e)
     {
-        // pass
+        var category = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
     }
 
     private void ButtonAddCategory_OnClicked(object sender, EventArgs e)
