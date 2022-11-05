@@ -82,12 +82,12 @@ public partial class DisplayCategory
 
     private void SwipeDelete_OnClicked(object sender, EventArgs e)
     {
-        // var lieu = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
-        // lieu!.Delete();
-        //
-        // var index = _dataCategory.FindIndex(s => s.Id.Equals(lieu!.Id));
-        // StackLayoutCategory.Children.RemoveAt(index);
-        // _dataCategory.RemoveAt(index);
+        var category = ((SwipeItem)sender).BindingContext as SqLite.CategoryClass;
+        category!.Delete();
+        
+        var index = _dataCategory.FindIndex(s => s.Id.Equals(category!.Id));
+        StackLayoutCategory.Children.RemoveAt(index);
+        _dataCategory.RemoveAt(index);
     }
 
     private void SwipeModify_OnClicked(object sender, EventArgs e)
@@ -135,17 +135,25 @@ public partial class DisplayCategory
         var grid = GetGridCategory();
         var editor = grid.Children.Where(s => s.GetType() == typeof(Editor)).ToList()[0] as Editor;
 
-        if (editor!.Text is null || editor.Text.Equals(string.Empty))
+        var category = new SqLite.CategoryClass { Name = editor!.Text };
+        
+        var msg = string.Empty;
+        if (editor.Text is null || editor.Text.Equals(string.Empty)) msg = "Le nom de la catégorie ne peut pas étre vide";
+
+        var duplicate = _dataCategory.Where(s => s.Name.Equals(category.Name));
+        if (!duplicate.Count().Equals(0)) msg = "Nom de catégorie déja utiliser";
+
+        if (!msg.Equals(string.Empty))
         {
-            await DisplayAlert("Erreur", "Le nom de la catégorie ne peut pas étre vide", "Ok");
+            await DisplayAlert("Erreur", msg, "Ok");
             return;
         }
-    
-        var category = new SqLite.CategoryClass { Name = editor.Text };
+        
         category.Insert();
         
         DisableAddCategory(grid);
         AddCategoryDisplay(category);
+        _dataCategory.Add(category);
     }
 
     private Grid GetGridCategory() => (StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid)!;
