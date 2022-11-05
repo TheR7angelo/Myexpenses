@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using MyExpenses.Utils.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,6 +10,9 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class DisplayCategory
 {
+    private const string NewCategory = "NewCategory";
+    private const string GridName = $"Grid_{NewCategory}";
+
     private static List<SqLite.CategoryClass> _dataCategory = null!;
     public DisplayCategory()
     {
@@ -98,7 +102,58 @@ public partial class DisplayCategory
         // pass
     }
 
-    private void ButtonAddCategory_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new AddCategory(this));
+    private void ButtonAddCategory_OnClicked(object sender, EventArgs e)
+    {
+        ButtonAddNew.IsEnabled = false;
+
+        var grid = new Grid{ AutomationId = GridName };
+        var column0 = new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) };
+        var column1 = new ColumnDefinition { Width = new GridLength(3, GridUnitType.Star) };
+        var column2 = new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) };
+
+        foreach (var column in new List<ColumnDefinition>{ column0, column1, column2 }) grid.ColumnDefinitions.Add(column);
+
+        var buttonValid = new Button { Text = "Valider", BackgroundColor = Color.ForestGreen };
+        buttonValid.Clicked += ButtonValid_OnClicked;
+        
+        var buttonCancel = new Button { Text = "Annuler", BackgroundColor = Color.Crimson };
+        
+        var editor = new Editor { Placeholder = "catégorie ?", PlaceholderColor = Color.LightGray };
+
+        foreach (var element in new List<View>{ buttonValid, editor, buttonCancel }.Select((value, index) => new { index, value }))
+        {
+            Grid.SetColumn(element.value, element.index);
+            grid.Children.Add(element.value);
+        }
+
+        StackLayoutCategory.Children.Add(grid);
+    }
+
+    private async void ButtonValid_OnClicked(object sender, EventArgs e)
+    {
+        try
+        {
+            var grid = StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid;
+            var editor = grid!.Children.Where(s => s.GetType() == typeof(Editor)).ToList()[0] as Editor;
+
+            if (editor!.Text is null || editor.Text.Equals(string.Empty))
+            {
+                await DisplayAlert("Erreur", "Le nom de la catégorie ne peut pas étre vide", "Ok");
+                return;
+            }
+        
+            var category = new SqLite.CategoryClass { Name = editor.Text };
+            category.Insert();
+
+            ButtonAddNew.IsEnabled = StackLayoutCategory.Children.Remove(grid);
+            AddCategoryDisplay(category);
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception);
+            throw;
+        }
+    }
 
     #endregion
 }

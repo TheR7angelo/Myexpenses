@@ -8,7 +8,7 @@
             <ScrollView>
                 <StackLayout Orientation="Vertical">
                     <StackLayout x:Name="StackLayoutCategory" Orientation="Vertical"/>
-                    <Button Text="Add" Clicked="ButtonAddCategory_OnClicked"/>
+                    <Button x:Name="ButtonAddNew" Text="Add" Clicked="ButtonAddCategory_OnClicked"/>
                 </StackLayout>
             </ScrollView>
         </StackLayout>
