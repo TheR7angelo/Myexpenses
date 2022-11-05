@@ -199,10 +199,10 @@ public static partial class SqLite
             constraint t_type_compte_pk
                 primary key autoincrement,
         montant REAL,
-        compte_depart integer
+        compte_emeteur integer
             constraint t_virement_t_compte_id_fk
                 references t_compte(id),
-        compte_depart integer
+        compte_benificiaire integer
             constraint t_virement_t_compte_id_fk
                 references t_compte(id)
     );";
