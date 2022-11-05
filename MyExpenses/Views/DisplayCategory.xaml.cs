@@ -83,6 +83,21 @@ public partial class DisplayCategory
         StackLayoutCategory.Children.Add(swipe);
     }
 
+    private Grid GetGridCategory() => (StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid)!;
+    
+    private void DisableAddCategory(View grid) => ButtonAddNew.IsEnabled = StackLayoutCategory.Children.Remove(grid);
+    
+    private static void SwipeViewIsVisibleInverse(SwipeView swipeView)
+    {
+        swipeView.Close();
+        var grid = swipeView.Children[0] as Grid;
+        foreach (var element in grid!.Children) element.IsVisible = !element.IsVisible;
+        foreach (var swipe in new List<SwipeItems> { swipeView.LeftItems, swipeView.RightItems }.SelectMany(swipes => swipes))
+        {
+            swipe.IsVisible = !swipe.IsVisible;
+        }
+    }
+
     #endregion
 
     #region Actions
@@ -104,17 +119,6 @@ public partial class DisplayCategory
         var swipeView = (SwipeView)swipeItems!.Parent;
 
         SwipeViewIsVisibleInverse(swipeView);
-    }
-
-    private static void SwipeViewIsVisibleInverse(SwipeView swipeView)
-    {
-        swipeView.Close();
-        var grid = swipeView.Children[0] as Grid;
-        foreach (var element in grid!.Children) element.IsVisible = !element.IsVisible;
-        foreach (var swipe in new List<SwipeItems> { swipeView.LeftItems, swipeView.RightItems }.SelectMany(swipes => swipes))
-        {
-            swipe.IsVisible = !swipe.IsVisible;
-        }
     }
 
     private void SwipeValidModify_OnClicked(object sender, EventArgs e)
@@ -175,9 +179,6 @@ public partial class DisplayCategory
         AddCategoryDisplay(category);
         _dataCategory.Add(category);
     }
-
-    private Grid GetGridCategory() => (StackLayoutCategory.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid)!;
-    private void DisableAddCategory(View grid) => ButtonAddNew.IsEnabled = StackLayoutCategory.Children.Remove(grid);
 
     #endregion
 }
