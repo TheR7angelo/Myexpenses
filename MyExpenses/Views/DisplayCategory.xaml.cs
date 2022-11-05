@@ -24,14 +24,11 @@ public partial class DisplayCategory
 
     #region Function
 
-    public void AddDisplayCategory(bool reset = false)
+    private void AddDisplayCategory()
     {
-        if (reset) StackLayoutCategory.Children.Clear();
         foreach (var category in _dataCategory) AddCategoryDisplay(category);
     }
 
-    public void AddDisplayStore(SqLite.CategoryClass category) => AddCategoryDisplay(category);
-    
     private void AddCategoryDisplay(SqLite.CategoryClass category)
     {
         var grid = new Grid { HeightRequest = 30 };
