@@ -1,4 +1,5 @@
 ﻿using System;
+using MyExpenses.Utils.Function;
 using SQLite;
 
 namespace MyExpenses.Utils.Database;
@@ -246,7 +247,7 @@ public static partial class SqLite
     }
 
     [Table("t_type_categorie")]
-    public class CategoryClass
+    public class CategoryClass : ITableDisplay
     {
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }

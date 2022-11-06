@@ -1,11 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using MyExpenses.Utils.Function;
 
 namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
-    public static List<CategoryClass> GetAllCategory() =>
-        _connection!.QueryAsync<CategoryClass>("SELECT * FROM t_type_categorie").Result;
+    public static List<ITableDisplay> GetAllCategory()
+    {
+        return _connection!.QueryAsync<CategoryClass>("SELECT * FROM t_type_categorie").Result.Cast<ITableDisplay>().ToList();
+    }
+        
 
     #region Color
 

@@ -1,12 +1,14 @@
-﻿namespace MyExpenses.Utils.Database;
+﻿using MyExpenses.Utils.Function;
+
+namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
-    public static CategoryClass Delete(this CategoryClass categoryClass)
-    {
-        _connection!.DeleteAsync(categoryClass).Wait();
-        return categoryClass;
-    }
+    // public static CategoryClass Delete(this CategoryClass categoryClass)
+    // {
+    //     _connection!.DeleteAsync(categoryClass).Wait();
+    //     return categoryClass;
+    // }
     
     public static LieuClass Delete(this LieuClass lieuClass)
     {
@@ -18,5 +20,11 @@ public static partial class SqLite
     {
         _connection!.DeleteAsync(walletTypeClass).Wait();
         return walletTypeClass;
+    }
+
+    public static ITableDisplay Delete(this ITableDisplay obj)
+    {
+        _connection!.DeleteAsync(obj).Wait();
+        return obj;
     }
 }
