@@ -65,6 +65,10 @@
             "Xamarin.Forms.ComboBox": {
               "target": "Package",
               "version": "[1.0.0.3, )"
+            },
+            "Xamarin.Forms.DataGrid": {
+              "target": "Package",
+              "version": "[5.0.0.2515, )"
             }
           }
         }
@@ -141,6 +145,10 @@
             "Xamarin.Forms.ComboBox": {
               "target": "Package",
               "version": "[1.0.0.3, )"
+            },
+            "Xamarin.Forms.DataGrid": {
+              "target": "Package",
+              "version": "[5.0.0.2515, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

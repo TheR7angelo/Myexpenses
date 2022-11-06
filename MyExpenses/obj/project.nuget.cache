@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xIruKXZ2/4SbW+Ji+u8PpPEZSNE/u1BVQwbAu/OyayagW3lQXbR4cxhcjog/wRr8dNOL5Q/jGbSIMcXUKBfccw==",
+  "dgSpecHash": "AQSALc67xIoSt6dXZHZxmt6qm9ijcs8FFSSDBjb+PUxpOIdk0VuaMSU2hXuQUWQ0lh1rvCGVRdnEelZkl/a9gg==",
   "success": true,
   "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses\\MyExpenses.csproj",
   "expectedPackageFiles": [
@@ -77,6 +77,7 @@
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms.combobox\\1.0.0.3\\xamarin.forms.combobox.1.0.0.3.nupkg.sha512",
+    "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms.datagrid\\5.0.0.2515\\xamarin.forms.datagrid.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []

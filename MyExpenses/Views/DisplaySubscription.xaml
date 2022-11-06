@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid"
+             x:Class="MyExpenses.Views.DisplaySubscription">
+    <ContentPage.Content>
+        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
+            <dg:DataGrid x:Name="DataGrid" HeaderBackground="#FFE0E6f8" ActiveRowColor="#8899AA" FontSize="3">
+                <dg:DataGrid.Columns>
+                    <dg:DataGridColumn Title="Id" PropertyName="Id" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="Lieu" PropertyName="LieuFk" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="Raison" PropertyName="Raison" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="PaymentTypeFk" PropertyName="PaymentTypeFk" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="Recurrence" PropertyName="Recurrence" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="Duration" PropertyName="Duration" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="Amount" PropertyName="Amount" Width="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                </dg:DataGrid.Columns>
+                
+                <dg:DataGrid.RowsBackgroundColorPalette>
+                    <dg:PaletteCollection>
+                        <Color>#FFE0E6f8</Color>
+                    </dg:PaletteCollection>
+                </dg:DataGrid.RowsBackgroundColorPalette>
+            </dg:DataGrid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

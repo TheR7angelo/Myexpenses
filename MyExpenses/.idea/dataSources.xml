@@ -13,11 +13,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="test categorie" uuid="7d425c85-81d9-4c34-b99f-d6802387b63a">
+    <data-source source="LOCAL" name="test abonement" uuid="6f734c42-76f3-4a7f-a59a-d256dbe9bda6">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\test\test categorie.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\test\test abonement.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>

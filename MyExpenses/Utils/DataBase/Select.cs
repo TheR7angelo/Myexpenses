@@ -38,6 +38,9 @@ public static partial class SqLite
     public static List<ITableDisplay> GetAllPaymentType() =>
         _connection!.QueryAsync<PaymentClass>("SELECT * FROM t_type_payement").Result.Cast<ITableDisplay>().ToList();
 
+    public static List<SubscriptionClass> GetAllSubscription() =>
+        _connection!.QueryAsync<SubscriptionClass>("SELECT * FROM t_abonements").Result;
+
     public static List<LieuClass> GetAllStore() => _connection!.QueryAsync<LieuClass>("SELECT * FROM t_lieu").Result;
 
     public static IEnumerable<WalletClass> GetAllTWallet() =>

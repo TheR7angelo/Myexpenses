@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uEzslYFjtb88A5BDQJuzqX/LoYKdrIs983lVan3cfwQLbfCLXkrE2enxNTP72EuX9w9vj6of9eDkftgDVOUx/w==",
+  "dgSpecHash": "VYquvXJSrke48O+99xHlBJaQTJlkjRwXFiisNOaygcc2QP40C+HnViSRofXFI0q4kXayyOcN5qJ8hSG5Mho6ow==",
   "success": true,
   "projectFilePath": "E:\\Logiciels\\Adobe\\Creative Cloud Files\\Programmation\\C#\\Personnel\\MyExpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
   "expectedPackageFiles": [
@@ -96,6 +96,7 @@
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms.combobox\\1.0.0.3\\xamarin.forms.combobox.1.0.0.3.nupkg.sha512",
+    "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms.datagrid\\5.0.0.2515\\xamarin.forms.datagrid.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\Rapha\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"

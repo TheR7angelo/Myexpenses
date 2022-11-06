@@ -9,6 +9,6 @@
 - [ ] tickets
 - [x] type compte
 - [x] type payement
-- [ ] type récurence
+- [ ] type récurence ( en cours )
 
 6/10 == 60%
