@@ -94,9 +94,10 @@ public class BaseDisplay
     private static async void DisplayAlert(string title, string msg, string cancel) => await Application.Current.MainPage.DisplayAlert(title, msg, cancel);
     private static async void DisplayAlert(string title, string msg, string accept, string cancel) => await Application.Current.MainPage.DisplayAlert(title, msg, accept,cancel);
     
-    private static int FindUse(ITableDisplay display)
+    private static int FindUse(ITableDisplay display) ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     {
         if (_type == typeof(SqLite.CategoryClass)) return SqLite.GetAllHistorique().Where(s => s.TypeCategorieFk.Equals(display.Id)).ToList().Count;
+        if (_type == typeof(SqLite.WalletTypeClass)) return SqLite.GetAllTWallet().Where(s => s.TypeCompteFk.Equals(display.Id)).ToList().Count;
 
         return 0;
 
@@ -104,9 +105,10 @@ public class BaseDisplay
     
     private Grid GetGridCategory() => (_displayLayout.Children.Where(s => s.GetType() == typeof(Grid)).ToList()[0] as Grid)!;
 
-    private static ITableDisplay? GetNew(string name)
+    private static ITableDisplay? GetNew(string name) /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     {
         if (_type == typeof(SqLite.CategoryClass)) return new SqLite.CategoryClass { Name = name };
+        if (_type == typeof(SqLite.WalletTypeClass)) return new SqLite.WalletTypeClass { Name = name };
         
         return null;
     }

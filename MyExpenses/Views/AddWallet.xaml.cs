@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using MyExpenses.Utils.Database;
+using MyExpenses.Utils.Function;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,7 +18,7 @@ public partial class AddWallet
     
     private readonly List<SqLite.ColorsClass> _dataColor;
     private readonly List<SqLite.ImageClass> _dataImage;
-    private List<SqLite.WalletTypeClass> _walletTypes = new();
+    private List<ITableDisplay> _walletTypes = new();
 
     private readonly Random _random = new();
     
@@ -37,14 +38,12 @@ public partial class AddWallet
 
     private void FillComboImage()
     {
-        // _dataImage = SqLite.GetAllImages().OrderBy(s => s.Name).ToList();
         PickerImage.ItemsSource = _dataImage.Select(image => image.Name).ToList();
         PickerImage.SelectedIndex = _random.Next(0, _dataImage.Count - 1);
     }
     
     private void FillComboColor()
     {
-        // _dataColor = SqLite.GetAllColor().OrderBy(s => s.Nom).ToList();
         PickerColor.ItemsSource = _dataColor.Select(color => color.Nom).ToList();
         PickerColor.SelectedIndex = _random.Next(0, _dataColor.Count - 1);
     }

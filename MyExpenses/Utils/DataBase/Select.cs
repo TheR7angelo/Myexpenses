@@ -47,8 +47,8 @@ public static partial class SqLite
         return _connection!.QueryAsync<VWalletClass>(cmd).Result;
     }
 
-    public static List<WalletTypeClass> GetAllWalletType() =>
-        _connection!.QueryAsync<WalletTypeClass>("SELECT * FROM t_type_compte").Result;
+    public static List<ITableDisplay> GetAllWalletType() =>
+        _connection!.QueryAsync<WalletTypeClass>("SELECT * FROM t_type_compte").Result.Cast<ITableDisplay>().ToList();
 
     #region Image
 
