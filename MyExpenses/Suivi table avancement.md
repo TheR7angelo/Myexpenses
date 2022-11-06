@@ -11,4 +11,4 @@
 - [x] type payement
 - [ ] type récurence
 
-4/10 == 40%
+6/10 == 60%
