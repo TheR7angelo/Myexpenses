@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using MyExpenses.Utils.Database;
 using MyExpenses.Utils.Function;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MyExpenses.Views;
