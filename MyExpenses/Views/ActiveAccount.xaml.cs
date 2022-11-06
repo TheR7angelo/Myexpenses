@@ -105,4 +105,8 @@ public partial class ActiveAccount
 
     private void ButtonCategory_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayCategory());
     private void ButtonStore_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayStore());
+    
+    private void ButtonTypeAccount_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayCategory());
+    
+    private void ButtonTypePayment_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayCategory());
 }
