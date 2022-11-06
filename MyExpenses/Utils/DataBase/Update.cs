@@ -13,4 +13,10 @@ public static partial class SqLite
         _connection!.UpdateAsync(lieuClass).Wait();
         return lieuClass;
     }
+
+    public static WalletTypeClass Update(this WalletTypeClass walletTypeClass)
+    {
+        _connection!.UpdateAsync(walletTypeClass).Wait();
+        return walletTypeClass;
+    }
 }

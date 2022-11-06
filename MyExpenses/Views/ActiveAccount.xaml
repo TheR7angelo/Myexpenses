@@ -38,7 +38,7 @@
                 
                 <Button Grid.Row="0" Grid.Column="0" Text="Gestion catégorie" BorderColor="Black" BorderWidth="1" Clicked="ButtonCategory_OnClicked"/>
                 <Button Grid.Row="0" Grid.Column="1" Text="Gestion magasin" BorderColor="Black" BorderWidth="1" Clicked="ButtonStore_OnClicked"/>
-                <Button Grid.Row="1" Grid.Column="0" Text="Gestion type compte" BorderColor="Black" BorderWidth="1" Clicked="ButtonTypeAccount_OnClicked"/>
+                <Button Grid.Row="1" Grid.Column="0" Text="Gestion type portefeuille" BorderColor="Black" BorderWidth="1" Clicked="ButtonWalletType_OnClicked"/>
                 <Button Grid.Row="1" Grid.Column="1" Text="Gestion type payement" BorderColor="Black" BorderWidth="1" Clicked="ButtonTypePayment_OnClicked"/>
             </Grid>
         </StackLayout>

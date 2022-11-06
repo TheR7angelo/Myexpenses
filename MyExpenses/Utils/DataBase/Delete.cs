@@ -13,4 +13,10 @@ public static partial class SqLite
         _connection!.DeleteAsync(lieuClass).Wait();
         return lieuClass;
     }
+
+    public static WalletTypeClass Delete(this WalletTypeClass walletTypeClass)
+    {
+        _connection!.DeleteAsync(walletTypeClass).Wait();
+        return walletTypeClass;
+    }
 }

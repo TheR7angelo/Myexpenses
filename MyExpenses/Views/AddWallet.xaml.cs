@@ -17,7 +17,7 @@ public partial class AddWallet
     
     private readonly List<SqLite.ColorsClass> _dataColor;
     private readonly List<SqLite.ImageClass> _dataImage;
-    private List<SqLite.WalletType> _walletTypes = new();
+    private List<SqLite.WalletTypeClass> _walletTypes = new();
 
     private readonly Random _random = new();
     
@@ -124,7 +124,7 @@ public partial class AddWallet
 
         var lstType = _walletTypes.Where(s => s.Name.Equals(typeName)).ToList();
         
-        var type = lstType.Count.Equals(0) ? new SqLite.WalletType { Name = typeName }.Insert() : lstType[0];
+        var type = lstType.Count.Equals(0) ? new SqLite.WalletTypeClass { Name = typeName }.Insert() : lstType[0];
 
         var color = FrameColor.BindingContext as SqLite.ColorsClass;
         var image = ImageLogo.BindingContext as SqLite.ImageClass;

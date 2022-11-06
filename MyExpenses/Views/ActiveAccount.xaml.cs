@@ -55,7 +55,7 @@ public partial class ActiveAccount
     {
         var entries = new List<ChartEntry>();
 
-        var lstWallet = SqLite.GetAllWallet().Where(s => s.External.Equals(false)).ToList();
+        var lstWallet = SqLite.GetAllVWallet().Where(s => s.External.Equals(false)).ToList();
 
         var lstVTotalByWalletClass = SqLite.GetVTotalByWalletClass();
 
@@ -106,7 +106,7 @@ public partial class ActiveAccount
     private void ButtonCategory_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayCategory());
     private void ButtonStore_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayStore());
     
-    private void ButtonTypeAccount_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayCategory());
+    private void ButtonWalletType_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayWalletType());
     
     private void ButtonTypePayment_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayCategory());
 }

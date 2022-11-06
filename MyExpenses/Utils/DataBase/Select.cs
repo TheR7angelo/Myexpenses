@@ -4,6 +4,9 @@ namespace MyExpenses.Utils.Database;
 
 public static partial class SqLite
 {
+    public static List<CategoryClass> GetAllCategory() =>
+        _connection!.QueryAsync<CategoryClass>("SELECT * FROM t_type_categorie").Result;
+
     #region Color
 
     public static IEnumerable<ColorsClass> GetAllColor() =>
@@ -16,16 +19,16 @@ public static partial class SqLite
     }
 
     #endregion
-
-    public static List<CategoryClass> GetAllCategory() =>
-        _connection!.QueryAsync<CategoryClass>("SELECT * FROM t_type_categorie").Result;
-
+    
     public static List<HistoriqueClass> GetAllHistorique() =>
         _connection!.QueryAsync<HistoriqueClass>("SELECT * FROM t_historique").Result;
 
     public static List<LieuClass> GetAllStore() => _connection!.QueryAsync<LieuClass>("SELECT * FROM t_lieu").Result;
-    
-    public static IEnumerable<VWalletClass> GetAllWallet()
+
+    public static IEnumerable<WalletClass> GetAllTWallet() =>
+        _connection!.QueryAsync<WalletClass>("SELECT * FROM main.t_compte").Result;
+
+    public static IEnumerable<VWalletClass> GetAllVWallet()
     {
         const string cmd = @"
         SELECT c.id, c.nom, ttc.nom as type, tc.nom as color_name, tc.value as color_value, ti.name as image, c.externe
@@ -39,8 +42,8 @@ public static partial class SqLite
         return _connection!.QueryAsync<VWalletClass>(cmd).Result;
     }
 
-    public static List<WalletType> GetAllWalletType() =>
-        _connection!.QueryAsync<WalletType>("SELECT * FROM t_type_compte").Result;
+    public static List<WalletTypeClass> GetAllWalletType() =>
+        _connection!.QueryAsync<WalletTypeClass>("SELECT * FROM t_type_compte").Result;
 
     #region Image
 

@@ -26,9 +26,9 @@ public static partial class SqLite
         return walletClass;
     }
     
-    public static WalletType Insert(this WalletType walletType)
+    public static WalletTypeClass Insert(this WalletTypeClass walletTypeClass)
     {
-        _connection!.InsertAsync(walletType).Wait();
-        return walletType;
+        _connection!.InsertAsync(walletTypeClass).Wait();
+        return walletTypeClass;
     }
 }

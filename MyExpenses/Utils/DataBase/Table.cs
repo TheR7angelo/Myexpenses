@@ -306,7 +306,7 @@ public static partial class SqLite
     }
 
     [Table("t_type_compte")]
-    public class WalletType
+    public class WalletTypeClass
     {
         [PrimaryKey, AutoIncrement, Column("id")]
         public int Id { get; set; }
