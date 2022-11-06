@@ -8,7 +8,7 @@
 - [x] lieu
 - [ ] tickets
 - [x] type compte
-- [ ] type payement
+- [x] type payement
 - [ ] type récurence
 
 4/10 == 40%

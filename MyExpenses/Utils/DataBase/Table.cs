@@ -254,6 +254,15 @@ public static partial class SqLite
         [Column("nom")]
         public string Name { get; set; } = null!;
     }
+    
+    [Table("t_type_payement")]
+    public class PaymentClass : ITableDisplay
+    {
+        [PrimaryKey, AutoIncrement, Column("id")]
+        public int Id { get; set; }
+        [Column("nom")]
+        public string Name { get; set; } = null!;
+    }
 
     [Table("t_colors")]
     public class ColorsClass

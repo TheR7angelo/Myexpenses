@@ -11,8 +11,8 @@ public class BaseDisplay
     private static Type _type = null!;
     
     private static List<ITableDisplay> _data = null!;
-    private StackLayout _displayLayout;
-    private Button _buttonAdd;
+    private readonly StackLayout _displayLayout;
+    private readonly Button _buttonAdd;
     
     private const string NewCategory = "NewCategory";
     private const string GridName = $"Grid_{NewCategory}";
@@ -98,6 +98,7 @@ public class BaseDisplay
     {
         if (_type == typeof(SqLite.CategoryClass)) return SqLite.GetAllHistorique().Where(s => s.TypeCategorieFk.Equals(display.Id)).ToList().Count;
         if (_type == typeof(SqLite.WalletTypeClass)) return SqLite.GetAllTWallet().Where(s => s.TypeCompteFk.Equals(display.Id)).ToList().Count;
+        if (_type == typeof(SqLite.PaymentClass)) return SqLite.GetAllHistorique().Where(s => s.TypePayementFk.Equals(display.Id)).ToList().Count;
 
         return 0;
 
@@ -109,6 +110,7 @@ public class BaseDisplay
     {
         if (_type == typeof(SqLite.CategoryClass)) return new SqLite.CategoryClass { Name = name };
         if (_type == typeof(SqLite.WalletTypeClass)) return new SqLite.WalletTypeClass { Name = name };
+        if (_type == typeof(SqLite.PaymentClass)) return new SqLite.PaymentClass { Name = name };
         
         return null;
     }

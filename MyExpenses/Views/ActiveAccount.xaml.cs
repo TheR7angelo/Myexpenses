@@ -108,5 +108,5 @@ public partial class ActiveAccount
     
     private void ButtonWalletType_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayWalletType());
     
-    private void ButtonTypePayment_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayCategory());
+    private void ButtonTypePayment_OnClicked(object sender, EventArgs e) => Navigation.PushAsync(new DisplayPaymentType());
 }

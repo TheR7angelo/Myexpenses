@@ -25,8 +25,18 @@ public static partial class SqLite
 
     #endregion
     
-    public static List<HistoriqueClass> GetAllHistorique() =>
+    public static IEnumerable<HistoriqueClass> GetAllHistorique() =>
         _connection!.QueryAsync<HistoriqueClass>("SELECT * FROM t_historique").Result;
+    
+    #region Image
+
+    public static IEnumerable<ImageClass> GetAllImages() =>
+        _connection!.QueryAsync<ImageClass>("SELECT * FROM t_images").Result;
+
+    #endregion
+
+    public static List<ITableDisplay> GetAllPaymentType() =>
+        _connection!.QueryAsync<PaymentClass>("SELECT * FROM t_type_payement").Result.Cast<ITableDisplay>().ToList();
 
     public static List<LieuClass> GetAllStore() => _connection!.QueryAsync<LieuClass>("SELECT * FROM t_lieu").Result;
 
@@ -50,13 +60,6 @@ public static partial class SqLite
     public static List<ITableDisplay> GetAllWalletType() =>
         _connection!.QueryAsync<WalletTypeClass>("SELECT * FROM t_type_compte").Result.Cast<ITableDisplay>().ToList();
 
-    #region Image
-
-    public static IEnumerable<ImageClass> GetAllImages() =>
-        _connection!.QueryAsync<ImageClass>("SELECT * FROM t_images").Result;
-
-    #endregion
-    
     public static List<VTotalByWaletClass> GetVTotalByWalletClass() => _connection!
         .QueryAsync<VTotalByWaletClass>(
             "SELECT h.compte, round(sum(h.montant), 2) as restant  FROM v_historique h GROUP BY h.compte;").Result;
