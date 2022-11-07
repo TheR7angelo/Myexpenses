@@ -2272,10 +2272,10 @@
           "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {}
         }
       },
-      "Xamarin.Forms.DataGrid/5.0.0.2515": {
+      "Xamarin.Forms.DataGrid/4.8.0": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "5.0.0.2515"
+          "Xamarin.Forms": "4.8.0.1687"
         },
         "compile": {
           "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll": {}
@@ -2373,7 +2373,7 @@
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
           "Xamarin.Forms.ComboBox": "1.0.0.3",
-          "Xamarin.Forms.DataGrid": "5.0.0.2515",
+          "Xamarin.Forms.DataGrid": "4.8.0",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -4890,15 +4890,15 @@
         "xamarin.forms.combobox.nuspec"
       ]
     },
-    "Xamarin.Forms.DataGrid/5.0.0.2515": {
-      "sha512": "r712mHEgeVlBT3BOfaGPJhJPCtL2bwdYbMnFg+fVvIE+eZ/EATFdeq0fpRh5X+ACJiL8G9AUcRo9JGE5T9I92g==",
+    "Xamarin.Forms.DataGrid/4.8.0": {
+      "sha512": "aWVJQ2W5FKrmJgmt8aBhH1RumvUycM89vL0+JlTril+4QciUwerNCr9FV62jBeEXBp6/VUF4XX+9MfJtzjPWjQ==",
       "type": "package",
-      "path": "xamarin.forms.datagrid/5.0.0.2515",
+      "path": "xamarin.forms.datagrid/4.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Xamarin.Forms.DataGrid.dll",
-        "xamarin.forms.datagrid.5.0.0.2515.nupkg.sha512",
+        "xamarin.forms.datagrid.4.8.0.nupkg.sha512",
         "xamarin.forms.datagrid.nuspec"
       ]
     },
@@ -4980,7 +4980,7 @@
       "Xamarin.Essentials >= 1.7.3",
       "Xamarin.Forms >= 5.0.0.2515",
       "Xamarin.Forms.ComboBox >= 1.0.0.3",
-      "Xamarin.Forms.DataGrid >= 5.0.0.2515"
+      "Xamarin.Forms.DataGrid >= 4.8.0"
     ]
   },
   "packageFolders": {
@@ -5052,7 +5052,7 @@
           },
           "Xamarin.Forms.DataGrid": {
             "target": "Package",
-            "version": "[5.0.0.2515, )"
+            "version": "[4.8.0, )"
           }
         }
       }

@@ -2,12 +2,19 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid"
              x:Class="MyExpenses.Views.DisplaySubscription">
     <ContentPage.Content>
         <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
-            <dg:DataGrid x:Name="DataGrid" HeaderBackground="#FFE0E6f8" ActiveRowColor="#8899AA"
-                         SelectionEnabled="True" IsSortable="True" HeaderBordersVisible="True">
+            <dg:DataGrid x:Name="DataGrid" IsSortable="True" HeaderBordersVisible="True" SelectionEnabled="True"
+                         ItemsSource="{Binding SubscriptionData}" SelectedItem="{Binding SelectedSubscription}" PullToRefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}"
+                         HeaderBackground="#FFE0E6f8" ActiveRowColor="Red"
+                         ItemSelected="DataGrid_OnItemSelected" Refreshing="DataGrid_OnRefreshing">
+                <x:Arguments>
+                    <ListViewCachingStrategy>RetainElement</ListViewCachingStrategy>
+                </x:Arguments>
                 <dg:DataGrid.Columns>
                     <dg:DataGridColumn Title="Id" PropertyName="Id" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <dg:DataGridColumn Title="Lieu" PropertyName="LieuFk" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
@@ -17,17 +24,12 @@
                     <dg:DataGridColumn Title="Duration" PropertyName="Duration" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <dg:DataGridColumn Title="Amount" PropertyName="Amount" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 </dg:DataGrid.Columns>
-                
                 <dg:DataGrid.RowsBackgroundColorPalette>
                     <dg:PaletteCollection>
-                        <Color>White</Color>
+                        <Color>#F2F2F2</Color>
+                        <Color>#FFFFFF</Color>
                     </dg:PaletteCollection>
                 </dg:DataGrid.RowsBackgroundColorPalette>
-                <dg:DataGrid.SelectedItem>
-                    <dg:PaletteCollection>
-                        <Color>Red</Color>
-                    </dg:PaletteCollection>
-                </dg:DataGrid.SelectedItem>
             </dg:DataGrid>
         </ScrollView>
     </ContentPage.Content>

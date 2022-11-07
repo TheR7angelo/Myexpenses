@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mndWXQAbCBcv3/O94vfW9gu7Q2drfKbGeZzVVypdORoIX7o/j0vVYnVXKh8qTfcKkTScVydMXTseJqcMgL623w==",
+  "dgSpecHash": "zmxBktlyI9C+Xlly3Ejzv3zY4+ssosqmi45FW9zsnvhZIWmatO8XhZqibPb0EXKN0G05k8NaGpEp2LhL6ed5IQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.iOS\\MyExpenses.iOS.csproj",
   "expectedPackageFiles": [
@@ -42,7 +42,7 @@
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.combobox\\1.0.0.3\\xamarin.forms.combobox.1.0.0.3.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.datagrid\\5.0.0.2515\\xamarin.forms.datagrid.5.0.0.2515.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.datagrid\\4.8.0\\xamarin.forms.datagrid.4.8.0.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.ios.materialcomponents\\92.0.0\\xamarin.ios.materialcomponents.92.0.0.nupkg.sha512"
   ],

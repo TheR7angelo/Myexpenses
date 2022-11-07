@@ -80,7 +80,7 @@
             },
             "Xamarin.Forms.DataGrid": {
               "target": "Package",
-              "version": "[5.0.0.2515, )"
+              "version": "[4.8.0, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
