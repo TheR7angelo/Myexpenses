@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zEjrsHI5v6Usf6TwUj3Qbl0nitbL8AAhsSQj/HQaty04fOQb/p0qjRShnE73qNrdKFPA9ZZBlI2IayW0vsPblA==",
+  "dgSpecHash": "NEFdiffeqT5Fs6LXyzrp3zLCnmgnAoZRMU9wLjt5wUXbNyUN0bnNsqPIJmOrWycA08lrrhFo/rVTtBRgc1sI7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses.Android\\MyExpenses.Android.csproj",
   "expectedPackageFiles": [
@@ -23,7 +23,6 @@
     "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.views.forms\\2.88.3\\skiasharp.views.forms.2.88.3.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitenetextensions.async\\2.1.0\\sqlitenetextensions.async.2.1.0.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.4\\sqlitepclraw.lib.e_sqlite3.android.2.0.4.nupkg.sha512",

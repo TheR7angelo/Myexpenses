@@ -329,23 +329,6 @@
           }
         }
       },
-      "SQLiteNetExtensions.Async/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "SQLiteNetExtensions": "2.0.0",
-          "sqlite-net-pcl": "1.4.118"
-        },
-        "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
-        }
-      },
       "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -764,11 +747,8 @@
           "Mapsui.Forms": "4.0.0-beta.5",
           "Microcharts.Forms": "1.0.0-preview1",
           "SQLiteNetExtensions": "2.1.0",
-          "SQLiteNetExtensions.Async": "2.1.0",
-          "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
-          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "Xamarin.Forms.DataGrid": "4.8.0",
           "sqlite-net-pcl": "1.8.116"
         },
@@ -1064,23 +1044,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "related": ".pdb"
-          }
-        }
-      },
-      "SQLiteNetExtensions.Async/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "SQLiteNetExtensions": "2.0.0",
-          "sqlite-net-pcl": "1.4.118"
-        },
-        "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
             "related": ".pdb"
           }
         }
@@ -1499,11 +1462,8 @@
           "Mapsui.Forms": "4.0.0-beta.5",
           "Microcharts.Forms": "1.0.0-preview1",
           "SQLiteNetExtensions": "2.1.0",
-          "SQLiteNetExtensions.Async": "2.1.0",
-          "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
-          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "Xamarin.Forms.DataGrid": "4.8.0",
           "sqlite-net-pcl": "1.8.116"
         },
@@ -1803,23 +1763,6 @@
           }
         }
       },
-      "SQLiteNetExtensions.Async/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "SQLiteNetExtensions": "2.0.0",
-          "sqlite-net-pcl": "1.4.118"
-        },
-        "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
-        }
-      },
       "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -2232,11 +2175,8 @@
           "Mapsui.Forms": "4.0.0-beta.5",
           "Microcharts.Forms": "1.0.0-preview1",
           "SQLiteNetExtensions": "2.1.0",
-          "SQLiteNetExtensions.Async": "2.1.0",
-          "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
-          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "Xamarin.Forms.DataGrid": "4.8.0",
           "sqlite-net-pcl": "1.8.116"
         },
@@ -2536,23 +2476,6 @@
           }
         }
       },
-      "SQLiteNetExtensions.Async/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "SQLiteNetExtensions": "2.0.0",
-          "sqlite-net-pcl": "1.4.118"
-        },
-        "compile": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
-            "related": ".pdb"
-          }
-        }
-      },
       "SQLitePCLRaw.bundle_green/2.0.4": {
         "type": "package",
         "dependencies": {
@@ -2965,11 +2888,8 @@
           "Mapsui.Forms": "4.0.0-beta.5",
           "Microcharts.Forms": "1.0.0-preview1",
           "SQLiteNetExtensions": "2.1.0",
-          "SQLiteNetExtensions.Async": "2.1.0",
-          "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
-          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "Xamarin.Forms.DataGrid": "4.8.0",
           "sqlite-net-pcl": "1.8.116"
         },
@@ -3491,35 +3411,6 @@
         "lib/netstandard1.1/SQLiteNetExtensions.pdb",
         "sqlitenetextensions.2.1.0.nupkg.sha512",
         "sqlitenetextensions.nuspec",
-        "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
-        "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
-        "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",
-        "src/SQLiteNetExtensions/Attributes/ManyToOneAttribute.cs",
-        "src/SQLiteNetExtensions/Attributes/OneToManyAttribute.cs",
-        "src/SQLiteNetExtensions/Attributes/OneToOneAttribute.cs",
-        "src/SQLiteNetExtensions/Attributes/RelationshipAttribute.cs",
-        "src/SQLiteNetExtensions/Attributes/TextBlobAttribute.cs",
-        "src/SQLiteNetExtensions/Exceptions/IncorrectRelationshipException.cs",
-        "src/SQLiteNetExtensions/Extensions/ReadOperations.cs",
-        "src/SQLiteNetExtensions/Extensions/ReflectionExtensions.cs",
-        "src/SQLiteNetExtensions/Extensions/TextBlob/ITextBlobSerializer.cs",
-        "src/SQLiteNetExtensions/Extensions/TextBlob/Serializers/JsonBlobSerializer.cs",
-        "src/SQLiteNetExtensions/Extensions/TextBlob/TextBlobOperations.cs",
-        "src/SQLiteNetExtensions/Extensions/WriteOperations.cs",
-        "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
-      ]
-    },
-    "SQLiteNetExtensions.Async/2.1.0": {
-      "sha512": "jiIewsMh0Zfv1dB5Jp9eylckDOmVqNx5uPoFunfwAJApimL71bja7OxF55pFlz7TTiSm0rTkn3aWE6Gz89qUDw==",
-      "type": "package",
-      "path": "sqlitenetextensions.async/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll",
-        "lib/netstandard1.1/SQLiteNetExtensionsAsync.pdb",
-        "sqlitenetextensions.async.2.1.0.nupkg.sha512",
-        "sqlitenetextensions.async.nuspec",
         "src/SQLiteNetExtensions/Attributes/CascadeOperation.cs",
         "src/SQLiteNetExtensions/Attributes/ForeignKeyAttribute.cs",
         "src/SQLiteNetExtensions/Attributes/ManyToManyAttribute.cs",

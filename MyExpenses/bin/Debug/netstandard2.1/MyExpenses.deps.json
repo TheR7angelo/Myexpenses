@@ -12,11 +12,8 @@
           "Mapsui.Forms": "4.0.0-beta.5",
           "Microcharts.Forms": "1.0.0-preview1",
           "SQLiteNetExtensions": "2.1.0",
-          "SQLiteNetExtensions.Async": "2.1.0",
-          "SkiaSharp.Views.Forms": "2.88.3",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515",
-          "Xamarin.Forms.ComboBox": "1.0.0.3",
           "Xamarin.Forms.DataGrid": "4.8.0",
           "sqlite-net-pcl": "1.8.116"
         },
@@ -60,7 +57,7 @@
           "BruTile": "5.0.0",
           "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
           "NetTopologySuite": "2.4.0",
-          "SkiaSharp": "2.88.3",
+          "SkiaSharp": "2.88.1-preview.63",
           "Svg.Skia": "0.5.12",
           "System.Linq.Async": "6.0.1",
           "System.Text.Encoding.CodePages": "6.0.0",
@@ -88,7 +85,7 @@
       "Mapsui.Forms/4.0.0-beta.5": {
         "dependencies": {
           "Mapsui": "4.0.0-beta.5",
-          "SkiaSharp.Views.Forms": "2.88.3",
+          "SkiaSharp.Views.Forms": "2.88.1-preview.63",
           "Xamarin.Essentials": "1.7.3",
           "Xamarin.Forms": "5.0.0.2515"
         },
@@ -101,8 +98,8 @@
       },
       "Microcharts.Forms/1.0.0-preview1": {
         "dependencies": {
-          "SkiaSharp": "2.88.3",
-          "SkiaSharp.Views.Forms": "2.88.3",
+          "SkiaSharp": "2.88.1-preview.63",
+          "SkiaSharp.Views.Forms": "2.88.1-preview.63",
           "System.ValueTuple": "4.5.0",
           "Xamarin.Forms": "5.0.0.2515"
         },
@@ -204,22 +201,23 @@
           }
         }
       },
-      "SkiaSharp/2.88.3": {
+      "SkiaSharp/2.88.1-preview.63": {
         "dependencies": {
-          "SkiaSharp.NativeAssets.Win32": "2.88.3",
-          "SkiaSharp.NativeAssets.macOS": "2.88.3"
+          "SkiaSharp.NativeAssets.Win32": "2.88.1-preview.63",
+          "SkiaSharp.NativeAssets.macOS": "2.88.1-preview.63",
+          "System.Memory": "4.5.4"
         },
         "runtime": {
-          "lib/netstandard2.1/SkiaSharp.dll": {
+          "lib/netstandard2.0/SkiaSharp.dll": {
             "assemblyVersion": "2.88.0.0",
-            "fileVersion": "2.88.3.0"
+            "fileVersion": "2.88.1.0"
           }
         }
       },
       "SkiaSharp.HarfBuzz/2.88.0-preview.178": {
         "dependencies": {
           "HarfBuzzSharp": "2.8.2-preview.178",
-          "SkiaSharp": "2.88.3"
+          "SkiaSharp": "2.88.1-preview.63"
         },
         "runtime": {
           "lib/netstandard2.0/SkiaSharp.HarfBuzz.dll": {
@@ -228,11 +226,11 @@
           }
         }
       },
-      "SkiaSharp.NativeAssets.macOS/2.88.3": {},
-      "SkiaSharp.NativeAssets.Win32/2.88.3": {},
-      "SkiaSharp.Views.Forms/2.88.3": {
+      "SkiaSharp.NativeAssets.macOS/2.88.1-preview.63": {},
+      "SkiaSharp.NativeAssets.Win32/2.88.1-preview.63": {},
+      "SkiaSharp.Views.Forms/2.88.1-preview.63": {
         "dependencies": {
-          "SkiaSharp": "2.88.3",
+          "SkiaSharp": "2.88.1-preview.63",
           "Xamarin.Forms": "5.0.0.2515"
         }
       },
@@ -254,18 +252,6 @@
         },
         "runtime": {
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "SQLiteNetExtensions.Async/2.1.0": {
-        "dependencies": {
-          "SQLiteNetExtensions": "2.1.0",
-          "sqlite-net-pcl": "1.8.116"
-        },
-        "runtime": {
-          "lib/netstandard1.1/SQLiteNetExtensionsAsync.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -335,7 +321,7 @@
       },
       "Svg.Skia/0.5.12": {
         "dependencies": {
-          "SkiaSharp": "2.88.3",
+          "SkiaSharp": "2.88.1-preview.63",
           "SkiaSharp.HarfBuzz": "2.88.0-preview.178",
           "Svg.Custom": "0.5.12",
           "Svg.Model": "0.5.12"
@@ -788,7 +774,7 @@
       },
       "Topten.RichTextKit/0.4.145": {
         "dependencies": {
-          "SkiaSharp": "2.88.3",
+          "SkiaSharp": "2.88.1-preview.63",
           "SkiaSharp.HarfBuzz": "2.88.0-preview.178"
         },
         "runtime": {
@@ -825,18 +811,6 @@
           }
         }
       },
-      "Xamarin.Forms.ComboBox/1.0.0.3": {
-        "dependencies": {
-          "Xamarin.Forms": "5.0.0.2515",
-          "Xamarin.Forms.Visual.Material": "5.0.0.2012"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Xamarin.Forms.ComboBox.dll": {
-            "assemblyVersion": "1.0.0.3",
-            "fileVersion": "1.0.0.3"
-          }
-        }
-      },
       "Xamarin.Forms.DataGrid/4.8.0": {
         "dependencies": {
           "Xamarin.Forms": "5.0.0.2515"
@@ -846,11 +820,6 @@
             "assemblyVersion": "4.8.0.0",
             "fileVersion": "4.8.0.0"
           }
-        }
-      },
-      "Xamarin.Forms.Visual.Material/5.0.0.2012": {
-        "dependencies": {
-          "Xamarin.Forms": "5.0.0.2515"
         }
       }
     }
@@ -966,12 +935,12 @@
       "path": "shimskiasharp/0.5.12",
       "hashPath": "shimskiasharp.0.5.12.nupkg.sha512"
     },
-    "SkiaSharp/2.88.3": {
+    "SkiaSharp/2.88.1-preview.63": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GG8X3EdfwyBfwjl639UIiOVOKEdeoqDgYrz0P1MUCnefXt9cofN+AK8YB/v1+5cLMr03ieWCQdDmPqnFIzSxZw==",
-      "path": "skiasharp/2.88.3",
-      "hashPath": "skiasharp.2.88.3.nupkg.sha512"
+      "sha512": "sha512-1478Soo55lNwUCjox75xsvwCVfrKadOVjBqk5h1K5ZpwV7DHVBhKMPUl7iIGDulQAin2JUEdxIUu3IkVOTeTOw==",
+      "path": "skiasharp/2.88.1-preview.63",
+      "hashPath": "skiasharp.2.88.1-preview.63.nupkg.sha512"
     },
     "SkiaSharp.HarfBuzz/2.88.0-preview.178": {
       "type": "package",
@@ -980,26 +949,26 @@
       "path": "skiasharp.harfbuzz/2.88.0-preview.178",
       "hashPath": "skiasharp.harfbuzz.2.88.0-preview.178.nupkg.sha512"
     },
-    "SkiaSharp.NativeAssets.macOS/2.88.3": {
+    "SkiaSharp.NativeAssets.macOS/2.88.1-preview.63": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CEbWAXMGFkPV3S1snBKK7jEG3+xud/9kmSAhu0BEUKKtlMdxx+Qal0U9bntQREM9QpqP5xLWZooodi8IlV8MEg==",
-      "path": "skiasharp.nativeassets.macos/2.88.3",
-      "hashPath": "skiasharp.nativeassets.macos.2.88.3.nupkg.sha512"
+      "sha512": "sha512-bEmEp/wQ9P4pi8pMqg6oaMIQzLLCUgUqRnvJosL6E68A0VKHG+6bAfbuINh4qGv3Pb+eQBCG9qvlXLUrE7pkmQ==",
+      "path": "skiasharp.nativeassets.macos/2.88.1-preview.63",
+      "hashPath": "skiasharp.nativeassets.macos.2.88.1-preview.63.nupkg.sha512"
     },
-    "SkiaSharp.NativeAssets.Win32/2.88.3": {
+    "SkiaSharp.NativeAssets.Win32/2.88.1-preview.63": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MU4ASL8VAbTv5vSw1PoiWjjjpjtGhWtFYuJnrN4sNHFCePb2ohQij9JhSdqLLxk7RpRtWPdV93fbA53Pt+J0yw==",
-      "path": "skiasharp.nativeassets.win32/2.88.3",
-      "hashPath": "skiasharp.nativeassets.win32.2.88.3.nupkg.sha512"
+      "sha512": "sha512-2UN4qAfe1YNqPdxjh6jY6Kgk9WuYmPz/A2r3ojUtxOhmDOphNmIelXiWsLGIKO/yaSTJJc5KytVRT2U53IZqPg==",
+      "path": "skiasharp.nativeassets.win32/2.88.1-preview.63",
+      "hashPath": "skiasharp.nativeassets.win32.2.88.1-preview.63.nupkg.sha512"
     },
-    "SkiaSharp.Views.Forms/2.88.3": {
+    "SkiaSharp.Views.Forms/2.88.1-preview.63": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zLCojq2yZhm/ZdUUevT1/e84XPp+Sr/lT51TrQ/KRiw01Q05xzfESDFJ7CTFgl/wG0M4dqyv5IkexZMyUWhulg==",
-      "path": "skiasharp.views.forms/2.88.3",
-      "hashPath": "skiasharp.views.forms.2.88.3.nupkg.sha512"
+      "sha512": "sha512-d/KbsNTZL6g9JtTputVkAX95BlJSowQIFWb1l2w8LKqPTIXVDk9vOzSCOj8U9mQC/LOOqHsP2nvKzOCbhQc1qQ==",
+      "path": "skiasharp.views.forms/2.88.1-preview.63",
+      "hashPath": "skiasharp.views.forms.2.88.1-preview.63.nupkg.sha512"
     },
     "sqlite-net-pcl/1.8.116": {
       "type": "package",
@@ -1014,13 +983,6 @@
       "sha512": "sha512-oiyhVxCi7M2nr3tI6h05jdHGT0HKW6GxMNKUiO04zWAxv42MHtX12c4tW67w6VqGwcnXj1bwyTpq9P0W8QoGYQ==",
       "path": "sqlitenetextensions/2.1.0",
       "hashPath": "sqlitenetextensions.2.1.0.nupkg.sha512"
-    },
-    "SQLiteNetExtensions.Async/2.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jiIewsMh0Zfv1dB5Jp9eylckDOmVqNx5uPoFunfwAJApimL71bja7OxF55pFlz7TTiSm0rTkn3aWE6Gz89qUDw==",
-      "path": "sqlitenetextensions.async/2.1.0",
-      "hashPath": "sqlitenetextensions.async.2.1.0.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_green/2.0.4": {
       "type": "package",
@@ -1365,26 +1327,12 @@
       "path": "xamarin.forms/5.0.0.2515",
       "hashPath": "xamarin.forms.5.0.0.2515.nupkg.sha512"
     },
-    "Xamarin.Forms.ComboBox/1.0.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jMbUH1YSXK+0YpWWuwUnAncCTmCKPEFVJEdAxJ/DUzn8U09AKfYHUGdX+a7xB4BIuSweFa+mUDLVjNZ1gSmhUg==",
-      "path": "xamarin.forms.combobox/1.0.0.3",
-      "hashPath": "xamarin.forms.combobox.1.0.0.3.nupkg.sha512"
-    },
     "Xamarin.Forms.DataGrid/4.8.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-aWVJQ2W5FKrmJgmt8aBhH1RumvUycM89vL0+JlTril+4QciUwerNCr9FV62jBeEXBp6/VUF4XX+9MfJtzjPWjQ==",
       "path": "xamarin.forms.datagrid/4.8.0",
       "hashPath": "xamarin.forms.datagrid.4.8.0.nupkg.sha512"
-    },
-    "Xamarin.Forms.Visual.Material/5.0.0.2012": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZwYp0UpXJICPvHlgiVCdpr3WwWcMClb7rNCUlMZ93L/zJVFIGMloi49sC9l+jxvPZMStVTbptDm+BhSNszNHng==",
-      "path": "xamarin.forms.visual.material/5.0.0.2012",
-      "hashPath": "xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
     }
   }
 }

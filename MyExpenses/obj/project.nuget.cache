@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ILNgzgHVDLOcpxmvMDNKhHydaF1xXb3ZherXEtxi3lIvfKMC5deVLX+Tr2+0rvB9mR00NMBavvAM5M0nnckitw==",
+  "dgSpecHash": "fLoEAmYfpXJuOI2g1wqlShC+8WNGVhmonzADZFOTCINWsOfoAtkcX0oqO1kW7uKe83axMvfIaaJW+KEqGqxLlg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ZP6177\\Creative Cloud Files\\Programmation\\C#\\Ineo Infracom\\Myexpenses\\MyExpenses\\MyExpenses.csproj",
   "expectedPackageFiles": [
@@ -19,14 +19,13 @@
     "C:\\Users\\ZP6177\\.nuget\\packages\\nettopologysuite\\2.4.0\\nettopologysuite.2.4.0.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\shimskiasharp\\0.5.12\\shimskiasharp.0.5.12.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp\\2.88.3\\skiasharp.2.88.3.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp\\2.88.1-preview.63\\skiasharp.2.88.1-preview.63.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.harfbuzz\\2.88.0-preview.178\\skiasharp.harfbuzz.2.88.0-preview.178.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.3\\skiasharp.nativeassets.macos.2.88.3.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.3\\skiasharp.nativeassets.win32.2.88.3.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.views.forms\\2.88.3\\skiasharp.views.forms.2.88.3.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.1-preview.63\\skiasharp.nativeassets.macos.2.88.1-preview.63.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.1-preview.63\\skiasharp.nativeassets.win32.2.88.1-preview.63.nupkg.sha512",
+    "C:\\Users\\ZP6177\\.nuget\\packages\\skiasharp.views.forms\\2.88.1-preview.63\\skiasharp.views.forms.2.88.1-preview.63.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitenetextensions\\2.1.0\\sqlitenetextensions.2.1.0.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitenetextensions.async\\2.1.0\\sqlitenetextensions.async.2.1.0.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
@@ -76,9 +75,7 @@
     "C:\\Users\\ZP6177\\.nuget\\packages\\topten.richtextkit\\0.4.145\\topten.richtextkit.0.4.145.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.combobox\\1.0.0.3\\xamarin.forms.combobox.1.0.0.3.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.datagrid\\4.8.0\\xamarin.forms.datagrid.4.8.0.nupkg.sha512",
-    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.visual.material\\5.0.0.2012\\xamarin.forms.visual.material.5.0.0.2012.nupkg.sha512"
+    "C:\\Users\\ZP6177\\.nuget\\packages\\xamarin.forms.datagrid\\4.8.0\\xamarin.forms.datagrid.4.8.0.nupkg.sha512"
   ],
   "logs": []
 }
