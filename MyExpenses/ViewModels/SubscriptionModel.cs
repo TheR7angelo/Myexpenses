@@ -16,6 +16,9 @@ public class SubscriptionModel : INotifyPropertyChanged
     public SubscriptionModel()
     {
         // _subscriptionData = new ObservableCollection<SqLite.SubscriptionClass>(SqLite.GetAllSubscription());
+        
+        // https://wpf-tutorial.com/list-controls/combobox-control/
+        
         _subscriptionData = TestData();
         RefreshCommand = new Command(CmdRefresh);
     }
