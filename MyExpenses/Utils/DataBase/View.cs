@@ -2,6 +2,28 @@
 
 public static partial class SqLite
 {
+    private const string VSubscribe = @"
+    CREATE VIEW v_abonements as
+    SELECT sub.id,
+       tl.nom   as lieu,
+       sub.raison,
+       ttp.nom  as payment_type,
+       sub.recurence,
+       ttr1.nom as recurence_type1,
+       sub.montant,
+       sub.duree,
+       ttr2.nom as recurence_type2
+    FROM t_abonements sub
+       LEFT JOIN t_lieu tl
+                 on sub.lieu_fk = tl.id
+       LEFT JOIN t_type_payement ttp
+                 on sub.type_payement_fk = ttp.id
+       LEFT JOIN t_type_recurence ttr1
+                 on sub.type_recurence1_fk = ttr1.id
+       LEFT JOIN t_type_recurence ttr2
+                 on sub.type_recurence2_fk = ttr2.id
+    ";
+    
     private const string VHistorique = @"
     CREATE VIEW v_historique as
     SELECT th.id,

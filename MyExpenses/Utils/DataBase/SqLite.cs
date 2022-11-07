@@ -37,13 +37,15 @@ public static partial class SqLite
 
                 #region View
 
-                foreach (var cmd in new List<string> { VHistorique, VToto, VTotoCategorie })
+                foreach (var cmd in new List<string> { VSubscribe, VHistorique, VToto, VTotoCategorie })
                 { Execute(cmd); }
 
                 #endregion
                 
                 FillColors();
                 FillImages();
+                FillPaymentType();
+                FillRecurrence();
             
                 return Task.FromResult(false);
             }

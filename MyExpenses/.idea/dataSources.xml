@@ -25,5 +25,17 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="test abonement 2" uuid="e19a9934-ccdc-4ec2-9b2e-f158581c3a5b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:E:\Logiciels\Adobe\Creative Cloud Files\Programmation\C#\Personnel\MyExpenses\MyExpenses\test\test abonement 2.sqlite</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>

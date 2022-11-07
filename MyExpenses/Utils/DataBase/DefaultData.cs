@@ -37,9 +37,6 @@ public static partial class SqLite
 
     #endregion
 
-
-    #region Images
-
     private static void FillImages()
     {
         var images = Ressources.Images.GetAllImages();
@@ -54,5 +51,15 @@ public static partial class SqLite
         }
     }
 
-    #endregion
+    private static void FillPaymentType()
+    {
+        const string cmd = "INSERT INTO t_type_payement VALUES ('carte'), ('espèce'), ('virement')";
+        _connection!.ExecuteAsync(cmd);
+    }
+
+    private static void FillRecurrence()
+    {
+        const string cmd = "INSERT INTO t_type_recurence VALUES ('jour'), ('mois'), ('année')";
+        _connection!.ExecuteAsync(cmd);
+    }
 }
