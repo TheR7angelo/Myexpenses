@@ -103,10 +103,14 @@ public static partial class SqLite
             constraint t_credit_t_type_payement_id_fk
                 references t_type_payement (id),
         recurence         integer,
-        type_recurence_fk integer
-            constraint t_credit_t_type_recurence_id_fk
+        type_recurence1_fk integer
+            constraint t_credit_t_type_recurence1_id_fk
                 references t_type_recurence (id),
-        montant           real
+        montant           real,
+        duree             int,
+        type_recurence2_fk integer
+            constraint t_credit_t_type_recurence2_id_fk
+                references t_type_recurence (id)
     );";
     
     private const string Compte = @"
@@ -223,12 +227,16 @@ public static partial class SqLite
         public string? Raison { get; set; }
         [Column("type_payement")]
         public int PaymentTypeFk { get; set; }
-        [Column("type_recurence_fk")]
-        public int Recurrence { get; set; }
-        [Column("duree")]
-        public int Duration { get; set; }
+        [Column("recurence")]
+        public int Recurence { get; set; }
+        [Column("type_recurence1_fk")]
+        public int RecurenceType1Fk { get; set; }
         [Column("montant")]
         public decimal Amount { get; set; }
+        [Collation("duree")]
+        public int Duration { get; set; }
+        [Column("type_recurence2_fk")]
+        public int RecurenceType2Fk { get; set; }
     }
     
     [Table("t_historique")]

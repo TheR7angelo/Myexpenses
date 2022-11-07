@@ -6,12 +6,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid"
              x:Class="MyExpenses.Views.DisplaySubscription">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem AutomationId="add" Text="Ajouter" Clicked="MenuItem_OnClicked"/>
+        <ToolbarItem AutomationId="modify" Text="Modifier" Clicked="MenuItem_OnClicked"/>
+        <ToolbarItem AutomationId="delete" Text="Supprimer" Clicked="MenuItem_OnClicked"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
             <dg:DataGrid x:Name="DataGrid" IsSortable="True" HeaderBordersVisible="True" SelectionEnabled="True"
                          ItemsSource="{Binding SubscriptionData}" SelectedItem="{Binding SelectedSubscription}" PullToRefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}"
-                         HeaderBackground="#FFE0E6f8" ActiveRowColor="Red"
-                         ItemSelected="DataGrid_OnItemSelected" Refreshing="DataGrid_OnRefreshing">
+                         HeaderBackground="#FFE0E6f8" ActiveRowColor="Red">
                 <x:Arguments>
                     <ListViewCachingStrategy>RetainElement</ListViewCachingStrategy>
                 </x:Arguments>

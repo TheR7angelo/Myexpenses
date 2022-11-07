@@ -35,7 +35,6 @@ public class SubscriptionModel : INotifyPropertyChanged
             LieuFk = 1,
             PaymentTypeFk = 1,
             Raison = "Test débile qui va disparaitre",
-            Recurrence = 1
         });
         lst.Add(new SqLite.SubscriptionClass
         {
@@ -45,7 +44,6 @@ public class SubscriptionModel : INotifyPropertyChanged
             LieuFk = 1,
             PaymentTypeFk = 1,
             Raison = "Test débile qui va disparaitre",
-            Recurrence = 1
         });
 
         return lst;
@@ -84,7 +82,8 @@ public class SubscriptionModel : INotifyPropertyChanged
     private async void CmdRefresh()
     {
         IsRefreshing = true;
-        await Task.Delay(3000);
+        _subscriptionData = TestData();
+        await Task.Delay(1000);
         IsRefreshing = false;
     }
     

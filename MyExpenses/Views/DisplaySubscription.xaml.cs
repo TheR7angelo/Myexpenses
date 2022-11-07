@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using MyExpenses.Utils.Database;
 using MyExpenses.ViewModels;
 using Xamarin.Forms;
@@ -10,19 +9,28 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class DisplaySubscription
 {
+    private static SqLite.SubscriptionClass _selected = new();
     public DisplaySubscription()
     {
         InitializeComponent();
         BindingContext = new SubscriptionModel();
     }
 
-    private void DataGrid_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+    private async void MenuItem_OnClicked(object sender, EventArgs e)
     {
-        Console.WriteLine("hey");
-    }
+        var button = (ToolbarItem)sender;
+        var select = DataGrid.SelectedItem as SqLite.SubscriptionClass;
+        if (select is null)
+        {
+            var msg = button.AutomationId switch
+            {
+                "modify" => "Impossible de modifier, aucun élement de sélectionner",
+                _ => "Erreur inconnue"
+            };
+            await DisplayAlert("Erreur", msg, "Ok");
+            return;
+        }
 
-    private void DataGrid_OnRefreshing(object sender, EventArgs e)
-    {
-        //pass
+        Console.WriteLine(select.Id);
     }
 }
