@@ -18,23 +18,31 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AddAddress
 {
-    private readonly DisplayStore _displayStore;
+    private DisplayStore _displayStore = null!;
 
     private const string Crs = "EPSG:4326";
     private const string UserAgent = "C#";
     private static readonly Nominatim Nominatim = new(UserAgent);
 
     private static SqLite.LieuClass? _modify; 
-    public AddAddress(DisplayStore previous, SqLite.LieuClass? modify=null)
+    public AddAddress(DisplayStore previous)
     {
-        _displayStore = previous;
-        
-        InitializeComponent();
-        InitializeMap();
+        Init(previous);
+    }
 
-        if (modify is null) return;
+    public AddAddress(DisplayStore previous, SqLite.LieuClass modify)
+    {
+        Init(previous);
+
         _modify = modify;
         Modify(modify);
+    }
+
+    private void Init(DisplayStore previous)
+    {
+        _displayStore = previous;
+        InitializeComponent();
+        InitializeMap();
     }
 
     #region Function
