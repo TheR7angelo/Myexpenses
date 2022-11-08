@@ -12,13 +12,12 @@
                 
                 <!-- Widget -->
                 <ResourceDictionary Source="Utils/Style/Widget/Button.xaml"/>
+                <ResourceDictionary Source="Utils/Style/Widget/Editor.xaml"/>
                 <ResourceDictionary Source="Utils/Style/Widget/Element.xaml"/>
                 <ResourceDictionary Source="Utils/Style/Widget/FlyoutItem.xaml"/>
                 <ResourceDictionary Source="Utils/Style/Widget/Label.xaml"/>
                 <ResourceDictionary Source="Utils/Style/Widget/Layout.xaml"/>
                 <ResourceDictionary Source="Utils/Style/Widget/TabBar.xaml"/>
-                
-                
                 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
