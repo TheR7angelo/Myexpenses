@@ -1,6 +1,6 @@
 ﻿# Gestion des tables
 
-- [ ] abonnement
+- [ ] abonnement (en cours)
 - [x] categorie
 - [ ] credit
 - [x] historique
@@ -9,6 +9,6 @@
 - [ ] tickets
 - [x] type compte
 - [x] type payement
-- [ ] type récurence ( en cours )
+- [ ] type récurence (en cours)
 
 6/10 == 60%

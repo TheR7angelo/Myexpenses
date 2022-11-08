@@ -9,7 +9,6 @@ namespace MyExpenses.Views;
 [XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class DisplaySubscription
 {
-    private static SqLite.SubscriptionClass _selected = new();
     public DisplaySubscription()
     {
         InitializeComponent();
@@ -32,5 +31,17 @@ public partial class DisplaySubscription
         }
 
         Console.WriteLine(select.Id);
+    }
+    
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        DependencyService.Get<IInterface>().Landscape();
+    }
+    
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        DependencyService.Get<IInterface>().Portrait();
     }
 }

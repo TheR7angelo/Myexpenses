@@ -2,8 +2,6 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid"
              x:Class="MyExpenses.Views.DisplaySubscription">
     
@@ -27,8 +25,10 @@
                     <dg:DataGridColumn Title="Raison" PropertyName="Raison" Width="2*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <dg:DataGridColumn Title="PaymentTypeFk" PropertyName="PaymentTypeFk" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <dg:DataGridColumn Title="Recurrence" PropertyName="Recurrence" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <dg:DataGridColumn Title="Duration" PropertyName="Duration" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="RecurrenceType1" PropertyName="RecurrenceType1Fk" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <dg:DataGridColumn Title="Amount" PropertyName="Amount" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="Duration" PropertyName="Duration" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <dg:DataGridColumn Title="RecurrenceType2" PropertyName="RecurrenceType1Fk" Width="*" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 </dg:DataGrid.Columns>
                 <dg:DataGrid.RowsBackgroundColorPalette>
                     <dg:PaletteCollection>
