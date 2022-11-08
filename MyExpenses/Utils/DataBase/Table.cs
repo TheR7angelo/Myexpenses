@@ -59,7 +59,7 @@ public static partial class SqLite
         id  INTEGER NOT NULL
             PRIMARY KEY AUTOINCREMENT ,
         nom TEXT,
-        delete integer default 1
+        can_delete integer default 1
     );";
 
     private const string TypeCategorie = @"
@@ -68,7 +68,7 @@ public static partial class SqLite
         id  INTEGER NOT NULL
             PRIMARY KEY AUTOINCREMENT ,
         nom TEXT,
-        delete integer default 1
+        can_delete integer default 1
     );";
 
     private const string Ticket = @"
@@ -86,7 +86,7 @@ public static partial class SqLite
             constraint t_type_compte_pk
                 primary key AUTOINCREMENT,
         nom TEXT,
-        delete integer default 1
+        can_delete integer default 1
     );";
 
     #endregion
@@ -279,7 +279,7 @@ public static partial class SqLite
         public int Id { get; set; }
         [Column("nom")]
         public string Name { get; set; } = null!;
-        [Column("delete")]
+        [Column("can_delete")]
         public bool CanDelete { get; set; } = true;
     }
     
@@ -290,7 +290,7 @@ public static partial class SqLite
         public int Id { get; set; }
         [Column("nom")]
         public string Name { get; set; } = null!;
-        [Column("delete")]
+        [Column("can_delete")]
         public bool CanDelete { get; set; } = true;
     }
 
@@ -352,7 +352,7 @@ public static partial class SqLite
         public int Id { get; set; }
         [Column("nom")]
         public string Name { get; set; } = null!;
-        [Column("delete")]
+        [Column("can_delete")]
         public bool CanDelete { get; set; } = true;
     }
 
