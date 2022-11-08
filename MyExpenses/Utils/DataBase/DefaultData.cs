@@ -53,13 +53,13 @@ public static partial class SqLite
 
     private static void FillPaymentType()
     {
-        const string cmd = "INSERT INTO t_type_payement VALUES ('carte'), ('espèce'), ('virement')";
-        _connection!.ExecuteAsync(cmd);
+        const string sCmd = "INSERT INTO t_type_payement VALUES ('carte', 0), ('espèce', 0), ('virement', 0)";
+        _connection!.ExecuteAsync(sCmd);
     }
 
     private static void FillRecurrence()
     {
-        const string cmd = "INSERT INTO t_type_recurence VALUES ('jour'), ('mois'), ('année')";
-        _connection!.ExecuteAsync(cmd);
+        const string sCmd = "INSERT INTO t_type_recurence VALUES ('jour', 0), ('mois', 0), ('année', 0)";
+        _connection!.ExecuteAsync(sCmd);
     }
 }

@@ -6,6 +6,7 @@ public interface ITableDisplay
 {
     int Id { get; set; }
     string Name { get; set; }
+    bool CanDelete { get; set; }
 
     public ITableDisplay Delete(ITableDisplay obj) => obj.Delete();
 

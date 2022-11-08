@@ -50,7 +50,8 @@ public class BaseDisplay
         var leftItemModify = new SwipeItem
         {
             Text = "Modifier",
-            BackgroundColor = Color.Orange
+            BackgroundColor = Color.Orange,
+            BindingContext = obj
         };
         leftItemModify.Clicked += SwipeModify_OnClicked;
         
@@ -189,14 +190,16 @@ public class BaseDisplay
         var obj = ((SwipeItem)sender).BindingContext as ITableDisplay;
 
         var uses = FindUse(obj!);
-        if (!uses.Equals(0))
+
+        if (!uses!.Equals(0) || !obj!.CanDelete)
         {
-            DisplayAlert("Erreur", "Imposible de supprimer car cette catégorie est en cours d'utilisation", "Ok");
+            DisplayAlert("Erreur", "Imposible de supprimer", "Ok");
             return;
         }
-        obj!.Delete();
         
-        var index = _data.FindIndex(s => s.Id.Equals(obj!.Id));
+        obj.Delete();
+        
+        var index = _data.FindIndex(s => s.Id.Equals(obj.Id));
         _displayLayout.Children.RemoveAt(index);
         _data.RemoveAt(index);
     }
@@ -204,10 +207,17 @@ public class BaseDisplay
     private static void SwipeModify_OnClicked(object sender, EventArgs e)
     {
         var swipeItem = (SwipeItem)sender;
-        var swipeItems = swipeItem.Parent as SwipeItems;
-        var swipeView = (SwipeView)swipeItems!.Parent;
 
-        SwipeViewIsVisibleInverse(swipeView);
+        var obj = swipeItem.BindingContext as ITableDisplay;
+        if (obj!.CanDelete)
+        {
+            var swipeItems = swipeItem.Parent as SwipeItems;
+            var swipeView = (SwipeView)swipeItems!.Parent;
+
+            SwipeViewIsVisibleInverse(swipeView);
+            return;
+        }
+        DisplayAlert("Erreur", "Impossible de modifier", "Ok");
     }
     
     private static void SwipeValidModify_OnClicked(object sender, EventArgs e)
