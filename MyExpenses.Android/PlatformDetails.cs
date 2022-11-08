@@ -1,9 +1,10 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content.PM;
 using MyExpenses.Droid;
 using Xamarin.Forms;
 
-[assembly: Xamarin.Forms.Dependency(typeof(PlatformDetails))]
+[assembly: Dependency(typeof(PlatformDetails))]
 
 namespace MyExpenses.Droid
 {
@@ -14,11 +15,13 @@ namespace MyExpenses.Droid
             return Android.App.Application.Context.GetExternalFilesDir(null)?.AbsolutePath;
         }
 
+        [Obsolete("Obsolete")]
         public void Landscape()
         {
             ((Activity)Forms.Context).RequestedOrientation = ScreenOrientation.Landscape;
         }
 
+        [Obsolete("Obsolete")]
         public void Portrait()
         {
             ((Activity)Forms.Context).RequestedOrientation = ScreenOrientation.Portrait;
