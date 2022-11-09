@@ -38,7 +38,8 @@ public class BaseDisplay
     private void AddDisplays(ITableDisplay obj)
     {
         var grid = new Grid();
-        grid.Children.Add(new Editor { Text = obj.Name, ClassId = $"Editor_{obj.Id}", IsVisible = false });
+        var editor = new Editor { Text = obj.Name, ClassId = $"Editor_{obj.Id}", IsVisible = false };
+        grid.Children.Add(editor);
         grid.Children.Add(new Label { Text = obj.Name , ClassId = $"Label_{obj.Id}"});
         
         var swipe = new SwipeView
